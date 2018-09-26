@@ -50,84 +50,63 @@
 </div>
 <header class="header2">
     <%--  top-header  --%>
+    <%--顶部栏--%>
     <div class="top-header">
         <div class="container">
             <div class="col-md-6">
                 <div class="top-header-left">
                     <ul>
                         <li>
-                            <div class="dropdown">
-                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                                   data-hover="dropdown"> <img src="assets/images/eng-flg.jpg" alt="eng-flg"/> English
-                                    <i class="fa fa-angle-down" aria-hidden="true"></i> </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">One more dropdown</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li><a href="#">Separated link</a></li>
-                                </ul>
-                            </div>
+                            <span>你好 请-<a href="login.jsp">登陆</a> or <a href="registe.jsp">注册</a></span>
                         </li>
-                        <li>
-                            <div class="dropdown"><a href="#" class="btn btn-default dropdown-toggle"
-                                                     data-toggle="dropdown" data-hover="dropdown">
-                                USD <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">One more dropdown</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><span>Hello Custumer - Login or Registe!</span></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="top-header-right">
                     <ul>
-                        <li><i class="icon-location-pin icons" aria-hidden="true"></i> Store Location</li>
-                        <li><i class="icon-note icons" aria-hidden="true"></i> Track Your Order</li>
+                        <li><a href="#">我的账户</a></li>
+                        <li><i class="icon-note icons" aria-hidden="true"></i><a href="#">我的订单</a></li>
                         <li>
                             <div class="dropdown">
-                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                                   data-hover="dropdown"> <i class="icon-settings icons" aria-hidden="true"></i> Setting
+                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                                    <i class="icon-settings icons" aria-hidden="true"></i> 设置
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">One more dropdown</a></li>
+                                    <li><a href="#">修改密码</a></li>
+                                    <li><a href="#">管理我的地址</a></li>
                                 </ul>
                             </div>
                         </li>
+                        <li><i class="icon-location-pin icons" aria-hidden="true"></i><a href="#">联络我们</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <%--  /top-header  --%>
     </div>
+    <%--顶部菜单--%>
     <section class="top-md-menu">
         <div class="container">
+            <%--商标、搜索栏、购物车--%>
             <div class="col-sm-3">
                 <div class="logo">
                     <h6><img src="assets/images/logo.png" alt="logo"/></h6>
                 </div>
             </div>
             <div class="col-sm-6">
-                <%-- Search box Start --%>
+                <%--查询栏开始--%>
                 <form>
                     <div class="well carousel-search hidden-phone">
                         <div class="btn-group">
-                            <a class="btn dropdown-toggle btn-select" data-toggle="dropdown" href="#">All Categories
+                            <a class="btn dropdown-toggle btn-select" data-toggle="dropdown" href="#">所有类别
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Item I</a></li>
-                                <li><a href="#">Item II</a></li>
-                                <li><a href="#">Item III</a></li>
+                                <li><a href="#">类别 I</a></li>
+                                <li><a href="#">类别 II</a></li>
+                                <li><a href="#">类别 III</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Other</a></li>
+                                <li><a href="#">其他</a></li>
                             </ul>
                         </div>
                         <div class="search">
@@ -140,76 +119,94 @@
                         </div>
                     </div>
                 </form>
-                <%-- Search box End --%>
+                <%--查询栏结束--%>
             </div>
             <div class="col-sm-3">
-                <%-- cart-menu --%>
+                <%-- 愿望清单与购物车 --%>
                 <div class="cart-menu">
                     <ul>
-                        <li><a href="#"><i class="icon-heart icons" aria-hidden="true"></i></a><span
-                                class="subno">1</span><strong>Your Wishlist</strong></li>
-                        <li class="dropdown"><a href="#" data-toggle="dropdown" data-hover="dropdown"><i
-                                class="icon-basket-loaded icons" aria-hidden="true"></i></a><span class="subno">2</span><strong>Your
-                            Cart</strong>
+                        <li>
+                            <a href="#"><i class="icon-heart icons" aria-hidden="true"></i></a>
+                            <span class="subno">1</span>
+                            <strong>愿望清单</strong>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons" aria-hidden="true"></i></a>
+                            <span class="subno">2</span><strong>购物车</strong>
                             <div class="dropdown-menu  cart-outer">
+                                <%--todo：jsp自适应显示购物车--%>
                                 <div class="cart-content">
                                     <div class="col-sm-4 col-md-4"><img src="assets/images/elec-img4.jpg" alt="13">
                                     </div>
                                     <div class="col-sm-8 col-md-8">
-                                        <div class="pro-text"><a href="#">Apple Macbook Retina 23’’ </a>
+                                        <div class="pro-text">
+                                            <a href="#">Apple Macbook Retina 23’’ </a>
                                             <div class="close">x</div>
-                                            <strong>1 × $290.00</strong></div>
+                                            <strong>1 × $290.00</strong>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="cart-content">
                                     <div class="col-sm-4 col-md-4"><img src="assets/images/elec-img3.jpg" alt="13">
                                     </div>
                                     <div class="col-sm-8 col-md-8">
-                                        <div class="pro-text"><a href="#">Apple Macbook Retina 23’’ </a>
+                                        <div class="pro-text">
+                                            <a href="#">Apple Macbook Retina 23’’ </a>
                                             <div class="close">x</div>
-                                            <strong>1 × $290.00</strong></div>
+                                            <strong>1 × $290.00</strong>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="total">
-                                    <div class="col-md-6 text-left"><span>Shipping :</span> <strong>Total :</strong>
+                                    <div class="col-md-6 text-left">
+                                        <span>运费 :</span>
+                                        <strong>总额 :</strong>
                                     </div>
-                                    <div class="col-md-6 text-right"><strong>$0.00</strong> <strong>$160.00</strong>
+                                    <div class="col-md-6 text-right">
+                                        <strong>$0.00</strong>
+                                        <strong>$160.00</strong>
                                     </div>
                                 </div>
-                                <a href="shopping-cart.jsp" class="cart-btn">VIEW CART </a> <a href="checkout.jsp"
-                                                                                               class="cart-btn">CHECKOUT</a>
+                                <a href="shopping-cart.jsp" class="cart-btn">查看购物车详情 </a>
+                                <a href="checkout.jsp" class="cart-btn">购买</a>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <%-- cart-menu End --%>
+                <%-- 愿望清单与购物车 End --%>
             </div>
+            <%--菜单导航栏--%>
             <div class="main-menu">
-                <%--  nav  --%>
+                <%--  导航  --%>
                 <nav class="navbar navbar-inverse navbar-default">
                     <%-- Brand and toggle get grouped for better mobile display --%>
+                    <%--品牌和切换被分组以获得更好的移动显示--%>
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                data-target="#bs-example-navbar-collapse-1"><span
-                                class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
-                                class="icon-bar"></span> <span class="icon-bar"></span></button>
+                                data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">切换导航</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                     </div>
                     <%-- Collect the nav links, forms, and other content for toggling --%>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown"
-                         data-animations=" fadeInLeft fadeInUp fadeInRight">
+                    <%--收集导航链接、表单和其他内容--%>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations=" fadeInLeft fadeInUp fadeInRight">
                         <ul class="nav navbar-nav">
-                            <li class="all-departments dropdown"><a href="index.jsp" class="dropdown-toggle"
-                                                                    data-toggle="dropdown" role="button"
-                                                                    aria-expanded="false"><span> Shop By Department</span>
-                                <i class="fa fa-bars" aria-hidden="true"></i> </a>
+                            <li class="all-departments dropdown">
+                                <a href="index.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-expanded="false"><span> 商品分类 </span> <i class="fa fa-bars" aria-hidden="true"></i>
+                                </a>
                                 <ul class="dropdown-menu dropdownhover-bottom" role="menu">
+                                    <%--todo：通过数据库查询有哪些类别显示--%>
                                     <li class="dropdown">
                                         <a href="index.jsp"><img src="assets/images/menu-icon1.png" alt="menu-icon1"/>
-                                            Electronic & Digital <i class="fa fa-angle-right"
-                                                                    aria-hidden="true"></i></a>
+                                            电子数码产品<i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </a>
                                         <ul class="dropdown-menu right">
-                                            <li><a href="grid.jsp">Electronic 01</a></li>
-                                            <li><a href="list.jsp">Electronic 02</a></li>
+                                            <li><a href="grid.jsp">电脑</a></li>
+                                            <li><a href="list.jsp">电视</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown">
@@ -321,18 +318,18 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="index.jsp">Home</a></li>
-                            <li><a href="list.jsp">List</a></li>
-                            <li><a href="grid.jsp">Grid</a></li>
-                            <li><a href="shop-detail.jsp">Shop-detail</a></li>
-                            <li><a href="contact.jsp">Contact</a></li>
-                            <li><a href="shopping-cart.jsp">Shopping-cart</a></li>
-                            <li><a href="checkout.jsp">Checkout</a></li>
+                            <li><a href="index.jsp">主页</a></li>
+                            <li><a href="list.jsp">列表展示</a></li>
+                            <li><a href="grid.jsp">网格展示</a></li>
+                            <li><a href="shop-detail.jsp">商品详情</a></li>
+                            <li><a href="contact.jsp">联系方式</a></li>
+                            <li><a href="shopping-cart.jsp">购物车</a></li>
+                            <li><a href="checkout.jsp">付款台</a></li>
                         </ul>
                         <%-- /.navbar-collapse --%>
                     </div>
                 </nav>
-                <%-- /nav end --%>
+                <%-- /导航 end --%>
             </div>
         </div>
     </section>
@@ -342,25 +339,25 @@
     <div class="container">
             <div class="col-md-12">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Check Out</li>
+                    <li class="breadcrumb-item"><a href="index.jsp">主页</a></li>
+                    <li class="breadcrumb-item active">登陆</li>
                 </ol>
             </div>
             <div class="col-sm-10">
                 <div class="shipping-outer">
-                    <h4>Create a new account</h4>
+                    <h4>登陆你的账户</h4>
                     <div class="row">
                         <div class="col-md-12 counttry">
                             <div class="lable">Email:</div>
-                            <input name="counttry" placeholder="Mark Stevens" type="text">
+                            <input name="counttry" placeholder="输入你的电子邮箱" type="text">
                         </div>
                         <div class="col-md-12 counttry">
                             <div class="lable">Password:</div>
-                            <input name="counttry" placeholder="Mark Stevens" type="password">
+                            <input name="counttry" placeholder="输入你的密码" type="password">
                         </div>
                     </div>
-                    <a href="#" class="button2">REgister now</a>
-                    <a href="#" class="button3">Checkout as guest</a>
+                    <a href="#" class="button2">登陆</a>
+                    <a href="registe.jsp" >注册</a>
                 </div>
             </div>
     </div>

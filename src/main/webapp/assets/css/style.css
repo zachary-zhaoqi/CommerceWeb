@@ -108,6 +108,15 @@ a:hover {
     border-left: none;
 }
 
+.top-header-right a{
+    color: white;
+}
+
+.top-header-right a:hover{
+    color: #b11e22;
+}
+
+
 .top-header-left {
     float: left;
 }
@@ -133,6 +142,14 @@ a:hover {
     border: none;
     padding: 3px 20px;
     margin: 0;
+}
+
+.top-header-left a{
+    color: white;
+}
+
+.top-header-left a:hover{
+    color: #b11e22;
 }
 
 .top-header {
@@ -2666,6 +2683,10 @@ ul {
 
 .breadcrumb > li + li::before {
     color: #333e48;
+}
+
+.breadcrumb>li>a:hover{
+    color: #b11e22;
 }
 
 .product-categories span {

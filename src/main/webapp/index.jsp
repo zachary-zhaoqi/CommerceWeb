@@ -43,17 +43,20 @@
 <body>
 <%--  Preloader  --%>
 <div id="preloader">
-    <div id="loading"></div>
+    <div id="loading">
+
+    </div>
 </div>
 <header>
     <%--  top-header  --%>
+    <%--顶部栏--%>
     <div class="top-header">
         <div class="container">
             <div class="col-md-6">
                 <div class="top-header-left">
                     <ul>
                         <li>
-                            <span>你好 - <a href="login.jsp">登陆</a> or <a href="registe.jsp">注册</a></span>
+                            <span>你好 请-<a href="login.jsp">登陆</a> or <a href="registe.jsp">注册</a></span>
                         </li>
                     </ul>
                 </div>
@@ -61,13 +64,11 @@
             <div class="col-md-6">
                 <div class="top-header-right">
                     <ul>
-                        <li><a href="#" style="color: white;">我的账户</a></li>
-                        <li><i class="icon-note icons" aria-hidden="true"></i> 我的订单</li>
-                        <li><i class="icon-location-pin icons" aria-hidden="true"></i> 联络我们</li>
+                        <li><a href="#">我的账户</a></li>
+                        <li><i class="icon-note icons" aria-hidden="true"></i><a href="#">我的订单</a></li>
                         <li>
                             <div class="dropdown">
-                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                                   data-hover="dropdown">
+                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
                                     <i class="icon-settings icons" aria-hidden="true"></i> 设置
                                 </a>
                                 <ul class="dropdown-menu">
@@ -76,6 +77,7 @@
                                 </ul>
                             </div>
                         </li>
+                        <li><i class="icon-location-pin icons" aria-hidden="true"></i><a href="#">联络我们</a></li>
                     </ul>
                 </div>
             </div>
@@ -85,6 +87,7 @@
     <%--顶部菜单--%>
     <section class="top-md-menu">
         <div class="container">
+            <%--商标、搜索栏、购物车--%>
             <div class="col-sm-3">
                 <div class="logo">
                     <h6><img src="assets/images/logo.png" alt="logo"/></h6>
@@ -130,6 +133,7 @@
                             <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons" aria-hidden="true"></i></a>
                             <span class="subno">2</span><strong>购物车</strong>
                             <div class="dropdown-menu  cart-outer">
+                                <%--todo：jsp自适应显示购物车--%>
                                 <div class="cart-content">
                                     <div class="col-sm-4 col-md-4"><img src="assets/images/elec-img4.jpg" alt="13">
                                     </div>
@@ -154,52 +158,54 @@
                                 </div>
                                 <div class="total">
                                     <div class="col-md-6 text-left">
-                                        <span>Shipping :</span>
-                                        <strong>Total :</strong>
+                                        <span>运费 :</span>
+                                        <strong>总额 :</strong>
                                     </div>
                                     <div class="col-md-6 text-right">
                                         <strong>$0.00</strong>
                                         <strong>$160.00</strong>
                                     </div>
                                 </div>
-                                <a href="shopping-cart.jsp" class="cart-btn">VIEW CART </a> <a href="checkout.jsp"
-                                                                                               class="cart-btn">CHECKOUT</a>
+                                <a href="shopping-cart.jsp" class="cart-btn">查看购物车详情 </a>
+                                <a href="checkout.jsp" class="cart-btn">购买</a>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <%-- 愿望清单与购物车 End --%>
             </div>
+            <%--菜单导航栏--%>
             <div class="main-menu">
-                <%--  nav  --%>
+                <%--  导航  --%>
                 <nav class="navbar navbar-inverse navbar-default">
                     <%-- Brand and toggle get grouped for better mobile display --%>
+                    <%--品牌和切换被分组以获得更好的移动显示--%>
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                                 data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
+                            <span class="sr-only">切换导航</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
                     </div>
                     <%-- Collect the nav links, forms, and other content for toggling --%>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown"
-                         data-animations=" fadeInLeft fadeInUp fadeInRight">
+                    <%--收集导航链接、表单和其他内容--%>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations=" fadeInLeft fadeInUp fadeInRight">
                         <ul class="nav navbar-nav">
                             <li class="all-departments dropdown">
                                 <a href="index.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-expanded="false"><span> Shop By Department</span> <i class="fa fa-bars"
-                                                                                             aria-hidden="true"></i>
+                                   aria-expanded="false"><span> 商品分类 </span> <i class="fa fa-bars" aria-hidden="true"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdownhover-bottom all-open" role="menu">
+                                    <%--todo：通过数据库查询有哪些类别显示--%>
                                     <li class="dropdown">
                                         <a href="index.jsp"><img src="assets/images/menu-icon1.png" alt="menu-icon1"/>
-                                            Electronic & Digital <i class="fa fa-angle-right"
-                                                                    aria-hidden="true"></i></a>
+                                            电子数码产品<i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </a>
                                         <ul class="dropdown-menu right">
-                                            <li><a href="grid.jsp">Electronic 01</a></li>
-                                            <li><a href="list.jsp">Electronic 02</a></li>
+                                            <li><a href="grid.jsp">电脑</a></li>
+                                            <li><a href="list.jsp">电视</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown">
@@ -311,18 +317,18 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="index.jsp">Home</a></li>
-                            <li><a href="list.jsp">List</a></li>
-                            <li><a href="grid.jsp">Grid</a></li>
-                            <li><a href="shop-detail.jsp">Shop-detail</a></li>
-                            <li><a href="contact.jsp">Contact</a></li>
-                            <li><a href="shopping-cart.jsp">Shopping-cart</a></li>
-                            <li><a href="checkout.jsp">Checkout</a></li>
+                            <li><a href="index.jsp">主页</a></li>
+                            <li><a href="list.jsp">列表展示</a></li>
+                            <li><a href="grid.jsp">网格展示</a></li>
+                            <li><a href="shop-detail.jsp">商品详情</a></li>
+                            <li><a href="contact.jsp">联系方式</a></li>
+                            <li><a href="shopping-cart.jsp">购物车</a></li>
+                            <li><a href="checkout.jsp">付款台</a></li>
                         </ul>
                         <%-- /.navbar-collapse --%>
                     </div>
                 </nav>
-                <%-- /nav end --%>
+                <%-- /导航 end --%>
             </div>
         </div>
     </section>
@@ -6246,41 +6252,41 @@
 </aside>
 <%-- /sticky-socia --%>
 <%-- Get Our Email Letter popup --%>
-<div class="modal fade modal-popup" id="modal1" data-open-onload="true" data-open-delay="1500" tabindex="-1"
-     role="dialog">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>
-            </button>
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6 pt-20">
-                        </div>
-                        <div class="col-sm-6 pt-20 text-center">
-                            <h2 class="heading font34 inverse">
-                                Get Our Email Letter
-                            </h2>
-                            <p class="font22 text-center">Subscribe to the Platin mailing list to receive updates on new
-                                arrivals, special offers and other discount information.</p>
-                            <form name="main">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Enter your Email id">
-                                </div>
-                                <div class="form-group">
-                                    <button class="btn btn-black" type="button">Subscribe!</button>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="check"/> Do not show this popup again
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<%--<div class="modal fade modal-popup" id="modal1" data-open-onload="true" data-open-delay="1500" tabindex="-1"--%>
+     <%--role="dialog">--%>
+    <%--<div class="modal-dialog modal-lg" role="document">--%>
+        <%--<div class="modal-content">--%>
+            <%--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>--%>
+            <%--</button>--%>
+            <%--<div class="modal-body">--%>
+                <%--<div class="container-fluid">--%>
+                    <%--<div class="row">--%>
+                        <%--<div class="col-sm-6 pt-20">--%>
+                        <%--</div>--%>
+                        <%--<div class="col-sm-6 pt-20 text-center">--%>
+                            <%--<h2 class="heading font34 inverse">--%>
+                                <%--Get Our Email Letter--%>
+                            <%--</h2>--%>
+                            <%--<p class="font22 text-center">Subscribe to the Platin mailing list to receive updates on new--%>
+                                <%--arrivals, special offers and other discount information.</p>--%>
+                            <%--<form name="main">--%>
+                                <%--<div class="form-group">--%>
+                                    <%--<input type="text" class="form-control" placeholder="Enter your Email id">--%>
+                                <%--</div>--%>
+                                <%--<div class="form-group">--%>
+                                    <%--<button class="btn btn-black" type="button">Subscribe!</button>--%>
+                                <%--</div>--%>
+                                <%--<div class="form-group">--%>
+                                    <%--<input type="checkbox" name="check"/> Do not show this popup again--%>
+                                <%--</div>--%>
+                            <%--</form>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+    <%--</div>--%>
+<%--</div>--%>
 <%-- /Get Our Email Letter popup --%>
 <p id="back-top">
     <a href="#top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
