@@ -1,23 +1,29 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>瞎买瞎卖</title>
     <%-- Latest Bootstrap min CSS --%>
+    <%--引导程序.小.CSS--%>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
     <%-- Dropdownhover CSS --%>
+    <%--下拉悬停CSS--%>
     <link rel="stylesheet" href="assets/css/bootstrap-dropdownhover.min.css" type="text/css">
     <%-- latest fonts awesome --%>
+    <%--最新的字体--%>
     <link rel="stylesheet" href="assets/font/css/font-awesome.min.css" type="text/css">
     <%-- simple line fonts awesome --%>
+    <%--简单的线条字体--%>
     <link rel="stylesheet" href="assets/simple-line-icon/css/simple-line-icons.css" type="text/css">
     <%-- stroke-gap-icons --%>
+    <%--敲击图标--%>
     <link rel="stylesheet" href="assets/stroke-gap-icons/stroke-gap-icons.css" type="text/css">
     <%-- Animate CSS --%>
+    <%--动画CSS--%>
     <link rel="stylesheet" href="assets/css/animate.min.css" type="text/css">
     <%-- Style CSS --%>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
@@ -37,44 +43,17 @@
 <body>
 <%--  Preloader  --%>
 <div id="preloader">
-    <div id="loading">
-    </div>
+    <div id="loading"></div>
 </div>
 <header>
     <%--  top-header  --%>
     <div class="top-header">
         <div class="container">
-
             <div class="col-md-6">
                 <div class="top-header-left">
                     <ul>
                         <li>
-                            <div class="dropdown">
-                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                                   data-hover="dropdown">
-                                    <img src="assets/images/eng-flg.jpg" alt="eng-flg"> English <i
-                                        class="fa fa-angle-down" aria-hidden="true"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">English</a></li>
-                                    <li><a href="#">Aribic</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="dropdown">
-                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                                   data-hover="dropdown">
-                                    USD <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">GBP</a></li>
-                                    <li><a href="#">USD</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Hello Custumer - Login or Registe!</span>
+                            <span>你好 - <a href="login.jsp">登陆</a> or <a href="registe.jsp">注册</a></span>
                         </li>
                     </ul>
                 </div>
@@ -82,18 +61,18 @@
             <div class="col-md-6">
                 <div class="top-header-right">
                     <ul>
-                        <li><i class="icon-location-pin icons" aria-hidden="true"></i> Store Location</li>
-                        <li><i class="icon-note icons" aria-hidden="true"></i> Track Your Order</li>
+                        <li><a href="#" style="color: white;">我的账户</a></li>
+                        <li><i class="icon-note icons" aria-hidden="true"></i> 我的订单</li>
+                        <li><i class="icon-location-pin icons" aria-hidden="true"></i> 联络我们</li>
                         <li>
                             <div class="dropdown">
                                 <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
                                    data-hover="dropdown">
-                                    <i class="icon-settings icons" aria-hidden="true"></i> Setting
+                                    <i class="icon-settings icons" aria-hidden="true"></i> 设置
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">My Account</a></li>
-                                    <li><a href="#">Change Password</a></li>
-                                    <li><a href="#">Change Address</a></li>
+                                    <li><a href="#">修改密码</a></li>
+                                    <li><a href="#">管理我的地址</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -103,6 +82,7 @@
         </div>
         <%--  /top-header  --%>
     </div>
+    <%--顶部菜单--%>
     <section class="top-md-menu">
         <div class="container">
             <div class="col-sm-3">
@@ -111,18 +91,18 @@
                 </div>
             </div>
             <div class="col-sm-6">
-                <%-- Search box Start --%>
+                <%--查询栏开始--%>
                 <form>
                     <div class="well carousel-search hidden-phone">
                         <div class="btn-group">
-                            <a class="btn dropdown-toggle btn-select" data-toggle="dropdown" href="#">All Categories
+                            <a class="btn dropdown-toggle btn-select" data-toggle="dropdown" href="#">所有类别
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Item I</a></li>
-                                <li><a href="#">Item II</a></li>
-                                <li><a href="#">Item III</a></li>
+                                <li><a href="#">类别 I</a></li>
+                                <li><a href="#">类别 II</a></li>
+                                <li><a href="#">类别 III</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Other</a></li>
+                                <li><a href="#">其他</a></li>
                             </ul>
                         </div>
                         <div class="search">
@@ -135,18 +115,20 @@
                         </div>
                     </div>
                 </form>
-                <%-- Search box End --%>
+                <%--查询栏结束--%>
             </div>
             <div class="col-sm-3">
-                <%-- cart-menu --%>
+                <%-- 愿望清单与购物车 --%>
                 <div class="cart-menu">
                     <ul>
-                        <li><a href="#"><i class="icon-heart icons" aria-hidden="true"></i></a><span
-                                class="subno">1</span><strong>Your Wishlist</strong></li>
+                        <li>
+                            <a href="#"><i class="icon-heart icons" aria-hidden="true"></i></a>
+                            <span class="subno">1</span>
+                            <strong>愿望清单</strong>
+                        </li>
                         <li class="dropdown">
-                            <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons"
-                                                                                        aria-hidden="true"></i></a><span
-                                class="subno">2</span><strong>Your Cart</strong>
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons" aria-hidden="true"></i></a>
+                            <span class="subno">2</span><strong>购物车</strong>
                             <div class="dropdown-menu  cart-outer">
                                 <div class="cart-content">
                                     <div class="col-sm-4 col-md-4"><img src="assets/images/elec-img4.jpg" alt="13">
@@ -186,7 +168,7 @@
                         </li>
                     </ul>
                 </div>
-                <%-- cart-menu End --%>
+                <%-- 愿望清单与购物车 End --%>
             </div>
             <div class="main-menu">
                 <%--  nav  --%>
