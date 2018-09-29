@@ -1,6 +1,3 @@
-package test;
-
-
 import com.mysql.cj.protocol.Resultset;
 
 import java.io.FileInputStream;
