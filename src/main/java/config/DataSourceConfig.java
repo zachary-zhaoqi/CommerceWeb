@@ -165,6 +165,7 @@ public class DataSourceConfig {
             String sql="SELECT * FROM commerce.user;";
             preparedStatement=connection.prepareStatement(sql);
             resultSet=preparedStatement.executeQuery();
+
             while (resultSet.next())
             {
                 String string=resultSet.getString(1);
