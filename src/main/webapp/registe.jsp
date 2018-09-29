@@ -69,7 +69,8 @@
                         <li><i class="icon-note icons" aria-hidden="true"></i><a href="#">我的订单</a></li>
                         <li>
                             <div class="dropdown">
-                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                   data-hover="dropdown">
                                     <i class="icon-settings icons" aria-hidden="true"></i> 设置
                                 </a>
                                 <ul class="dropdown-menu">
@@ -131,7 +132,8 @@
                             <strong>愿望清单</strong>
                         </li>
                         <li class="dropdown">
-                            <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons"
+                                                                                        aria-hidden="true"></i></a>
                             <span class="subno">2</span><strong>购物车</strong>
                             <div class="dropdown-menu  cart-outer">
                                 <%--todo：jsp自适应显示购物车--%>
@@ -192,11 +194,13 @@
                     </div>
                     <%-- Collect the nav links, forms, and other content for toggling --%>
                     <%--收集导航链接、表单和其他内容--%>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations=" fadeInLeft fadeInUp fadeInRight">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown"
+                         data-animations=" fadeInLeft fadeInUp fadeInRight">
                         <ul class="nav navbar-nav">
                             <li class="all-departments dropdown">
                                 <a href="index.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-expanded="false"><span> 商品分类 </span> <i class="fa fa-bars" aria-hidden="true"></i>
+                                   aria-expanded="false"><span> 商品分类 </span> <i class="fa fa-bars"
+                                                                                aria-hidden="true"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdownhover-bottom" role="menu">
                                     <%--todo：通过数据库查询有哪些类别显示--%>
@@ -347,33 +351,47 @@
             <div class="shipping-outer">
                 <h4>登陆你的账户</h4>
                 <div class="row">
-                    <div class="col-md-12 counttry">
+                    <div class="col-md-12 counttry"style="margin-bottom: 5px">
                         <div class="lable">Email:</div>
-                        <input name="counttry" placeholder="输入你的电子邮箱" type="text">
+                        <input name="email" placeholder="输入你的电子邮箱" type="text">
                     </div>
-                    <div class="col-md-12 counttry">
-                        <div class="lable">Password:</div>
-                        <input name="counttry" placeholder="输入你的密码" type="password">
+                    <div class="col-md-12 counttry"style="margin-bottom: 5px">
+                        <div class="lable">密码:</div>
+                        <input name="psw" placeholder="输入你的密码" type="password">
                     </div>
-                    <div class="col-md-12 counttry">
-                        <div class="lable">Password:</div>
-                        <input name="counttry" placeholder="输入你的密码" type="password">
+                    <div class="col-md-12 counttry" style="margin-bottom: 5px">
+                        <div class="lable">再输一次密码:</div>
+                        <input name="psw2" placeholder="输入你的密码" type="password">
                     </div>
-                    <div class="col-md-12 counttry">
-                        <div class="lable">Password:</div>
-                        <input name="counttry" placeholder="输入你的密码" type="password">
-                    </div>
-                    <div class="col-md-12 counttry">
-                        <div class="lable">Password:</div>
-                        <input name="counttry" placeholder="输入你的密码" type="password">
-                    </div>
-                    <div class="col-md-12 counttry">
-                        <div class="lable">Password:</div>
-                        <input name="counttry" placeholder="输入你的密码" type="password">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"style="margin-bottom: 5px">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">更多信息(非必填)-<span style="color: #761c19">点击展开与关闭</span></a>
+                            </h4>
+                        </div>
+                        <div id="collapse4" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="col-md-12 counttry"style="margin-bottom: 5px">
+                                    <div class="lable">姓名</div>
+                                    <input name="" placeholder="输入你的密码" type="password">
+                                </div>
+                                <div class="col-md-12 counttry"style="margin-bottom: 5px">
+                                    <div class="lable">性别:</div>
+                                    <input name="counttry" placeholder="输入你的密码" type="password">
+                                </div>
+                                <div class="col-md-12 counttry"style="margin-bottom: 5px">
+                                    <div class="lable">Password:</div>
+                                    <input name="counttry" placeholder="输入你的密码" type="password">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <a href="#" class="button2">注册</a>
-                <a href="index.jsp" >返回</a>
+                <div class="shopping-cart">
+                    <a href="#" class="button">注册</a>
+                    <a href="index.jsp" class="button">返回</a>
+                </div>
+
             </div>
         </div>
     </div>

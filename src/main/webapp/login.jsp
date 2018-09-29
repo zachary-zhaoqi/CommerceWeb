@@ -356,8 +356,11 @@
                             <input name="counttry" placeholder="输入你的密码" type="password">
                         </div>
                     </div>
-                    <a href="#" class="button2">登陆</a>
-                    <a href="registe.jsp" >注册</a>
+                    <div class="shopping-cart">
+                        <a href="#" class="button">登陆</a>
+                        <a href="registe.jsp" class="button">注册</a>
+                    </div>
+
                 </div>
             </div>
     </div>
