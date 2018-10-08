@@ -9,29 +9,29 @@
     <title>瞎买瞎卖</title>
     <%-- Latest Bootstrap min CSS --%>
     <%--引导程序.小.CSS--%>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css" type="text/css">
     <%-- Dropdownhover CSS --%>
     <%--下拉悬停CSS--%>
-    <link rel="stylesheet" href="assets/css/bootstrap-dropdownhover.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap-dropdownhover.min.css" type="text/css">
     <%-- latest fonts awesome --%>
     <%--最新的字体--%>
-    <link rel="stylesheet" href="assets/font/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/css/font-awesome.min.css" type="text/css">
     <%-- simple line fonts awesome --%>
     <%--简单的线条字体--%>
-    <link rel="stylesheet" href="assets/simple-line-icon/css/simple-line-icons.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/simple-line-icon/css/simple-line-icons.css" type="text/css">
     <%-- stroke-gap-icons --%>
     <%--敲击图标--%>
-    <link rel="stylesheet" href="assets/stroke-gap-icons/stroke-gap-icons.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/stroke-gap-icons/stroke-gap-icons.css" type="text/css">
     <%-- Animate CSS --%>
     <%--动画CSS--%>
-    <link rel="stylesheet" href="assets/css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/animate.min.css" type="text/css">
     <%-- Style CSS --%>
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css" type="text/css">
     <%--  baguetteBox --%>
-    <link rel="stylesheet" href="assets/css/baguetteBox.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/baguetteBox.css">
     <%-- Owl Carousel Assets --%>
-    <link href="assets/owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="assets/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/assets/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/assets/owl-carousel/owl.theme.css" rel="stylesheet">
     <%-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --%>
     <%-- WARNING: Respond.js doesn't work if you view the page via file:// --%>
     <%--[if lt IE 9]>
@@ -90,7 +90,7 @@
             <%--商标、搜索栏、购物车--%>
             <div class="col-sm-3">
                 <div class="logo">
-                    <h6><img src="assets/images/logo.png" alt="logo"/></h6>
+                    <h6><img src="${pageContext.request.contextPath}/assets/images/logo.png" alt="logo"/></h6>
                 </div>
             </div>
             <div class="col-sm-6">
@@ -135,7 +135,7 @@
                             <div class="dropdown-menu  cart-outer">
                                 <%--todo：jsp自适应显示购物车--%>
                                 <div class="cart-content">
-                                    <div class="col-sm-4 col-md-4"><img src="assets/images/elec-img4.jpg" alt="13">
+                                    <div class="col-sm-4 col-md-4"><img src="${pageContext.request.contextPath}/assets/images/elec-img4.jpg" alt="13">
                                     </div>
                                     <div class="col-sm-8 col-md-8">
                                         <div class="pro-text">
@@ -146,7 +146,7 @@
                                     </div>
                                 </div>
                                 <div class="cart-content">
-                                    <div class="col-sm-4 col-md-4"><img src="assets/images/elec-img3.jpg" alt="13">
+                                    <div class="col-sm-4 col-md-4"><img src="${pageContext.request.contextPath}/assets/images/elec-img3.jpg" alt="13">
                                     </div>
                                     <div class="col-sm-8 col-md-8">
                                         <div class="pro-text">
@@ -200,7 +200,7 @@
                                 <ul class="dropdown-menu dropdownhover-bottom all-open" role="menu">
                                     <%--todo：通过数据库查询有哪些类别显示--%>
                                     <li class="dropdown">
-                                        <a href="index.jsp"><img src="assets/images/menu-icon1.png" alt="menu-icon1"/>
+                                        <a href="index.jsp"><img src="${pageContext.request.contextPath}/assets/images/menu-icon1.png" alt="menu-icon1"/>
                                             电子数码产品<i class="fa fa-angle-right" aria-hidden="true"></i>
                                         </a>
                                         <ul class="dropdown-menu right">
@@ -209,7 +209,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon2.png" alt="menu-icon2"/> Phones &
+                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon2.png" alt="menu-icon2"/> Phones &
                                             Accessories <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Iphone 05</a></li>
@@ -220,11 +220,11 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="assets/images/menu-icon3.png" alt="menu-icon3"/> PHome &
+                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon3.png" alt="menu-icon3"/> PHome &
                                             Kitchen <sup class="bg-red">hot!</sup></a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon4.png" alt="menu-icon4"/> Fashion &
+                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon4.png" alt="menu-icon4"/> Fashion &
                                             Clothing <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <div class="dropdown-menu dropdownhover-bottom mega-menu" role="menu">
 
@@ -266,7 +266,7 @@
                                         </div>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon5.png" alt="menu-icon2"/> Sport &
+                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon5.png" alt="menu-icon2"/> Sport &
                                             Outdoors <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Sport 05</a></li>
@@ -276,7 +276,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon6.png" alt="menu-icon2"/> Jewelry &
+                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon6.png" alt="menu-icon2"/> Jewelry &
                                             Watches <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Jewelry 05</a></li>
@@ -285,11 +285,11 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="assets/images/menu-icon7.png" alt="menu-icon2"/> Health &
+                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon7.png" alt="menu-icon2"/> Health &
                                             Beauty <sup class="bg-blue">NEW</sup></a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon8.png" alt="menu-icon2"/> Toys &
+                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon8.png" alt="menu-icon2"/> Toys &
                                             Hobbies <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Toys 05</a></li>
@@ -298,7 +298,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon9.png" alt="menu-icon2"/> Book &
+                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon9.png" alt="menu-icon2"/> Book &
                                             Office <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Book 05</a></li>
@@ -308,11 +308,11 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="assets/images/menu-icon10.png" alt="menu-icon2"/> Cameras
+                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon10.png" alt="menu-icon2"/> Cameras
                                             & Camcorders</a>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="assets/images/menu-icon11.png" alt="menu-icon2"/>All
+                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon11.png" alt="menu-icon2"/>All
                                             Categories</a>
                                     </li>
                                 </ul>
@@ -340,7 +340,7 @@
                 <%-- .home-slider --%>
                 <div class="carousel-inner">
                     <div class="item active"
-                         style="background-image: url(assets/images/home-header1.jpg);
+                         style="background-image: url(${pageContext.request.contextPath}/assets/images/home-header1.jpg);
                          background-repeat: no-repeat;
                          background-position: top;">
                         <div class="container">
@@ -371,7 +371,7 @@
 
                     </div>
                     <div class="item"
-                         style="background-image: url(assets/images/home-header2.jpg);  background-repeat: no-repeat; background-position: top;">
+                         style="background-image: url(${pageContext.request.contextPath}/assets/images/home-header2.jpg);  background-repeat: no-repeat; background-position: top;">
                         <div class="container">
                             <div class="caption">
                                 <div class="caption-outer">
@@ -399,7 +399,7 @@
                         </div>
                     </div>
                     <div class="item"
-                         style="background-image: url(assets/images/home-header3.jpg);  background-repeat: no-repeat; background-position: top;">
+                         style="background-image: url(${pageContext.request.contextPath}/assets/images/home-header3.jpg);  background-repeat: no-repeat; background-position: top;">
                         <div class="container">
                             <div class="caption">
                                 <div class="caption-outer">
@@ -506,7 +506,7 @@
                                     <div class="pro-text text-center">
                                         <%-- .pro-img --%>
                                         <div class="pro-img">
-                                            <img src="assets/images/wk-deal-img.jpg" alt="2"/>
+                                            <img src="${pageContext.request.contextPath}/assets/images/wk-deal-img.jpg" alt="2"/>
                                         </div>
                                         <%-- /.pro-img --%>
                                         <div class="text-text">
@@ -549,7 +549,7 @@
                                     <div class="pro-text text-center">
                                         <%-- .pro-img --%>
                                         <div class="pro-img">
-                                            <img src="assets/images/wk-deal-img.jpg" alt="2"/>
+                                            <img src="${pageContext.request.contextPath}/assets/images/wk-deal-img.jpg" alt="2"/>
                                         </div>
                                         <%-- /.pro-img --%>
                                         <div class="text-text">
@@ -571,7 +571,7 @@
                                     <div class="pro-text text-center">
                                         <%-- .pro-img --%>
                                         <div class="pro-img">
-                                            <img src="assets/images/wk-deal-img.jpg" alt="2"/>
+                                            <img src="${pageContext.request.contextPath}/assets/images/wk-deal-img.jpg" alt="2"/>
                                         </div>
                                         <%-- /.pro-img --%>
                                         <div class="text-text">
@@ -593,7 +593,7 @@
                                     <div class="pro-text text-center">
                                         <%-- .pro-img --%>
                                         <div class="pro-img">
-                                            <img src="assets/images/wk-deal-img.jpg" alt="2"/>
+                                            <img src="${pageContext.request.contextPath}/assets/images/wk-deal-img.jpg" alt="2"/>
                                         </div>
                                         <%-- /.pro-img --%>
                                         <div class="text-text">
@@ -637,7 +637,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -656,7 +656,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img2.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img2.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -675,7 +675,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img3.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img3.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -694,7 +694,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img4.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img4.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -713,7 +713,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img5.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img5.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -732,7 +732,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img6.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img6.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -754,7 +754,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -773,7 +773,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img2.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img2.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -792,7 +792,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img3.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img3.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -811,7 +811,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img4.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img4.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -830,7 +830,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img5.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img5.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -849,7 +849,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img6.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img6.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -881,7 +881,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -900,7 +900,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img2.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img2.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -919,7 +919,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img3.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img3.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -938,7 +938,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img4.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img4.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -957,7 +957,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img5.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img5.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -976,7 +976,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img6.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img6.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -998,7 +998,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1017,7 +1017,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img2.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img2.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1036,7 +1036,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img3.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img3.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1055,7 +1055,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img4.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img4.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1074,7 +1074,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img5.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img5.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1093,7 +1093,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img6.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img6.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1125,7 +1125,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1144,7 +1144,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img2.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img2.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1163,7 +1163,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img3.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img3.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1182,7 +1182,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img4.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img4.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1201,7 +1201,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img5.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img5.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1220,7 +1220,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img6.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img6.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1242,7 +1242,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1261,7 +1261,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img2.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img2.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1280,7 +1280,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img3.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img3.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1299,7 +1299,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img4.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img4.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1318,7 +1318,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img5.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img5.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1337,7 +1337,7 @@
                                             <div class="pro-text text-center">
                                                 <%-- .pro-img --%>
                                                 <div class="pro-img">
-                                                    <img src="assets/images/new-arrivals-img6.jpg" alt="2"/>
+                                                    <img src="${pageContext.request.contextPath}/assets/images/new-arrivals-img6.jpg" alt="2"/>
                                                 </div>
                                                 <%-- /.pro-img --%>
                                                 <div class="pro-text-outer">
@@ -1395,12 +1395,12 @@
                         <div class="carousel-inner">
                             <div class="item active">
                                 <a class="ads" href="#">
-                                    <img src="assets/images/add-banner.jpg" alt="add-banner"/>
+                                    <img src="${pageContext.request.contextPath}/assets/images/add-banner.jpg" alt="add-banner"/>
                                 </a>
                             </div>
                             <div class="item">
                                 <a class="ads" href="#">
-                                    <img src="assets/images/add-banner.jpg" alt="add-banner"/>
+                                    <img src="${pageContext.request.contextPath}/assets/images/add-banner.jpg" alt="add-banner"/>
                                 </a>
                             </div>
                         </div>
@@ -1427,7 +1427,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/elec-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/elec-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -1451,7 +1451,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/elec-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/elec-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -1472,7 +1472,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/elec-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/elec-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -1493,7 +1493,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/elec-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/elec-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -1516,7 +1516,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/elec-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/elec-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -1539,7 +1539,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/elec-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/elec-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -1559,7 +1559,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/elec-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/elec-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -1579,7 +1579,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/elec-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/elec-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -1610,7 +1610,7 @@
                                             <%-- e-product --%>
                                             <div class="e-product">
                                                 <div class="pro-img">
-                                                    <img src="assets/images/elec-img1.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img1.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -1634,7 +1634,7 @@
                                             <div class="e-product">
                                                 <div class="pro-img">
                                                     <sup class="sale-tag">sale!</sup>
-                                                    <img src="assets/images/elec-img2.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img2.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -1655,7 +1655,7 @@
                                             <div class="e-product">
                                                 <div class="pro-img">
                                                     <sup class="sale-tag">sale!</sup>
-                                                    <img src="assets/images/elec-img3.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img3.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -1676,7 +1676,7 @@
                                             <div class="e-product">
                                                 <div class="pro-img">
                                                     <sup class="new-tag">NEW</sup>
-                                                    <img src="assets/images/elec-img4.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img4.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -1699,7 +1699,7 @@
                                             <div class="e-product">
                                                 <div class="pro-img">
                                                     <sup class="sale-tag">sale!</sup>
-                                                    <img src="assets/images/elec-img1.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img1.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -1722,7 +1722,7 @@
                                             <%-- e-product --%>
                                             <div class="e-product">
                                                 <div class="pro-img">
-                                                    <img src="assets/images/elec-img2.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img2.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -1742,7 +1742,7 @@
                                             <%-- e-product --%>
                                             <div class="e-product">
                                                 <div class="pro-img">
-                                                    <img src="assets/images/elec-img3.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img3.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -1762,7 +1762,7 @@
                                             <%-- e-product --%>
                                             <div class="e-product">
                                                 <div class="pro-img">
-                                                    <img src="assets/images/elec-img4.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img4.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -1790,7 +1790,7 @@
                                             <%-- e-product --%>
                                             <div class="e-product">
                                                 <div class="pro-img">
-                                                    <img src="assets/images/elec-img1.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img1.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -1814,7 +1814,7 @@
                                             <div class="e-product">
                                                 <div class="pro-img">
                                                     <sup class="sale-tag">sale!</sup>
-                                                    <img src="assets/images/elec-img2.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img2.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -1835,7 +1835,7 @@
                                             <div class="e-product">
                                                 <div class="pro-img">
                                                     <sup class="sale-tag">sale!</sup>
-                                                    <img src="assets/images/elec-img3.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img3.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -1856,7 +1856,7 @@
                                             <div class="e-product">
                                                 <div class="pro-img">
                                                     <sup class="new-tag">NEW</sup>
-                                                    <img src="assets/images/elec-img4.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img4.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -1879,7 +1879,7 @@
                                             <div class="e-product">
                                                 <div class="pro-img">
                                                     <sup class="sale-tag">sale!</sup>
-                                                    <img src="assets/images/elec-img1.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img1.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -1902,7 +1902,7 @@
                                             <%-- e-product --%>
                                             <div class="e-product">
                                                 <div class="pro-img">
-                                                    <img src="assets/images/elec-img2.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img2.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -1922,7 +1922,7 @@
                                             <%-- e-product --%>
                                             <div class="e-product">
                                                 <div class="pro-img">
-                                                    <img src="assets/images/elec-img3.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img3.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -1942,7 +1942,7 @@
                                             <%-- e-product --%>
                                             <div class="e-product">
                                                 <div class="pro-img">
-                                                    <img src="assets/images/elec-img4.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img4.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -1970,7 +1970,7 @@
                                             <%-- e-product --%>
                                             <div class="e-product">
                                                 <div class="pro-img">
-                                                    <img src="assets/images/elec-img1.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img1.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -1994,7 +1994,7 @@
                                             <div class="e-product">
                                                 <div class="pro-img">
                                                     <sup class="sale-tag">sale!</sup>
-                                                    <img src="assets/images/elec-img2.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img2.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -2015,7 +2015,7 @@
                                             <div class="e-product">
                                                 <div class="pro-img">
                                                     <sup class="sale-tag">sale!</sup>
-                                                    <img src="assets/images/elec-img3.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img3.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -2036,7 +2036,7 @@
                                             <div class="e-product">
                                                 <div class="pro-img">
                                                     <sup class="new-tag">NEW</sup>
-                                                    <img src="assets/images/elec-img4.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img4.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -2059,7 +2059,7 @@
                                             <div class="e-product">
                                                 <div class="pro-img">
                                                     <sup class="sale-tag">sale!</sup>
-                                                    <img src="assets/images/elec-img1.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img1.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -2082,7 +2082,7 @@
                                             <%-- e-product --%>
                                             <div class="e-product">
                                                 <div class="pro-img">
-                                                    <img src="assets/images/elec-img2.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img2.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -2102,7 +2102,7 @@
                                             <%-- e-product --%>
                                             <div class="e-product">
                                                 <div class="pro-img">
-                                                    <img src="assets/images/elec-img3.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img3.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -2122,7 +2122,7 @@
                                             <%-- e-product --%>
                                             <div class="e-product">
                                                 <div class="pro-img">
-                                                    <img src="assets/images/elec-img4.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img4.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -2150,7 +2150,7 @@
                                             <%-- e-product --%>
                                             <div class="e-product">
                                                 <div class="pro-img">
-                                                    <img src="assets/images/elec-img1.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img1.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -2174,7 +2174,7 @@
                                             <div class="e-product">
                                                 <div class="pro-img">
                                                     <sup class="sale-tag">sale!</sup>
-                                                    <img src="assets/images/elec-img2.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img2.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -2195,7 +2195,7 @@
                                             <div class="e-product">
                                                 <div class="pro-img">
                                                     <sup class="sale-tag">sale!</sup>
-                                                    <img src="assets/images/elec-img3.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img3.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -2216,7 +2216,7 @@
                                             <div class="e-product">
                                                 <div class="pro-img">
                                                     <sup class="new-tag">NEW</sup>
-                                                    <img src="assets/images/elec-img4.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img4.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -2239,7 +2239,7 @@
                                             <div class="e-product">
                                                 <div class="pro-img">
                                                     <sup class="sale-tag">sale!</sup>
-                                                    <img src="assets/images/elec-img1.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img1.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -2262,7 +2262,7 @@
                                             <%-- e-product --%>
                                             <div class="e-product">
                                                 <div class="pro-img">
-                                                    <img src="assets/images/elec-img2.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img2.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -2282,7 +2282,7 @@
                                             <%-- e-product --%>
                                             <div class="e-product">
                                                 <div class="pro-img">
-                                                    <img src="assets/images/elec-img3.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img3.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -2302,7 +2302,7 @@
                                             <%-- e-product --%>
                                             <div class="e-product">
                                                 <div class="pro-img">
-                                                    <img src="assets/images/elec-img4.jpg" alt="2">
+                                                    <img src="${pageContext.request.contextPath}/assets/images/elec-img4.jpg" alt="2">
                                                     <div class="hover-icon">
                                                         <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                     </div>
@@ -2381,12 +2381,12 @@
                         <div class="carousel-inner">
                             <div class="item active">
                                 <a class="ads" href="#">
-                                    <img src="assets/images/fs-add-banner.jpg" alt="add-banner"/>
+                                    <img src="${pageContext.request.contextPath}/assets/images/fs-add-banner.jpg" alt="add-banner"/>
                                 </a>
                             </div>
                             <div class="item">
                                 <a class="ads" href="#">
-                                    <img src="assets/images/fs-add-banner.jpg" alt="add-banner"/>
+                                    <img src="${pageContext.request.contextPath}/assets/images/fs-add-banner.jpg" alt="add-banner"/>
                                 </a>
                             </div>
                         </div>
@@ -2413,7 +2413,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2437,7 +2437,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2458,7 +2458,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2479,7 +2479,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/fc-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2502,7 +2502,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2525,7 +2525,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2545,7 +2545,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2565,7 +2565,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2598,7 +2598,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2622,7 +2622,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2643,7 +2643,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2664,7 +2664,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/fc-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2687,7 +2687,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2710,7 +2710,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2730,7 +2730,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2750,7 +2750,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2781,7 +2781,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2805,7 +2805,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2826,7 +2826,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2847,7 +2847,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/fc-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2870,7 +2870,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2893,7 +2893,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2913,7 +2913,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2933,7 +2933,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2964,7 +2964,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -2988,7 +2988,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3009,7 +3009,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3030,7 +3030,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/fc-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3053,7 +3053,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3076,7 +3076,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3096,7 +3096,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3116,7 +3116,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3147,7 +3147,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3171,7 +3171,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3192,7 +3192,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3213,7 +3213,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/fc-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3236,7 +3236,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3259,7 +3259,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3279,7 +3279,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3299,7 +3299,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3330,7 +3330,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3354,7 +3354,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3375,7 +3375,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3396,7 +3396,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/fc-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3419,7 +3419,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/fc-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3442,7 +3442,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3462,7 +3462,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3482,7 +3482,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/fc-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/fc-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3516,7 +3516,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <a href="#" class="banner animated wow slideInUp" data-wow-delay="0ms"
                            data-wow-duration="1500ms">
-                            <img src="assets/images/add-banner-large.jpg" alt="add banner large">
+                            <img src="${pageContext.request.contextPath}/assets/images/add-banner-large.jpg" alt="add banner large">
                         </a>
                     </div>
                 </div>
@@ -3546,12 +3546,12 @@
                         <div class="carousel-inner">
                             <div class="item active">
                                 <a class="ads" href="#">
-                                    <img src="assets/images/hgk-add-banner.jpg" alt="add-banner"/>
+                                    <img src="${pageContext.request.contextPath}/assets/images/hgk-add-banner.jpg" alt="add-banner"/>
                                 </a>
                             </div>
                             <div class="item">
                                 <a class="ads" href="#">
-                                    <img src="assets/images/hgk-add-banner.jpg" alt="add-banner"/>
+                                    <img src="${pageContext.request.contextPath}/assets/images/hgk-add-banner.jpg" alt="add-banner"/>
                                 </a>
                             </div>
                         </div>
@@ -3578,7 +3578,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3602,7 +3602,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3623,7 +3623,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3644,7 +3644,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/hgk-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3667,7 +3667,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3690,7 +3690,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3710,7 +3710,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3730,7 +3730,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3763,7 +3763,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3787,7 +3787,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3808,7 +3808,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3829,7 +3829,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/hgk-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3852,7 +3852,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3875,7 +3875,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3895,7 +3895,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3915,7 +3915,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3946,7 +3946,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3970,7 +3970,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -3991,7 +3991,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4012,7 +4012,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/hgk-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4035,7 +4035,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4058,7 +4058,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4078,7 +4078,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4098,7 +4098,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4129,7 +4129,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4153,7 +4153,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4174,7 +4174,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4195,7 +4195,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/hgk-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4218,7 +4218,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4241,7 +4241,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4261,7 +4261,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4281,7 +4281,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4312,7 +4312,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4336,7 +4336,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4357,7 +4357,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4378,7 +4378,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/hgk-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4401,7 +4401,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4424,7 +4424,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4444,7 +4444,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4464,7 +4464,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4495,7 +4495,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4519,7 +4519,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4540,7 +4540,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4561,7 +4561,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/hgk-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4584,7 +4584,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/hgk-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4607,7 +4607,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4627,7 +4627,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4647,7 +4647,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/hgk-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/hgk-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4679,10 +4679,10 @@
             <div class="half-banner">
                 <div class="row">
                     <a href="#" class="col-xs-12 col-sm-6 col-md-6">
-                        <img src="assets/images/half-banner3.jpg" alt="half-banner3"/>
+                        <img src="${pageContext.request.contextPath}/assets/images/half-banner3.jpg" alt="half-banner3"/>
                     </a>
                     <a href="#" class="col-xs-12 col-sm-6 col-md-6">
-                        <img src="assets/images/half-banner4.jpg" alt="half-banner3"/>
+                        <img src="${pageContext.request.contextPath}/assets/images/half-banner4.jpg" alt="half-banner3"/>
                     </a>
                 </div>
             </div>
@@ -4711,12 +4711,12 @@
                         <div class="carousel-inner">
                             <div class="item active">
                                 <a class="ads" href="#">
-                                    <img src="assets/images/home-design-add-banner.jpg" alt="add-banner"/>
+                                    <img src="${pageContext.request.contextPath}/assets/images/home-design-add-banner.jpg" alt="add-banner"/>
                                 </a>
                             </div>
                             <div class="item">
                                 <a class="ads" href="#">
-                                    <img src="assets/images/home-design-add-banner.jpg" alt="add-banner"/>
+                                    <img src="${pageContext.request.contextPath}/assets/images/home-design-add-banner.jpg" alt="add-banner"/>
                                 </a>
                             </div>
                         </div>
@@ -4743,7 +4743,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4767,7 +4767,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4788,7 +4788,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4809,7 +4809,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/ghm-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4832,7 +4832,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4855,7 +4855,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4875,7 +4875,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4895,7 +4895,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4928,7 +4928,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4952,7 +4952,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4973,7 +4973,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -4994,7 +4994,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/ghm-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5017,7 +5017,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5040,7 +5040,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5060,7 +5060,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5080,7 +5080,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5111,7 +5111,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5135,7 +5135,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5156,7 +5156,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5177,7 +5177,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/ghm-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5200,7 +5200,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5223,7 +5223,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5243,7 +5243,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5263,7 +5263,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5294,7 +5294,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5318,7 +5318,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5339,7 +5339,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5360,7 +5360,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/ghm-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5383,7 +5383,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5406,7 +5406,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5426,7 +5426,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5446,7 +5446,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5477,7 +5477,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5501,7 +5501,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5522,7 +5522,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5543,7 +5543,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/ghm-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5566,7 +5566,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5589,7 +5589,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5609,7 +5609,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5629,7 +5629,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5660,7 +5660,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5684,7 +5684,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5705,7 +5705,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5726,7 +5726,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="new-tag">NEW</sup>
-                                                        <img src="assets/images/ghm-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5749,7 +5749,7 @@
                                                 <div class="e-product">
                                                     <div class="pro-img">
                                                         <sup class="sale-tag">sale!</sup>
-                                                        <img src="assets/images/ghm-img1.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img1.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5772,7 +5772,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img2.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img2.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5792,7 +5792,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img3.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img3.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5812,7 +5812,7 @@
                                                 <%-- e-product --%>
                                                 <div class="e-product">
                                                     <div class="pro-img">
-                                                        <img src="assets/images/ghm-img4.jpg" alt="2">
+                                                        <img src="${pageContext.request.contextPath}/assets/images/ghm-img4.jpg" alt="2">
                                                         <div class="hover-icon">
                                                             <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                                                         </div>
@@ -5844,7 +5844,7 @@
             <div class="half-banner">
                 <div class="row">
                     <a href="#" class="col-xs-12 col-sm-12 col-md-12">
-                        <img src="assets/images/add-banner-large2.jpg" alt="add-banner-large2"/>
+                        <img src="${pageContext.request.contextPath}/assets/images/add-banner-large2.jpg" alt="add-banner-large2"/>
                     </a>
                 </div>
             </div>
@@ -5869,7 +5869,7 @@
                                         <%-- blog-outer --%>
                                         <div class="blog-outer">
                                             <div class="blog-img">
-                                                <img src="assets/images/lt-blog-img1.jpg" alt="lt-blog-img1">
+                                                <img src="${pageContext.request.contextPath}/assets/images/lt-blog-img1.jpg" alt="lt-blog-img1">
                                             </div>
                                             <div class="blog-text-outer">
                                                 <a href="#">
@@ -5888,7 +5888,7 @@
                                         <%-- blog-outer --%>
                                         <div class="blog-outer">
                                             <div class="blog-img">
-                                                <img src="assets/images/lt-blog-img2.jpg" alt="lt-blog-img1">
+                                                <img src="${pageContext.request.contextPath}/assets/images/lt-blog-img2.jpg" alt="lt-blog-img1">
                                             </div>
                                             <div class="blog-text-outer">
                                                 <a href="#">
@@ -5907,7 +5907,7 @@
                                         <%-- blog-outer --%>
                                         <div class="blog-outer">
                                             <div class="blog-img">
-                                                <img src="assets/images/lt-blog-img3.jpg" alt="lt-blog-img1">
+                                                <img src="${pageContext.request.contextPath}/assets/images/lt-blog-img3.jpg" alt="lt-blog-img1">
                                             </div>
                                             <div class="blog-text-outer">
                                                 <a href="#">
@@ -5930,7 +5930,7 @@
                                         <%-- blog-outer --%>
                                         <div class="blog-outer">
                                             <div class="blog-img">
-                                                <img src="assets/images/lt-blog-img1.jpg" alt="lt-blog-img1">
+                                                <img src="${pageContext.request.contextPath}/assets/images/lt-blog-img1.jpg" alt="lt-blog-img1">
                                             </div>
                                             <div class="blog-text-outer">
                                                 <a href="#">
@@ -5949,7 +5949,7 @@
                                         <%-- blog-outer --%>
                                         <div class="blog-outer">
                                             <div class="blog-img">
-                                                <img src="assets/images/lt-blog-img2.jpg" alt="lt-blog-img1">
+                                                <img src="${pageContext.request.contextPath}/assets/images/lt-blog-img2.jpg" alt="lt-blog-img1">
                                             </div>
                                             <div class="blog-text-outer">
                                                 <a href="#">
@@ -5968,7 +5968,7 @@
                                         <%-- blog-outer --%>
                                         <div class="blog-outer">
                                             <div class="blog-img">
-                                                <img src="assets/images/lt-blog-img3.jpg" alt="lt-blog-img1">
+                                                <img src="${pageContext.request.contextPath}/assets/images/lt-blog-img3.jpg" alt="lt-blog-img1">
                                             </div>
                                             <div class="blog-text-outer">
                                                 <a href="#">
@@ -6055,15 +6055,15 @@
 
                             <ol class="carousel-indicators">
                                 <li data-target="#home-slider11" data-slide-to="0" class=""><img
-                                        src="assets/images/test-img1.jpg" alt="11"></li>
+                                        src="${pageContext.request.contextPath}/assets/images/test-img1.jpg" alt="11"></li>
                                 <li data-target="#home-slider11" data-slide-to="1" class=""><img
-                                        src="assets/images/test-img1.jpg" alt="11"></li>
+                                        src="${pageContext.request.contextPath}/assets/images/test-img1.jpg" alt="11"></li>
                                 <li data-target="#home-slider11" data-slide-to="2" class="active"><img
-                                        src="assets/images/test-img1.jpg" alt="11"></li>
+                                        src="${pageContext.request.contextPath}/assets/images/test-img1.jpg" alt="11"></li>
                                 <li data-target="#home-slider11" data-slide-to="3" class=""><img
-                                        src="assets/images/test-img1.jpg" alt="11"></li>
+                                        src="${pageContext.request.contextPath}/assets/images/test-img1.jpg" alt="11"></li>
                                 <li data-target="#home-slider11" data-slide-to="4" class=""><img
-                                        src="assets/images/test-img1.jpg" alt="11"></li>
+                                        src="${pageContext.request.contextPath}/assets/images/test-img1.jpg" alt="11"></li>
                             </ol>
                         </div>
                         <%-- /.testimonal-slider --%>
@@ -6143,7 +6143,7 @@
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <%-- f-weghit --%>
                 <div class="f-weghit">
-                    <img src="assets/images/logo.png" alt="logo"/>
+                    <img src="${pageContext.request.contextPath}/assets/images/logo.png" alt="logo"/>
                     <p><strong>Complex</strong> is a premium Templates theme with advanced admin module. It’s extremely
                         customizable, easy to use and fully responsive and retina ready.</p>
                     <ul>
@@ -6190,7 +6190,7 @@
                     <%-- e-product --%>
                     <div class="e-product">
                         <div class="pro-img">
-                            <img src="assets/images/on-seal-img1.jpg" alt="2">
+                            <img src="${pageContext.request.contextPath}/assets/images/on-seal-img1.jpg" alt="2">
                         </div>
                         <div class="pro-text-outer">
                             <span>Macbook, Laptop</span>
@@ -6204,7 +6204,7 @@
                     <%-- e-product --%>
                     <div class="e-product">
                         <div class="pro-img">
-                            <img src="assets/images/on-seal-img2.jpg" alt="2">
+                            <img src="${pageContext.request.contextPath}/assets/images/on-seal-img2.jpg" alt="2">
                         </div>
                         <div class="pro-text-outer">
                             <span>Macbook, Laptop</span>
@@ -6225,7 +6225,7 @@
                         Copyright &copy; 2017.Company name All rights reserved.
                     </div>
                     <div class="text-right col-xs-12 col-sm-6 col-md-6">
-                        <img src="assets/images/payment-img.jpg" alt="payment-img"/>
+                        <img src="${pageContext.request.contextPath}/assets/images/payment-img.jpg" alt="payment-img"/>
                     </div>
                 </div>
             </div>
@@ -6291,17 +6291,17 @@
 <p id="back-top">
     <a href="#top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 </p>
-<script src="assets/js/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/jquery.js"></script>
 <%-- Bootstrap Core JavaScript --%>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/bootstrap-dropdownhover.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/bootstrap-dropdownhover.min.js"></script>
 <%-- Plugin JavaScript --%>
-<script src="assets/js/jquery.easing.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/jquery.easing.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/wow.min.js"></script>
 <%-- owl carousel --%>
-<script src="assets/owl-carousel/owl.carousel.js"></script>
+<script src="${pageContext.request.contextPath}/assets/owl-carousel/owl.carousel.js"></script>
 <%--  Custom Theme JavaScript  --%>
-<script src="assets/js/custom.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/custom.js"></script>
 </body>
 
 </html>

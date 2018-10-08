@@ -15,26 +15,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <%-- Latest Bootstrap min CSS --%>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css">
     <%-- Dropdownhover CSS --%>
-    <link rel="stylesheet" href="assets/css/bootstrap-dropdownhover.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-dropdownhover.min.css" type="text/css">
     <%-- latest fonts awesome --%>
-    <link rel="stylesheet" href="assets/font/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/font/css/font-awesome.min.css" type="text/css">
     <%-- simple line fonts awesome --%>
-    <link rel="stylesheet" href="assets/simple-line-icon/css/simple-line-icons.css" type="text/css">
+    <link rel="stylesheet" href="../assets/simple-line-icon/css/simple-line-icons.css" type="text/css">
     <%-- stroke-gap-icons --%>
-    <link rel="stylesheet" href="assets/stroke-gap-icons/stroke-gap-icons.css" type="text/css">
+    <link rel="stylesheet" href="../assets/stroke-gap-icons/stroke-gap-icons.css" type="text/css">
     <%-- Animate CSS --%>
-    <link rel="stylesheet" href="assets/css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css" type="text/css">
     <%-- Style CSS --%>
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
     <%-- Style CSS --%>
-    <link rel="stylesheet" href="assets/css/jcarousel.connected-carousels.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/jcarousel.connected-carousels.css" type="text/css">
     <%--  baguetteBox --%>
-    <link rel="stylesheet" href="assets/css/baguetteBox.css">
+    <link rel="stylesheet" href="../assets/css/baguetteBox.css">
     <%-- Owl Carousel Assets --%>
-    <link href="assets/owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="assets/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="../assets/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="../assets/owl-carousel/owl.theme.css" rel="stylesheet">
     <%-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --%>
     <%-- WARNING: Respond.js doesn't work if you view the page via file:// --%>
     <%--[if lt IE 9]>
@@ -57,9 +57,9 @@
                     <ul>
                         <li>
                             <div class="dropdown">
-                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"> <img src="assets/images/eng-flg.jpg" alt="eng-flg" /> English <i class="fa fa-angle-down" aria-hidden="true"></i> </a>
+                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"> <img src="../assets/images/eng-flg.jpg" alt="eng-flg" /> English <i class="fa fa-angle-down" aria-hidden="true"></i> </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li> <a href="#">One more dropdown</a> </li>
                                     <li><a href="#">Something else here</a></li>
@@ -72,7 +72,7 @@
                                 USD <i class="fa fa-angle-down" aria-hidden="true"></i>
                             </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li> <a href="#">One more dropdown</a> </li>
                                 </ul>
@@ -91,7 +91,7 @@
                             <div class="dropdown">
                                 <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"> <i class="icon-settings icons" aria-hidden="true"></i> Setting </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li> <a href="#">One more dropdown</a> </li>
                                 </ul>
@@ -107,7 +107,7 @@
         <div class="container">
             <div class="col-sm-3">
                 <div class="logo">
-                    <h6><img src="assets/images/logo.png" alt="logo" /></h6>
+                    <h6><img src="../assets/images/logo.png" alt="logo" /></h6>
                 </div>
             </div>
             <div class="col-sm-6">
@@ -142,14 +142,14 @@
                         <li class="dropdown"> <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons" aria-hidden="true"></i></a><span class="subno">2</span><strong>Your Cart</strong>
                             <div class="dropdown-menu  cart-outer">
                                 <div class="cart-content">
-                                    <div class="col-sm-4 col-md-4"><img src="assets/images/elec-img4.jpg" alt="13"></div>
+                                    <div class="col-sm-4 col-md-4"><img src="../assets/images/elec-img4.jpg" alt="13"></div>
                                     <div class="col-sm-8 col-md-8">
                                         <div class="pro-text"> <a href="#">Apple Macbook Retina 23’’ </a>
                                             <div class="close">x</div> <strong>1 × $290.00</strong> </div>
                                     </div>
                                 </div>
                                 <div class="cart-content">
-                                    <div class="col-sm-4 col-md-4"><img src="assets/images/elec-img3.jpg" alt="13"></div>
+                                    <div class="col-sm-4 col-md-4"><img src="../assets/images/elec-img3.jpg" alt="13"></div>
                                     <div class="col-sm-8 col-md-8">
                                         <div class="pro-text"> <a href="#">Apple Macbook Retina 23’’ </a>
                                             <div class="close">x</div> <strong>1 × $290.00</strong> </div>
@@ -177,14 +177,14 @@
                             <li class="all-departments dropdown"> <a href="index.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span> Shop By Department</span> <i class="fa fa-bars" aria-hidden="true"></i> </a>
                                 <ul class="dropdown-menu dropdownhover-bottom" role="menu">
                                     <li class="dropdown">
-                                        <a href="index.jsp"><img src="assets/images/menu-icon1.png" alt="menu-icon1" /> Electronic & Digital <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="index.jsp"><img src="../assets/images/menu-icon1.png" alt="menu-icon1" /> Electronic & Digital <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Electronic 01</a></li>
                                             <li><a href="list.jsp">Electronic 02</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon2.png" alt="menu-icon2" /> Phones & Accessories <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="#"><img src="../assets/images/menu-icon2.png" alt="menu-icon2" /> Phones & Accessories <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Iphone 05</a></li>
                                             <li><a href="list.jsp">Iphone 06</a></li>
@@ -194,10 +194,10 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="assets/images/menu-icon3.png" alt="menu-icon3" /> PHome & Kitchen <sup class="bg-red">hot!</sup></a>
+                                        <a href="#"><img src="../assets/images/menu-icon3.png" alt="menu-icon3" /> PHome & Kitchen <sup class="bg-red">hot!</sup></a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon4.png" alt="menu-icon4" /> Fashion & Clothing <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="#"><img src="../assets/images/menu-icon4.png" alt="menu-icon4" /> Fashion & Clothing <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <div class="dropdown-menu dropdownhover-bottom mega-menu" role="menu">
 
                                             <div class="col-sm-8 col-md-8">
@@ -238,7 +238,7 @@
                                         </div>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon5.png" alt="menu-icon2" /> Sport & Outdoors <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="#"><img src="../assets/images/menu-icon5.png" alt="menu-icon2" /> Sport & Outdoors <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Sport 05</a></li>
                                             <li><a href="list.jsp">Sport 06</a></li>
@@ -247,7 +247,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon6.png" alt="menu-icon2" /> Jewelry & Watches <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="#"><img src="../assets/images/menu-icon6.png" alt="menu-icon2" /> Jewelry & Watches <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Jewelry 05</a></li>
                                             <li><a href="grid.jsp">Watches 07</a></li>
@@ -255,10 +255,10 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="assets/images/menu-icon7.png" alt="menu-icon2" /> Health & Beauty <sup class="bg-blue">NEW</sup></a>
+                                        <a href="#"><img src="../assets/images/menu-icon7.png" alt="menu-icon2" /> Health & Beauty <sup class="bg-blue">NEW</sup></a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon8.png" alt="menu-icon2" /> Toys & Hobbies <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="#"><img src="../assets/images/menu-icon8.png" alt="menu-icon2" /> Toys & Hobbies <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Toys 05</a></li>
                                             <li><a href="list.jsp">Hobbies 02</a></li>
@@ -266,7 +266,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon9.png" alt="menu-icon2" /> Book & Office <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="#"><img src="../assets/images/menu-icon9.png" alt="menu-icon2" /> Book & Office <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Book 05</a></li>
                                             <li><a href="list.jsp">Book 06</a></li>
@@ -275,10 +275,10 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="assets/images/menu-icon10.png" alt="menu-icon2" /> Cameras & Camcorders</a>
+                                        <a href="#"><img src="../assets/images/menu-icon10.png" alt="menu-icon2" /> Cameras & Camcorders</a>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="assets/images/menu-icon11.png" alt="menu-icon2" />All Categories</a>
+                                        <a href="#"><img src="../assets/images/menu-icon11.png" alt="menu-icon2" />All Categories</a>
                                     </li>
                                 </ul>
                             </li>
@@ -316,12 +316,12 @@
                             <div class="stage">
                                 <div class="carousel carousel-stage">
                                     <ul>
-                                        <li><img class="zoom_01" src="assets/images/products/fashion/1.jpg" data-zoom-image="assets/images/products/fashion/1.jpg" alt="qoute-icon" /> </li>
-                                        <li><img class="zoom_01" src="assets/images/products/fashion/2.jpg" data-zoom-image="assets/images/products/fashion/2.jpg" alt="qoute-icon" /></li>
-                                        <li><img class="zoom_01" src="assets/images/products/fashion/3.jpg" data-zoom-image="assets/images/products/fashion/3.jpg" alt="qoute-icon" /></li>
-                                        <li><img class="zoom_01" src="assets/images/products/fashion/15.jpg" data-zoom-image="assets/images/products/fashion/15.jpg" alt="qoute-icon" /> </li>
-                                        <li><img class="zoom_01" src="assets/images/products/fashion/8.jpg" data-zoom-image="assets/images/products/fashion/8.jpg" alt="qoute-icon" /></li>
-                                        <li><img class="zoom_01" src="assets/images/products/fashion/12.jpg" data-zoom-image="assets/images/products/fashion/12.jpg" alt="qoute-icon" /></li>
+                                        <li><img class="zoom_01" src="../assets/images/products/fashion/1.jpg" data-zoom-image="assets/images/products/fashion/1.jpg" alt="qoute-icon" /> </li>
+                                        <li><img class="zoom_01" src="../assets/images/products/fashion/2.jpg" data-zoom-image="assets/images/products/fashion/2.jpg" alt="qoute-icon" /></li>
+                                        <li><img class="zoom_01" src="../assets/images/products/fashion/3.jpg" data-zoom-image="assets/images/products/fashion/3.jpg" alt="qoute-icon" /></li>
+                                        <li><img class="zoom_01" src="../assets/images/products/fashion/15.jpg" data-zoom-image="assets/images/products/fashion/15.jpg" alt="qoute-icon" /> </li>
+                                        <li><img class="zoom_01" src="../assets/images/products/fashion/8.jpg" data-zoom-image="assets/images/products/fashion/8.jpg" alt="qoute-icon" /></li>
+                                        <li><img class="zoom_01" src="../assets/images/products/fashion/12.jpg" data-zoom-image="assets/images/products/fashion/12.jpg" alt="qoute-icon" /></li>
                                     </ul>
                                 </div>
                                 <p class="photo-credits">
@@ -336,12 +336,12 @@
                                 <a href="#" class="next next-navigation">&rsaquo;</a>
                                 <div class="carousel carousel-navigation">
                                     <ul>
-                                        <li><img src="assets/images/products/fashion/1.jpg" width="110" height="110" alt=""></li>
-                                        <li><img src="assets/images/products/fashion/2.jpg" width="110" height="110" alt=""></li>
-                                        <li><img src="assets/images/products/fashion/3.jpg" width="110" height="110" alt=""></li>
-                                        <li><img src="assets/images/products/fashion/15.jpg" width="110" height="110" alt=""></li>
-                                        <li><img src="assets/images/products/fashion/8.jpg" width="110" height="110" alt=""></li>
-                                        <li><img src="assets/images/products/fashion/12.jpg" width="110" height="110" alt=""></li>
+                                        <li><img src="../assets/images/products/fashion/1.jpg" width="110" height="110" alt=""></li>
+                                        <li><img src="../assets/images/products/fashion/2.jpg" width="110" height="110" alt=""></li>
+                                        <li><img src="../assets/images/products/fashion/3.jpg" width="110" height="110" alt=""></li>
+                                        <li><img src="../assets/images/products/fashion/15.jpg" width="110" height="110" alt=""></li>
+                                        <li><img src="../assets/images/products/fashion/8.jpg" width="110" height="110" alt=""></li>
+                                        <li><img src="../assets/images/products/fashion/12.jpg" width="110" height="110" alt=""></li>
                                     </ul>
                                 </div>
                             </div>
@@ -460,7 +460,7 @@
                                 <%-- .pro-text --%>
                                 <div class="pro-text text-center">
                                     <%-- .pro-img --%>
-                                    <div class="pro-img"> <img src="assets/images/products/digital/2.jpg" alt="2"> <sup class="sale-tag">sale!</sup>
+                                    <div class="pro-img"> <img src="../assets/images/products/digital/2.jpg" alt="2"> <sup class="sale-tag">sale!</sup>
                                         <%-- .hover-icon --%>
                                         <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
                                         <%-- /.hover-icon --%>
@@ -478,7 +478,7 @@
                                 <%-- .pro-text --%>
                                 <div class="pro-text text-center">
                                     <%-- .pro-img --%>
-                                    <div class="pro-img"> <img src="assets/images/products/digital/3.jpg" alt="2">
+                                    <div class="pro-img"> <img src="../assets/images/products/digital/3.jpg" alt="2">
                                         <%-- .hover-icon --%>
                                         <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
                                         <%-- /.hover-icon --%>
@@ -496,7 +496,7 @@
                                 <%-- .pro-text --%>
                                 <div class="pro-text text-center">
                                     <%-- .pro-img --%>
-                                    <div class="pro-img"> <img src="assets/images/products/digital/5.jpg" alt="2">
+                                    <div class="pro-img"> <img src="../assets/images/products/digital/5.jpg" alt="2">
                                         <%-- .hover-icon --%>
                                         <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
                                         <%-- /.hover-icon --%>
@@ -514,7 +514,7 @@
                                 <%-- .pro-text --%>
                                 <div class="pro-text text-center">
                                     <%-- .pro-img --%>
-                                    <div class="pro-img"> <img src="assets/images/products/digital/7.jpg" alt="2">
+                                    <div class="pro-img"> <img src="../assets/images/products/digital/7.jpg" alt="2">
                                         <%-- .hover-icon --%>
                                         <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
                                         <%-- /.hover-icon --%>
@@ -535,7 +535,7 @@
                                 <%-- .pro-text --%>
                                 <div class="pro-text text-center">
                                     <%-- .pro-img --%>
-                                    <div class="pro-img"> <img src="assets/images/products/digital/2.jpg" alt="2"> <sup class="sale-tag">sale!</sup>
+                                    <div class="pro-img"> <img src="../assets/images/products/digital/2.jpg" alt="2"> <sup class="sale-tag">sale!</sup>
                                         <%-- .hover-icon --%>
                                         <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
                                         <%-- /.hover-icon --%>
@@ -553,7 +553,7 @@
                                 <%-- .pro-text --%>
                                 <div class="pro-text text-center">
                                     <%-- .pro-img --%>
-                                    <div class="pro-img"> <img src="assets/images/products/digital/3.jpg" alt="2">
+                                    <div class="pro-img"> <img src="../assets/images/products/digital/3.jpg" alt="2">
                                         <%-- .hover-icon --%>
                                         <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
                                         <%-- /.hover-icon --%>
@@ -571,7 +571,7 @@
                                 <%-- .pro-text --%>
                                 <div class="pro-text text-center">
                                     <%-- .pro-img --%>
-                                    <div class="pro-img"> <img src="assets/images/products/digital/5.jpg" alt="2">
+                                    <div class="pro-img"> <img src="../assets/images/products/digital/5.jpg" alt="2">
                                         <%-- .hover-icon --%>
                                         <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
                                         <%-- /.hover-icon --%>
@@ -589,7 +589,7 @@
                                 <%-- .pro-text --%>
                                 <div class="pro-text text-center">
                                     <%-- .pro-img --%>
-                                    <div class="pro-img"> <img src="assets/images/products/digital/7.jpg" alt="2">
+                                    <div class="pro-img"> <img src="../assets/images/products/digital/7.jpg" alt="2">
                                         <%-- .hover-icon --%>
                                         <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
                                         <%-- /.hover-icon --%>
@@ -637,7 +637,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <%-- f-weghit --%>
-                <div class="f-weghit"> <img src="assets/images/logo.png" alt="logo" />
+                <div class="f-weghit"> <img src="../assets/images/logo.png" alt="logo" />
                     <p><strong>Complex</strong> is a premium Templates theme with advanced admin module. It’s extremely customizable, easy to use and fully responsive and retina ready.</p>
                     <ul>
                         <li><i class="icon-location-pin icons" aria-hidden="true"></i> <strong>Add:</strong> 1234 Heaven Stress, Beverly Hill, Melbourne, USA.</li>
@@ -679,7 +679,7 @@
                     <h4>On-Sale products</h4>
                     <%-- e-product --%>
                     <div class="e-product">
-                        <div class="pro-img"> <img src="assets/images/on-seal-img1.jpg" alt="2"> </div>
+                        <div class="pro-img"> <img src="../assets/images/on-seal-img1.jpg" alt="2"> </div>
                         <div class="pro-text-outer"> <span>Macbook, Laptop</span>
                             <a href="#">
                                 <h4> Apple Macbook Retina 23’ </h4>
@@ -690,7 +690,7 @@
                     <%-- e-product --%>
                     <%-- e-product --%>
                     <div class="e-product">
-                        <div class="pro-img"> <img src="assets/images/on-seal-img2.jpg" alt="2"> </div>
+                        <div class="pro-img"> <img src="../assets/images/on-seal-img2.jpg" alt="2"> </div>
                         <div class="pro-text-outer"> <span>Macbook, Laptop</span>
                             <a href="#">
                                 <h4> Apple Macbook Retina 23’ </h4>
@@ -706,7 +706,7 @@
             <div class="copayright">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">Copyright &copy; 2017.Company name All rights reserved.</div>
-                    <div class="text-right col-xs-12 col-sm-6 col-md-6"> <img src="assets/images/payment-img.jpg" alt="payment-img" /> </div>
+                    <div class="text-right col-xs-12 col-sm-6 col-md-6"> <img src="../assets/images/payment-img.jpg" alt="payment-img" /> </div>
                 </div>
             </div>
             <%-- /copayright --%>
@@ -725,22 +725,22 @@
 </aside>
 <%-- /sticky-socia --%>
 <p id="back-top"> <a href="#top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a> </p>
-<script src="assets/js/jquery.js"></script>
+<script src="../assets/js/jquery.js"></script>
 <%-- Bootstrap Core JavaScript --%>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/bootstrap-dropdownhover.min.js"></script>
-<script src="assets/js/incrementing.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/bootstrap-dropdownhover.min.js"></script>
+<script src="../assets/js/incrementing.js"></script>
 <%-- Plugin JavaScript --%>
-<script src="assets/js/jquery.easing.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
+<script src="../assets/js/jquery.easing.min.js"></script>
+<script src="../assets/js/wow.min.js"></script>
 <%-- owl carousel --%>
-<script src="assets/owl-carousel/owl.carousel.js"></script>
+<script src="../assets/owl-carousel/owl.carousel.js"></script>
 <%--  Custom Theme JavaScript  --%>
-<script src="assets/js/custom.js"></script>
+<script src="../assets/js/custom.js"></script>
 <%--  jcarousel Theme JavaScript  --%>
-<script type="text/javascript" src="assets/js/jquery.jcarousel.min.js"></script>
-<script type="text/javascript" src="assets/js/jcarousel.connected-carousels.js"></script>
-<script type="text/javascript" src="assets/js/jquery.elevatezoom.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="../assets/js/jcarousel.connected-carousels.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.elevatezoom.js"></script>
 <script>
     $('.zoom_01').elevateZoom({
         zoomType: "inner",

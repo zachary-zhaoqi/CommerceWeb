@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: starr
   Date: 2018/9/25
-  Time: 22:24
+  Time: 22:25
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -15,26 +15,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <%-- Latest Bootstrap min CSS --%>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css">
     <%-- Dropdownhover CSS --%>
-    <link rel="stylesheet" href="assets/css/bootstrap-dropdownhover.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-dropdownhover.min.css" type="text/css">
     <%-- latest fonts awesome --%>
-    <link rel="stylesheet" href="assets/font/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/font/css/font-awesome.min.css" type="text/css">
     <%-- simple line fonts awesome --%>
-    <link rel="stylesheet" href="assets/simple-line-icon/css/simple-line-icons.css" type="text/css">
+    <link rel="stylesheet" href="../assets/simple-line-icon/css/simple-line-icons.css" type="text/css">
     <%-- stroke-gap-icons --%>
-    <link rel="stylesheet" href="assets/stroke-gap-icons/stroke-gap-icons.css" type="text/css">
+    <link rel="stylesheet" href="../assets/stroke-gap-icons/stroke-gap-icons.css" type="text/css">
     <%-- Animate CSS --%>
-    <link rel="stylesheet" href="assets/css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css" type="text/css">
     <%-- Style CSS --%>
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
     <%-- Style CSS --%>
-    <link rel="stylesheet" href="assets/css/slider.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/slider.css" type="text/css">
     <%--  baguetteBox --%>
-    <link rel="stylesheet" href="assets/css/baguetteBox.css">
+    <link rel="stylesheet" href="../assets/css/baguetteBox.css">
     <%-- Owl Carousel Assets --%>
-    <link href="assets/owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="assets/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="../assets/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="../assets/owl-carousel/owl.theme.css" rel="stylesheet">
     <%-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --%>
     <%-- WARNING: Respond.js doesn't work if you view the page via file:// --%>
     <%--[if lt IE 9]>
@@ -57,9 +57,9 @@
                     <ul>
                         <li>
                             <div class="dropdown">
-                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"> <img src="assets/images/eng-flg.jpg" alt="eng-flg" /> English <i class="fa fa-angle-down" aria-hidden="true"></i> </a>
+                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"> <img src="../assets/images/eng-flg.jpg" alt="eng-flg" /> English <i class="fa fa-angle-down" aria-hidden="true"></i> </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li> <a href="#">One more dropdown</a> </li>
                                     <li><a href="#">Something else here</a></li>
@@ -72,7 +72,7 @@
                                 USD <i class="fa fa-angle-down" aria-hidden="true"></i>
                             </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li> <a href="#">One more dropdown</a> </li>
                                 </ul>
@@ -91,7 +91,7 @@
                             <div class="dropdown">
                                 <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"> <i class="icon-settings icons" aria-hidden="true"></i> Setting </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li> <a href="#">One more dropdown</a> </li>
                                 </ul>
@@ -107,7 +107,7 @@
         <div class="container">
             <div class="col-sm-3">
                 <div class="logo">
-                    <h6><img src="assets/images/logo.png" alt="logo" /></h6>
+                    <h6><img src="../assets/images/logo.png" alt="logo" /></h6>
                 </div>
             </div>
             <div class="col-sm-6">
@@ -134,7 +134,7 @@
                 </form>
                 <%-- Search box End --%>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-2">
                 <%-- cart-menu --%>
                 <div class="cart-menu">
                     <ul>
@@ -142,14 +142,14 @@
                         <li class="dropdown"> <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons" aria-hidden="true"></i></a><span class="subno">2</span><strong>Your Cart</strong>
                             <div class="dropdown-menu  cart-outer">
                                 <div class="cart-content">
-                                    <div class="col-sm-4 col-md-4"><img src="assets/images/elec-img4.jpg" alt="13"></div>
+                                    <div class="col-sm-4 col-md-4"><img src="../assets/images/elec-img4.jpg" alt="13"></div>
                                     <div class="col-sm-8 col-md-8">
                                         <div class="pro-text"> <a href="#">Apple Macbook Retina 23’’ </a>
                                             <div class="close">x</div> <strong>1 × $290.00</strong> </div>
                                     </div>
                                 </div>
                                 <div class="cart-content">
-                                    <div class="col-sm-4 col-md-4"><img src="assets/images/elec-img3.jpg" alt="13"></div>
+                                    <div class="col-sm-4 col-md-4"><img src="../assets/images/elec-img3.jpg" alt="13"></div>
                                     <div class="col-sm-8 col-md-8">
                                         <div class="pro-text"> <a href="#">Apple Macbook Retina 23’’ </a>
                                             <div class="close">x</div> <strong>1 × $290.00</strong> </div>
@@ -177,14 +177,14 @@
                             <li class="all-departments dropdown"> <a href="index.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span> Shop By Department</span> <i class="fa fa-bars" aria-hidden="true"></i> </a>
                                 <ul class="dropdown-menu dropdownhover-bottom" role="menu">
                                     <li class="dropdown">
-                                        <a href="index.jsp"><img src="assets/images/menu-icon1.png" alt="menu-icon1" /> Electronic & Digital <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="index.jsp"><img src="../assets/images/menu-icon1.png" alt="menu-icon1" /> Electronic & Digital <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Electronic 01</a></li>
                                             <li><a href="list.jsp">Electronic 02</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon2.png" alt="menu-icon2" /> Phones & Accessories <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="#"><img src="../assets/images/menu-icon2.png" alt="menu-icon2" /> Phones & Accessories <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Iphone 05</a></li>
                                             <li><a href="list.jsp">Iphone 06</a></li>
@@ -194,10 +194,10 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="assets/images/menu-icon3.png" alt="menu-icon3" /> PHome & Kitchen <sup class="bg-red">hot!</sup></a>
+                                        <a href="#"><img src="../assets/images/menu-icon3.png" alt="menu-icon3" /> PHome & Kitchen <sup class="bg-red">hot!</sup></a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon4.png" alt="menu-icon4" /> Fashion & Clothing <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="#"><img src="../assets/images/menu-icon4.png" alt="menu-icon4" /> Fashion & Clothing <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <div class="dropdown-menu dropdownhover-bottom mega-menu" role="menu">
 
                                             <div class="col-sm-8 col-md-8">
@@ -238,7 +238,7 @@
                                         </div>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon5.png" alt="menu-icon2" /> Sport & Outdoors <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="#"><img src="../assets/images/menu-icon5.png" alt="menu-icon2" /> Sport & Outdoors <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Sport 05</a></li>
                                             <li><a href="list.jsp">Sport 06</a></li>
@@ -247,7 +247,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon6.png" alt="menu-icon2" /> Jewelry & Watches <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="#"><img src="../assets/images/menu-icon6.png" alt="menu-icon2" /> Jewelry & Watches <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Jewelry 05</a></li>
                                             <li><a href="grid.jsp">Watches 07</a></li>
@@ -255,10 +255,10 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="assets/images/menu-icon7.png" alt="menu-icon2" /> Health & Beauty <sup class="bg-blue">NEW</sup></a>
+                                        <a href="#"><img src="../assets/images/menu-icon7.png" alt="menu-icon2" /> Health & Beauty <sup class="bg-blue">NEW</sup></a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon8.png" alt="menu-icon2" /> Toys & Hobbies <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="#"><img src="../assets/images/menu-icon8.png" alt="menu-icon2" /> Toys & Hobbies <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Toys 05</a></li>
                                             <li><a href="list.jsp">Hobbies 02</a></li>
@@ -266,7 +266,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="assets/images/menu-icon9.png" alt="menu-icon2" /> Book & Office <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="#"><img src="../assets/images/menu-icon9.png" alt="menu-icon2" /> Book & Office <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Book 05</a></li>
                                             <li><a href="list.jsp">Book 06</a></li>
@@ -275,10 +275,10 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="assets/images/menu-icon10.png" alt="menu-icon2" /> Cameras & Camcorders</a>
+                                        <a href="#"><img src="../assets/images/menu-icon10.png" alt="menu-icon2" /> Cameras & Camcorders</a>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="assets/images/menu-icon11.png" alt="menu-icon2" />All Categories</a>
+                                        <a href="#"><img src="../assets/images/menu-icon11.png" alt="menu-icon2" />All Categories</a>
                                     </li>
                                 </ul>
                             </li>
@@ -381,7 +381,7 @@
                         <h2>Compare products</h2>
                     </div>
                     <div class="ads-lft">
-                        <p>You have no item to compare. </p> <img src="assets/images/add-banner2.jpg" alt="add banner"> </div>
+                        <p>You have no item to compare. </p> <img src="../assets/images/add-banner2.jpg" alt="add-banner2"> </div>
                 </div>
                 <div class="weight">
                     <div class="title">
@@ -391,7 +391,7 @@
                         <ul>
                             <li>
                                 <div class="e-product">
-                                    <div class="pro-img"> <img src="assets/images/products/digital/5.jpg" alt="2"> </div>
+                                    <div class="pro-img"> <img src="../assets/images/products/digital/5.jpg" alt="2"> </div>
                                     <div class="pro-text-outer"> <span>Macbook, Laptop</span>
                                         <a href="#">
                                             <h4> Apple Macbook Retina 23’ </h4>
@@ -402,7 +402,7 @@
                             </li>
                             <li>
                                 <div class="e-product">
-                                    <div class="pro-img"> <img src="assets/images/products/digital/9.jpg" alt="2"> </div>
+                                    <div class="pro-img"> <img src="../assets/images/products/digital/9.jpg" alt="2"> </div>
                                     <div class="pro-text-outer"> <span>Macbook, Laptop</span>
                                         <a href="#">
                                             <h4> Apple Macbook Retina 23’ </h4>
@@ -413,7 +413,7 @@
                             </li>
                             <li>
                                 <div class="e-product">
-                                    <div class="pro-img"> <img src="assets/images/products/digital/12.jpg" alt="2"> </div>
+                                    <div class="pro-img"> <img src="../assets/images/products/digital/12.jpg" alt="2"> </div>
                                     <div class="pro-text-outer"> <span>Macbook, Laptop</span>
                                         <a href="#">
                                             <h4> Apple Macbook Retina 23’ </h4>
@@ -427,7 +427,7 @@
                 </div>
             </div>
             <div class="col-sm-9 col-md-9">
-                <div class="col-md-12 grid-banner"> <img src="assets/images/Grid-banner.png" alt="Grid-banner" /> </div>
+                <div class="col-md-12 grid-banner"> <img src="../assets/images/Grid-banner.png" alt="Grid-banner" /> </div>
                 <div class="grid-spr">
                     <div class="col-sm-6 col-md-6"> <a href="#" class="grid-view-icon"><i class="fa fa-th-large" aria-hidden="true"></i></a> <a href="#" class="list-view-icon"><i class="fa fa-list" aria-hidden="true"></i></a>
                         <div class="select-option">
@@ -447,279 +447,219 @@
                     </div>
                     <div class="col-sm-6 col-md-6 text-right"> <strong>Showing 1-12 <span>of 30 relults</span></strong> </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="col-xs-12 col-sm-6 col-md-4">
                     <%-- .pro-text --%>
-                    <div class="pro-text">
-                        <div class="col-xs-12 col-sm-5 col-md-5">
-                            <%-- .pro-img --%>
-                            <div class="pro-img"> <img src="assets/images/products/digital/20.jpg" alt="2">
-                                <sup class="sale-tag">sale!</sup>
-                                <%-- .hover-icon --%>
-                                <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
-                                <%-- /.hover-icon --%>
-                            </div>
-                            <%-- /.pro-img --%>
+                    <div class="pro-text text-center">
+                        <%-- .pro-img --%>
+                        <div class="pro-img"> <img src="../assets/images/products/digital/1.jpg" alt="2">
+                            <%-- .hover-icon --%>
+                            <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
+                            <%-- /.hover-icon --%>
                         </div>
-                        <div class="col-xs-12 col-sm-7 col-md-7">
-                            <div class="pro-text-outer list-pro-text">
-                                <span>Macbook, Laptop</span>
-                                <a href="#">
-                                    <h4> Apple Macbook Retina 23’ </h4>
-                                </a>
-                                <div class="star2">
-                                    <ul>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><a href="#">10 review(s)</a></li>
-                                        <li><a href="#"> Add your review</a></li>
-                                    </ul>
-                                </div>
-                                <p class="wk-price">$290.00 </p>
-                                <p>Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus.</p>
-                                <a href="#" class="add-btn">Add to cart</a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Heart"></span></a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Restart"></span></a>
-                            </div>
-                        </div>
+                        <%-- /.pro-img --%>
+                        <div class="pro-text-outer"> <span>Macbook, Laptop</span>
+                            <a href="#">
+                                <h4> Apple Macbook Retina 23’ </h4>
+                            </a>
+                            <p class="wk-price">$290.00 </p> <a href="#" class="add-btn">Add to cart</a> </div>
                     </div>
                     <%-- /.pro-text --%>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="col-xs-12 col-sm-6 col-md-4">
                     <%-- .pro-text --%>
-                    <div class="pro-text">
-                        <div class="col-xs-12 col-sm-5 col-md-5">
-                            <%-- .pro-img --%>
-                            <div class="pro-img"> <img src="assets/images/products/digital/2.jpg" alt="2">
-                                <sup class="sale-tag">sale!</sup>
-                                <%-- .hover-icon --%>
-                                <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
-                                <%-- /.hover-icon --%>
-                            </div>
-                            <%-- /.pro-img --%>
+                    <div class="pro-text text-center">
+                        <%-- .pro-img --%>
+                        <div class="pro-img"> <img src="../assets/images/products/digital/2.jpg" alt="2"> <sup class="sale-tag">sale!</sup>
+                            <%-- .hover-icon --%>
+                            <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
+                            <%-- /.hover-icon --%>
                         </div>
-                        <div class="col-xs-12 col-sm-7 col-md-7">
-                            <div class="pro-text-outer list-pro-text">
-                                <span>Macbook, Laptop</span>
-                                <a href="#">
-                                    <h4> Apple Macbook Retina 23’ </h4>
-                                </a>
-                                <div class="star2">
-                                    <ul>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><a href="#">10 review(s)</a></li>
-                                        <li><a href="#"> Add your review</a></li>
-                                    </ul>
-                                </div>
-                                <p class="wk-price">$290.00 </p>
-                                <p>Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus.</p>
-                                <a href="#" class="add-btn">Add to cart</a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Heart"></span></a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Restart"></span></a>
-                            </div>
-                        </div>
+                        <%-- /.pro-img --%>
+                        <div class="pro-text-outer"> <span>Macbook, Laptop</span>
+                            <a href="#">
+                                <h4> Apple Macbook Retina 23’ </h4>
+                            </a>
+                            <p class="wk-price">$290.00 </p> <a href="#" class="add-btn">Add to cart</a> </div>
                     </div>
                     <%-- /.pro-text --%>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="col-xs-12 col-sm-6 col-md-4">
                     <%-- .pro-text --%>
-                    <div class="pro-text">
-                        <div class="col-xs-12 col-sm-5 col-md-5">
-                            <%-- .pro-img --%>
-                            <div class="pro-img"> <img src="assets/images/products/digital/22.jpg" alt="2">
-                                <%-- .hover-icon --%>
-                                <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
-                                <%-- /.hover-icon --%>
-                            </div>
-                            <%-- /.pro-img --%>
+                    <div class="pro-text text-center">
+                        <%-- .pro-img --%>
+                        <div class="pro-img"> <img src="../assets/images/products/digital/3.jpg" alt="2">
+                            <%-- .hover-icon --%>
+                            <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
+                            <%-- /.hover-icon --%>
                         </div>
-                        <div class="col-xs-12 col-sm-7 col-md-7">
-                            <div class="pro-text-outer list-pro-text">
-                                <span>Macbook, Laptop</span>
-                                <a href="#">
-                                    <h4> Apple Macbook Retina 23’ </h4>
-                                </a>
-                                <div class="star2">
-                                    <ul>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><a href="#">10 review(s)</a></li>
-                                        <li><a href="#"> Add your review</a></li>
-                                    </ul>
-                                </div>
-                                <p class="wk-price">$290.00 </p>
-                                <p>Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus.</p>
-                                <a href="#" class="add-btn">Add to cart</a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Heart"></span></a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Restart"></span></a>
-                            </div>
-                        </div>
+                        <%-- /.pro-img --%>
+                        <div class="pro-text-outer"> <span>Macbook, Laptop</span>
+                            <a href="#">
+                                <h4> Apple Macbook Retina 23’ </h4>
+                            </a>
+                            <p class="wk-price">$290.00 </p> <a href="#" class="add-btn">Add to cart</a> </div>
                     </div>
                     <%-- /.pro-text --%>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="col-xs-12 col-sm-6 col-md-4">
                     <%-- .pro-text --%>
-                    <div class="pro-text">
-                        <div class="col-xs-12 col-sm-5 col-md-5">
-                            <%-- .pro-img --%>
-                            <div class="pro-img"> <img src="assets/images/products/digital/13.jpg" alt="2">
-                                <%-- .hover-icon --%>
-                                <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
-                                <%-- /.hover-icon --%>
-                            </div>
-                            <%-- /.pro-img --%>
+                    <div class="pro-text text-center">
+                        <%-- .pro-img --%>
+                        <div class="pro-img"> <img src="../assets/images/products/digital/4.jpg" alt="2">
+                            <%-- .hover-icon --%>
+                            <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
+                            <%-- /.hover-icon --%>
                         </div>
-                        <div class="col-xs-12 col-sm-7 col-md-7">
-                            <div class="pro-text-outer list-pro-text">
-                                <span>Macbook, Laptop</span>
-                                <a href="#">
-                                    <h4> Apple Macbook Retina 23’ </h4>
-                                </a>
-                                <div class="star2">
-                                    <ul>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><a href="#">10 review(s)</a></li>
-                                        <li><a href="#"> Add your review</a></li>
-                                    </ul>
-                                </div>
-                                <p class="wk-price">$290.00 </p>
-                                <p>Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus.</p>
-                                <a href="#" class="add-btn">Add to cart</a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Heart"></span></a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Restart"></span></a>
-                            </div>
-                        </div>
+                        <%-- /.pro-img --%>
+                        <div class="pro-text-outer"> <span>Macbook, Laptop</span>
+                            <a href="#">
+                                <h4> Apple Macbook Retina 23’ </h4>
+                            </a>
+                            <p class="wk-price">$290.00 </p> <a href="#" class="add-btn">Add to cart</a> </div>
                     </div>
                     <%-- /.pro-text --%>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="col-xs-12 col-sm-6 col-md-4">
                     <%-- .pro-text --%>
-                    <div class="pro-text">
-                        <div class="col-xs-12 col-sm-5 col-md-5">
-                            <%-- .pro-img --%>
-                            <div class="pro-img"> <img src="assets/images/products/digital/17.jpg" alt="2">
-                                <sup class="sale-tag">sale!</sup>
-                                <%-- .hover-icon --%>
-                                <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
-                                <%-- /.hover-icon --%>
-                            </div>
-                            <%-- /.pro-img --%>
+                    <div class="pro-text text-center">
+                        <%-- .pro-img --%>
+                        <div class="pro-img"> <img src="../assets/images/products/digital/5.jpg" alt="2"> <sup class="new-tag">NEW!</sup>
+                            <%-- .hover-icon --%>
+                            <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
+                            <%-- /.hover-icon --%>
                         </div>
-                        <div class="col-xs-12 col-sm-7 col-md-7">
-                            <div class="pro-text-outer list-pro-text">
-                                <span>Macbook, Laptop</span>
-                                <a href="#">
-                                    <h4> Apple Macbook Retina 23’ </h4>
-                                </a>
-                                <div class="star2">
-                                    <ul>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><a href="#">10 review(s)</a></li>
-                                        <li><a href="#"> Add your review</a></li>
-                                    </ul>
-                                </div>
-                                <p class="wk-price">$290.00 </p>
-                                <p>Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus.</p>
-                                <a href="#" class="add-btn">Add to cart</a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Heart"></span></a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Restart"></span></a>
-                            </div>
-                        </div>
+                        <%-- /.pro-img --%>
+                        <div class="pro-text-outer"> <span>Macbook, Laptop</span>
+                            <a href="#">
+                                <h4> Apple Macbook Retina 23’ </h4>
+                            </a>
+                            <p class="wk-price">$290.00 </p> <a href="#" class="add-btn">Add to cart</a> </div>
                     </div>
                     <%-- /.pro-text --%>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="col-xs-12 col-sm-6 col-md-4">
                     <%-- .pro-text --%>
-                    <div class="pro-text">
-                        <div class="col-xs-12 col-sm-5 col-md-5">
-                            <%-- .pro-img --%>
-                            <div class="pro-img"> <img src="assets/images/products/digital/16.jpg" alt="2">
-                                <%-- .hover-icon --%>
-                                <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
-                                <%-- /.hover-icon --%>
-                            </div>
-                            <%-- /.pro-img --%>
+                    <div class="pro-text text-center">
+                        <%-- .pro-img --%>
+                        <div class="pro-img"> <img src="../assets/images/products/digital/6.jpg" alt="2"> <sup class="sale-tag">sale!</sup>
+                            <%-- .hover-icon --%>
+                            <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
+                            <%-- /.hover-icon --%>
                         </div>
-                        <div class="col-xs-12 col-sm-7 col-md-7">
-                            <div class="pro-text-outer list-pro-text">
-                                <span>Macbook, Laptop</span>
-                                <a href="#">
-                                    <h4> Apple Macbook Retina 23’ </h4>
-                                </a>
-                                <div class="star2">
-                                    <ul>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><a href="#">10 review(s)</a></li>
-                                        <li><a href="#"> Add your review</a></li>
-                                    </ul>
-                                </div>
-                                <p class="wk-price">$290.00 </p>
-                                <p>Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus.</p>
-                                <a href="#" class="add-btn">Add to cart</a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Heart"></span></a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Restart"></span></a>
-                            </div>
-                        </div>
+                        <%-- /.pro-img --%>
+                        <div class="pro-text-outer"> <span>Macbook, Laptop</span>
+                            <a href="#">
+                                <h4> Apple Macbook Retina 23’ </h4>
+                            </a>
+                            <p class="wk-price">$290.00 </p> <a href="#" class="add-btn">Add to cart</a> </div>
                     </div>
                     <%-- /.pro-text --%>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="col-xs-12 col-sm-6 col-md-4">
                     <%-- .pro-text --%>
-                    <div class="pro-text">
-                        <div class="col-xs-12 col-sm-5 col-md-5">
-                            <%-- .pro-img --%>
-                            <div class="pro-img"> <img src="assets/images/products/digital/14.jpg" alt="2">
-                                <%-- .hover-icon --%>
-                                <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
-                                <%-- /.hover-icon --%>
-                            </div>
-                            <%-- /.pro-img --%>
+                    <div class="pro-text text-center">
+                        <%-- .pro-img --%>
+                        <div class="pro-img"> <img src="../assets/images/products/digital/7.jpg" alt="2">
+                            <%-- .hover-icon --%>
+                            <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
+                            <%-- /.hover-icon --%>
                         </div>
-                        <div class="col-xs-12 col-sm-7 col-md-7">
-                            <div class="pro-text-outer list-pro-text">
-                                <span>Macbook, Laptop</span>
-                                <a href="#">
-                                    <h4> Apple Macbook Retina 23’ </h4>
-                                </a>
-                                <div class="star2">
-                                    <ul>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><a href="#">10 review(s)</a></li>
-                                        <li><a href="#"> Add your review</a></li>
-                                    </ul>
-                                </div>
-                                <p class="wk-price">$290.00 </p>
-                                <p>Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus.</p>
-                                <a href="#" class="add-btn">Add to cart</a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Heart"></span></a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Restart"></span></a>
-                            </div>
+                        <%-- /.pro-img --%>
+                        <div class="pro-text-outer"> <span>Macbook, Laptop</span>
+                            <a href="#">
+                                <h4> Apple Macbook Retina 23’ </h4>
+                            </a>
+                            <p class="wk-price">$290.00 </p> <a href="#" class="add-btn">Add to cart</a> </div>
+                    </div>
+                    <%-- /.pro-text --%>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <%-- .pro-text --%>
+                    <div class="pro-text text-center">
+                        <%-- .pro-img --%>
+                        <div class="pro-img"> <img src="../assets/images/products/digital/8.jpg" alt="2"> <sup class="sale-tag">sale!</sup>
+                            <%-- .hover-icon --%>
+                            <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
+                            <%-- /.hover-icon --%>
                         </div>
+                        <%-- /.pro-img --%>
+                        <div class="pro-text-outer"> <span>Macbook, Laptop</span>
+                            <a href="#">
+                                <h4> Apple Macbook Retina 23’ </h4>
+                            </a>
+                            <p class="wk-price">$290.00 </p> <a href="#" class="add-btn">Add to cart</a> </div>
+                    </div>
+                    <%-- /.pro-text --%>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <%-- .pro-text --%>
+                    <div class="pro-text text-center">
+                        <%-- .pro-img --%>
+                        <div class="pro-img"> <img src="../assets/images/products/digital/9.jpg" alt="2">
+                            <%-- .hover-icon --%>
+                            <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
+                            <%-- /.hover-icon --%>
+                        </div>
+                        <%-- /.pro-img --%>
+                        <div class="pro-text-outer"> <span>Macbook, Laptop</span>
+                            <a href="#">
+                                <h4> Apple Macbook Retina 23’ </h4>
+                            </a>
+                            <p class="wk-price">$290.00 </p> <a href="#" class="add-btn">Add to cart</a> </div>
+                    </div>
+                    <%-- /.pro-text --%>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <%-- .pro-text --%>
+                    <div class="pro-text text-center">
+                        <%-- .pro-img --%>
+                        <div class="pro-img"> <img src="../assets/images/products/digital/10.jpg" alt="2">
+                            <%-- .hover-icon --%>
+                            <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
+                            <%-- /.hover-icon --%>
+                        </div>
+                        <%-- /.pro-img --%>
+                        <div class="pro-text-outer"> <span>Macbook, Laptop</span>
+                            <a href="#">
+                                <h4> Apple Macbook Retina 23’ </h4>
+                            </a>
+                            <p class="wk-price">$290.00 </p> <a href="#" class="add-btn">Add to cart</a> </div>
+                    </div>
+                    <%-- /.pro-text --%>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <%-- .pro-text --%>
+                    <div class="pro-text text-center">
+                        <%-- .pro-img --%>
+                        <div class="pro-img"> <img src="../assets/images/products/digital/11.jpg" alt="2">
+                            <%-- .hover-icon --%>
+                            <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
+                            <%-- /.hover-icon --%>
+                        </div>
+                        <%-- /.pro-img --%>
+                        <div class="pro-text-outer"> <span>Macbook, Laptop</span>
+                            <a href="#">
+                                <h4> Apple Macbook Retina 23’ </h4>
+                            </a>
+                            <p class="wk-price">$290.00 </p> <a href="#" class="add-btn">Add to cart</a> </div>
+                    </div>
+                    <%-- /.pro-text --%>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <%-- .pro-text --%>
+                    <div class="pro-text text-center">
+                        <%-- .pro-img --%>
+                        <div class="pro-img"> <img src="../assets/images/products/digital/12.jpg" alt="2">
+                            <%-- .hover-icon --%>
+                            <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
+                            <%-- /.hover-icon --%>
+                        </div>
+                        <%-- /.pro-img --%>
+                        <div class="pro-text-outer"> <span>Macbook, Laptop</span>
+                            <a href="#">
+                                <h4> Apple Macbook Retina 23’ </h4>
+                            </a>
+                            <p class="wk-price">$290.00 </p> <a href="#" class="add-btn">Add to cart</a> </div>
                     </div>
                     <%-- /.pro-text --%>
                 </div>
@@ -760,7 +700,8 @@
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="sing-up-input">
                     <input name="singup" type="text" placeholder="Your email address...">
-                    <input name="submit" type="button" value="Submit" /> </div>
+                    <input name="submit" type="button" value="Submit" />
+                </div>
             </div>
         </div>
     </div>
@@ -771,7 +712,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <%-- f-weghit --%>
-                <div class="f-weghit"> <img src="assets/images/logo.png" alt="logo" />
+                <div class="f-weghit"> <img src="../assets/images/logo.png" alt="logo" />
                     <p><strong>Complex</strong> is a premium Templates theme with advanced admin module. It’s extremely customizable, easy to use and fully responsive and retina ready.</p>
                     <ul>
                         <li><i class="icon-location-pin icons" aria-hidden="true"></i> <strong>Add:</strong> 1234 Heaven Stress, Beverly Hill, Melbourne, USA.</li>
@@ -813,7 +754,7 @@
                     <h4>On-Sale Products</h4>
                     <%-- e-product --%>
                     <div class="e-product">
-                        <div class="pro-img"> <img src="assets/images/on-seal-img1.jpg" alt="2"> </div>
+                        <div class="pro-img"> <img src="../assets/images/on-seal-img1.jpg" alt="2"> </div>
                         <div class="pro-text-outer"> <span>Macbook, Laptop</span>
                             <a href="#">
                                 <h4> Apple Macbook Retina 23’ </h4>
@@ -824,7 +765,7 @@
                     <%-- e-product --%>
                     <%-- e-product --%>
                     <div class="e-product">
-                        <div class="pro-img"> <img src="assets/images/on-seal-img2.jpg" alt="2"> </div>
+                        <div class="pro-img"> <img src="../assets/images/on-seal-img2.jpg" alt="2"> </div>
                         <div class="pro-text-outer"> <span>Macbook, Laptop</span>
                             <a href="#">
                                 <h4> Apple Macbook Retina 23’ </h4>
@@ -840,7 +781,7 @@
             <div class="copayright">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">Copyright &copy; 2017.Company name All rights reserved.</div>
-                    <div class="text-right col-xs-12 col-sm-6 col-md-6"> <img src="assets/images/payment-img.jpg" alt="payment-img" /> </div>
+                    <div class="text-right col-xs-12 col-sm-6 col-md-6"> <img src="../assets/images/payment-img.jpg" alt="payment-img" /> </div>
                 </div>
             </div>
             <%-- /copayright --%>
@@ -859,18 +800,18 @@
 </aside>
 <%-- /sticky-socia --%>
 <p id="back-top"> <a href="#top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a> </p>
-<script src="assets/js/jquery.js"></script>
+<script src="../assets/js/jquery.js"></script>
 <%-- Bootstrap Core JavaScript --%>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/bootstrap-dropdownhover.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/bootstrap-dropdownhover.min.js"></script>
 <%-- Plugin JavaScript --%>
-<script src="assets/js/jquery.easing.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
+<script src="../assets/js/jquery.easing.min.js"></script>
+<script src="../assets/js/wow.min.js"></script>
 <%-- owl carousel --%>
-<script src="assets/owl-carousel/owl.carousel.js"></script>
+<script src="../assets/owl-carousel/owl.carousel.js"></script>
 <%--  Custom Theme JavaScript  --%>
-<script src="assets/js/filter-price.js"></script>
-<script src="assets/js/custom.js"></script>
+<script src="../assets/js/filter-price.js"></script>
+<script src="../assets/js/custom.js"></script>
 </body>
 
 </html>
