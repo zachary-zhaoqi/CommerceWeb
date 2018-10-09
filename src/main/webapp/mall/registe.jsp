@@ -389,7 +389,7 @@
                         </div>
                         <div class="col-md-12 counttry" style="margin-bottom: 5px">
                             <div class="lable">密码:</div>
-                            <input name="psw" placeholder="输入你的密码" type="password">
+                            <input name="password" placeholder="输入你的密码" type="password">
                         </div>
                         <div class="col-md-12 counttry" style="margin-bottom: 5px">
                             <div class="lable">再输一次密码:</div>
@@ -423,9 +423,7 @@
                         </div>
                     </div>
                     <div class="shopping-cart">
-                        <input type="submit" value="注册"/>
-                        <a href="${pageContext.request.contextPath}/CentralControl" class="button">注册</a>
-                        <a href="javascript:history.back(-1)" class="button">返回</a>
+                        <input class="button" type="submit" id="registesubmit" value="注册"/>
                     </div>
                 </form>
             </div>

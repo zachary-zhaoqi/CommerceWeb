@@ -1,6 +1,8 @@
 package action.mall;
 
+import dao.MembersDAO;
 import action.Action;
+import entity.Members;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -11,7 +13,10 @@ public class MembersAction implements Action {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("errorMessage","注册成功！");
-        request.getRequestDispatcher("mall/error.jsp").forward(request,response);
+        Members members=new Members();
+        members.setPassword(request.getParameter("password"));
+        members.setEmail(request.getParameter("email"));
+        MembersDAO membersDAO=new MembersDAO();
+
     }
 }
