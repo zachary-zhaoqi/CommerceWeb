@@ -56,7 +56,7 @@
                 <div class="top-header-left">
                     <ul>
                         <li>
-                            <span>你好 请-<a href="login.jsp">登陆</a> or <a href="registe.jsp">注册</a></span>
+                            <span>你好 请-<a href="${pageContext.request.contextPath}/mall/login.jsp">登陆</a> or <a href="${pageContext.request.contextPath}/mall/registe.jsp">注册</a></span>
                         </li>
                     </ul>
                 </div>
@@ -109,7 +109,7 @@
                             </ul>
                         </div>
                         <div class="search">
-                            <input type="text" placeholder="Where prodect"/>
+                            <input type="text" placeholder="物品名称"/>
                         </div>
                         <div class="btn-group">
                             <button type="button" id="btnSearch" class="btn btn-primary"><i class="fa fa-search"
@@ -6144,15 +6144,13 @@
                 <%-- f-weghit --%>
                 <div class="f-weghit">
                     <img src="${pageContext.request.contextPath}/assets/images/logo.png" alt="logo"/>
-                    <p><strong>Complex</strong> is a premium Templates theme with advanced admin module. It’s extremely
-                        customizable, easy to use and fully responsive and retina ready.</p>
+                    <p><strong>赵奇做的网站</strong> 是一个牛逼哄哄的网站。很厉害的网站很厉害的网站很厉害的网站很厉害的网站很厉害的网站很厉害的网站很厉害的网站很厉害的网站很厉害的网站</p>
                     <ul>
-                        <li><i class="icon-location-pin icons" aria-hidden="true"></i> <strong>Add:</strong> 1234 Heaven
-                            Stress, Beverly Hill, Melbourne, USA.
+                        <li><i class="icon-location-pin icons" aria-hidden="true"></i> <strong>地址：</strong> 我就不告诉你我在哪，万一你来打我咋办。
                         </li>
-                        <li><i class="icon-envelope-letter icons"></i> <strong>Email:</strong> Contact@erentheme.com
+                        <li><i class="icon-envelope-letter icons"></i> <strong>邮箱：</strong> starryzhaoqi@gmail.com
                         </li>
-                        <li><i class="icon-call-in icons"></i> <strong>Phone Number:</strong> (800) 123 456 789</li>
+                        <li><i class="icon-call-in icons"></i> <strong>联系电话：</strong> (800) 123 456 789</li>
                     </ul>
                 </div>
                 <%-- /f-weghit --%>
@@ -6160,25 +6158,25 @@
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <%-- f-weghit2 --%>
                 <div class="f-weghit2">
-                    <h4>INFORMATION</h4>
+                    <h4>问讯处</h4>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">All Collection</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                        <li><a href="#">Terms & conditio</a></li>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">所有商品贝</a></li>
+                        <li><a href="#">隐私权政策；</a></li>
+                        <li><a href="#">条款和条件</a></li>
                     </ul>
                 </div>
                 <%-- /f-weghit2 --%>
                 <%-- f-weghit2 --%>
                 <div class="f-weghit2">
-                    <h4>CATEGORIES</h4>
+                    <h4>类别</h4>
                     <ul>
-                        <li><a href="#">Fashion</a></li>
-                        <li><a href="#">Electronics</a></li>
-                        <li><a href="#">Furnitured & Decor</a></li>
-                        <li><a href="#">Jewelry & Watches</a></li>
-                        <li><a href="#">Health & Beauty</a></li>
+                        <li><a href="#">时装</a></li>
+                        <li><a href="#">电子产品</a></li>
+                        <li><a href="#">饰品与服饰</a></li>
+                        <li><a href="#">珠宝与手表</a></li>
+                        <li><a href="#">健康美容</a></li>
                     </ul>
                 </div>
                 <%-- /f-weghit2 --%>
@@ -6186,7 +6184,7 @@
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <%-- f-weghit --%>
                 <div class="f-weghit">
-                    <h4>On-Sale Products</h4>
+                    <h4>代销的产品</h4>
                     <%-- e-product --%>
                     <div class="e-product">
                         <div class="pro-img">

@@ -10,12 +10,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "CentralControl")
+@WebServlet(name = "CentralControl",value = "*.action")
 public class CentralControl extends HttpServlet {
+
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        ActionFactory.initUrlMapping();
+    }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String url=request.getRequestURI();
         //解析url
-
+        url=url.substring(request.getContextPath().length());
+        if (url.indexOf("?")>=0){
+            url=url.substring(0,url.indexOf("?"));
+        }
+        System.out.println(url);
         //工厂方法
         Action action= ActionFactory.getAction(url);
         if (action==null){
