@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.rmi.MarshalException;
 
 public class MembersAction implements Action {
 
@@ -36,8 +37,20 @@ public class MembersAction implements Action {
 
     }
 
-    private void login(HttpServletRequest request, HttpServletResponse response) {
-
+    private void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Members members=new Members();
+        members.setPassword(request.getParameter("password"));
+        members.setEmail(request.getParameter("email"));
+        MembersDAO membersDAO=new MembersDAO();
+        try {
+            members=membersDAO.login(members);
+            request.setAttribute("Members",members);
+            request.getRequestDispatcher("/mall/index.jsp").forward(request,response);
+        } catch (Exception e) {
+            e.printStackTrace();
+            request.setAttribute("errorMessage",e.getMessage());
+            request.getRequestDispatcher("/mall/login.jsp").forward(request,response);
+        }
     }
 
     private void registe(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -48,11 +61,11 @@ public class MembersAction implements Action {
         try {
             membersDAO.registe(members);
             request.setAttribute("Members",members);
-            request.getRequestDispatcher("mall/index.jsp").forward(request,response);
+            request.getRequestDispatcher("/mall/index.jsp").forward(request,response);
         } catch (Exception e) {
             e.printStackTrace();
             request.setAttribute("errorMessage",e.getMessage());
-            request.getRequestDispatcher("mall/error.jsp").forward(request,response);
+            request.getRequestDispatcher("/mall/error.jsp").forward(request,response);
         }
     }
 }
