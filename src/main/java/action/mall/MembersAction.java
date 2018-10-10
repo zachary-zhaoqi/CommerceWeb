@@ -13,6 +13,34 @@ public class MembersAction implements Action {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String mark=request.getParameter("mark");
+        switch(mark){
+            case "registe" :
+                registe(request, response);
+                break;
+            case "login" :
+                login(request, response);
+                break;
+            case "add" :
+
+                break;
+            case "alter" :
+
+                break;
+            case "remove" :
+
+                break;
+            default : //可选
+                //语句
+        }
+
+    }
+
+    private void login(HttpServletRequest request, HttpServletResponse response) {
+
+    }
+
+    private void registe(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Members members=new Members();
         members.setPassword(request.getParameter("password"));
         members.setEmail(request.getParameter("email"));

@@ -31,3 +31,24 @@ function registeValidator() {
     }
     return flage;
 }
+
+function loginValidator() {
+    var flage = true;
+    if(!validator.isEmail($("[name='email']:input").val())){
+        $('#emaillable').text("Email:格式不正确")
+        $('#emaillable').css("color","red");
+        flage=false;
+    }else {
+        $('#emaillable').text("Email:")
+        $('#emaillable').css("color","#646a7c");
+    }
+    if ($("[name='password']:input").val()==""){
+        $('#passwordlable').text("密码:不能为空")
+        $('#passwordlable').css("color","red");
+        flage=false;
+    }else {
+        $('#passwordlable').text("密码:")
+        $('#passwordlable').css("color","#646a7c");
+    }
+    return flage;
+}

@@ -69,7 +69,8 @@
                         <li><i class="icon-note icons" aria-hidden="true"></i><a href="#">我的订单</a></li>
                         <li>
                             <div class="dropdown">
-                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                   data-hover="dropdown">
                                     <i class="icon-settings icons" aria-hidden="true"></i> 设置
                                 </a>
                                 <ul class="dropdown-menu">
@@ -131,7 +132,8 @@
                             <strong>愿望清单</strong>
                         </li>
                         <li class="dropdown">
-                            <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons"
+                                                                                        aria-hidden="true"></i></a>
                             <span class="subno">2</span><strong>购物车</strong>
                             <div class="dropdown-menu  cart-outer">
                                 <%--todo：jsp自适应显示购物车--%>
@@ -192,16 +194,19 @@
                     </div>
                     <%-- Collect the nav links, forms, and other content for toggling --%>
                     <%--收集导航链接、表单和其他内容--%>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations=" fadeInLeft fadeInUp fadeInRight">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown"
+                         data-animations=" fadeInLeft fadeInUp fadeInRight">
                         <ul class="nav navbar-nav">
                             <li class="all-departments dropdown">
                                 <a href="index.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-expanded="false"><span> 商品分类 </span> <i class="fa fa-bars" aria-hidden="true"></i>
+                                   aria-expanded="false"><span> 商品分类 </span> <i class="fa fa-bars"
+                                                                                aria-hidden="true"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdownhover-bottom" role="menu">
                                     <%--todo：通过数据库查询有哪些类别显示--%>
                                     <li class="dropdown">
-                                        <a href="index.jsp"><img src="../assets/images/menu-icon1.png" alt="menu-icon1"/>
+                                        <a href="index.jsp"><img src="../assets/images/menu-icon1.png"
+                                                                 alt="menu-icon1"/>
                                             电子数码产品<i class="fa fa-angle-right" aria-hidden="true"></i>
                                         </a>
                                         <ul class="dropdown-menu right">
@@ -210,7 +215,8 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="../assets/images/menu-icon2.png" alt="menu-icon2"/> Phones &
+                                        <a href="#"><img src="../assets/images/menu-icon2.png" alt="menu-icon2"/> Phones
+                                            &
                                             Accessories <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Iphone 05</a></li>
@@ -221,11 +227,13 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="../assets/images/menu-icon3.png" alt="menu-icon3"/> PHome &
+                                        <a href="#"><img src="../assets/images/menu-icon3.png" alt="menu-icon3"/> PHome
+                                            &
                                             Kitchen <sup class="bg-red">hot!</sup></a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="../assets/images/menu-icon4.png" alt="menu-icon4"/> Fashion &
+                                        <a href="#"><img src="../assets/images/menu-icon4.png" alt="menu-icon4"/>
+                                            Fashion &
                                             Clothing <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <div class="dropdown-menu dropdownhover-bottom mega-menu" role="menu">
 
@@ -267,7 +275,8 @@
                                         </div>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="../assets/images/menu-icon5.png" alt="menu-icon2"/> Sport &
+                                        <a href="#"><img src="../assets/images/menu-icon5.png" alt="menu-icon2"/> Sport
+                                            &
                                             Outdoors <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Sport 05</a></li>
@@ -277,7 +286,8 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#"><img src="../assets/images/menu-icon6.png" alt="menu-icon2"/> Jewelry &
+                                        <a href="#"><img src="../assets/images/menu-icon6.png" alt="menu-icon2"/>
+                                            Jewelry &
                                             Watches <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu right">
                                             <li><a href="grid.jsp">Jewelry 05</a></li>
@@ -286,7 +296,8 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="../assets/images/menu-icon7.png" alt="menu-icon2"/> Health &
+                                        <a href="#"><img src="../assets/images/menu-icon7.png" alt="menu-icon2"/> Health
+                                            &
                                             Beauty <sup class="bg-blue">NEW</sup></a>
                                     </li>
                                     <li class="dropdown">
@@ -309,7 +320,8 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="../assets/images/menu-icon10.png" alt="menu-icon2"/> Cameras
+                                        <a href="#"><img src="../assets/images/menu-icon10.png" alt="menu-icon2"/>
+                                            Cameras
                                             & Camcorders</a>
                                     </li>
                                     <li>
@@ -337,32 +349,33 @@
 
 <section class="login-page">
     <div class="container">
-            <div class="col-md-12">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.jsp">主页</a></li>
-                    <li class="breadcrumb-item active">登陆</li>
-                </ol>
-            </div>
-            <div class="col-sm-10">
-                <div class="shipping-outer">
+        <div class="col-md-12">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.jsp">主页</a></li>
+                <li class="breadcrumb-item active">登陆</li>
+            </ol>
+        </div>
+        <div class="col-sm-10">
+            <div class="shipping-outer">
+                <form  action="<%= request.getContextPath()%>/Members.action" onsubmit="return loginValidator()" method="post" >
                     <h4>登陆你的账户</h4>
                     <div class="row">
                         <div class="col-md-12 counttry">
-                            <div class="lable">Email:</div>
-                            <input name="counttry" placeholder="输入你的电子邮箱" type="text">
+                            <div class="lable" id="emaillable">Email:</div>
+                            <input name="email" placeholder="输入你的电子邮箱" type="text">
                         </div>
                         <div class="col-md-12 counttry">
-                            <div class="lable">Password:</div>
-                            <input name="counttry" placeholder="输入你的密码" type="password">
+                            <div class="lable" id="passwordlable">Password:</div>
+                            <input name="password" placeholder="输入你的密码" type="password">
                         </div>
                     </div>
                     <div class="shopping-cart">
-                        <a href="#" class="button">登陆</a>
-                        <a href="registe.jsp" class="button">注册</a>
+                        <input type="hidden" name="mark" value="login">
+                        <input type="submit" value="登陆" class="button">
                     </div>
-
-                </div>
+                </form>
             </div>
+        </div>
     </div>
 </section>
 
@@ -484,4 +497,7 @@
 <%--  Custom Theme JavaScript  --%>
 <script src="../assets/js/filter-price.js"></script>
 <script src="../assets/js/custom.js"></script>
+<%--我自己导入的js--%>
+<script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/validator.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/myjs.js"></script>
 </body>
