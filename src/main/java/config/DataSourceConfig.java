@@ -23,7 +23,7 @@ public class DataSourceConfig {
     /**
      * 配置文件的路径
      * */
-    private static final String DATASOURCE_CONFIG_FILE = "src/main/resources/config/datasource.properties";
+    private static final String DATASOURCE_CONFIG_FILE = "C:/Users/starr/workspace/CommerceWeb/src/main/resources/config/dataSource.properties";
     /**
      * 数据库帐号
      */

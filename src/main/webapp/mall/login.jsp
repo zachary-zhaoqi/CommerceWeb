@@ -57,7 +57,7 @@
                 <div class="top-header-left">
                     <ul>
                         <li>
-                            <span>你好 请-<a href="login.jsp">登陆</a> or <a href="registe.jsp">注册</a></span>
+                            <span>你好!请-<a href="login.jsp">登陆</a> or <a href="registe.jsp">注册</a></span>
                         </li>
                     </ul>
                 </div>

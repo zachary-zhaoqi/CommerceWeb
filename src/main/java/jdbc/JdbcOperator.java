@@ -56,9 +56,9 @@ public class JdbcOperator {
     }
 
     public static void main(String[] args) {
-        String sql ="INSERT INTO `commerce`.`user` (`password`, `email`) VALUES (?, ?);";
+        String sql ="INSERT INTO `commerce`.`members` (`password`, `email`) VALUES (?, ?);";
         String password="654321";
-        String email="888@qq.com";
+        String email="999@qq.com";
         JdbcOperator jdbcOperator=new JdbcOperator();
         try {
             int result=jdbcOperator.executeUpdate(sql,password,email);

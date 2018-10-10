@@ -27,7 +27,7 @@ public class CentralControl extends HttpServlet {
             url=url.substring(0,url.indexOf("?"));
         }
         System.out.println(url);
-        //工厂方法
+//        工厂方法
         Action action= ActionFactory.getAction(url);
         if (action==null){
             //不存在业务方法，跳转到错误页面。

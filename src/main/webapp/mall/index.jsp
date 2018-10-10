@@ -1,3 +1,4 @@
+<%@ page import="entity.Members" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="zh">
@@ -52,11 +53,30 @@
     <%--顶部栏--%>
     <div class="top-header">
         <div class="container">
+
             <div class="col-md-6">
                 <div class="top-header-left">
                     <ul>
                         <li>
-                            <span>你好 请-<a href="${pageContext.request.contextPath}/mall/login.jsp">登陆</a> or <a href="${pageContext.request.contextPath}/mall/registe.jsp">注册</a></span>
+                            <span>
+                                <%
+                                    Members members;
+                                    String name;
+                                    String href;
+                                    if (request.getAttribute("Members")!=null){
+                                        members= (Members) request.getAttribute("Members");
+                                        name=members.getEmail();
+                                        href=request.getContextPath()+"/mall/home.jsp";
+                                        out.println("你好!"+
+                                                "<a href=\""+href+"\">"+name+"</a>");
+                                    }else {
+                                        out.println("你好!请-" +
+                                                "<a href=\""+request.getContextPath()+"/mall/login.jsp\">登陆</a>" +
+                                                "or" +
+                                                "<a href=\""+request.getContextPath()+"/mall/registe.jsp\">注册</a>");
+                                    }
+                                %>
+                            </span>
                         </li>
                     </ul>
                 </div>

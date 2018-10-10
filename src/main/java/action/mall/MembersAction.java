@@ -1,7 +1,7 @@
 package action.mall;
 
-import dao.MembersDAO;
 import action.Action;
+import dao.MembersDAO;
 import entity.Members;
 
 import javax.servlet.ServletException;
@@ -17,6 +17,14 @@ public class MembersAction implements Action {
         members.setPassword(request.getParameter("password"));
         members.setEmail(request.getParameter("email"));
         MembersDAO membersDAO=new MembersDAO();
-
+        try {
+            membersDAO.registe(members);
+            request.setAttribute("Members",members);
+            request.getRequestDispatcher("mall/index.jsp").forward(request,response);
+        } catch (Exception e) {
+            e.printStackTrace();
+            request.setAttribute("errorMessage",e.getMessage());
+            request.getRequestDispatcher("mall/error.jsp").forward(request,response);
+        }
     }
 }

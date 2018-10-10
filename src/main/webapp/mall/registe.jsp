@@ -388,12 +388,12 @@
                             <input id="email" name="email" placeholder="输入你的电子邮箱" type="text">
                         </div>
                         <div class="col-md-12 counttry" style="margin-bottom: 5px">
-                            <div class="lable">密码:</div>
+                            <div class="lable" id="passwordlable">密码:</div>
                             <input name="password" placeholder="输入你的密码" type="password">
                         </div>
                         <div class="col-md-12 counttry" style="margin-bottom: 5px">
                             <div class="lable">再输一次密码:</div>
-                            <input name="psw2" placeholder="输入你的密码" type="password">
+                            <input name="password2" placeholder="输入你的密码" type="password">
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
