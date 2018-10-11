@@ -11,6 +11,7 @@ public class ActionFactory {
     /***/
     public static void initUrlMapping(){
         urlMappings.put("/Members.action",new MembersAction());
+
     }
 
     /***/

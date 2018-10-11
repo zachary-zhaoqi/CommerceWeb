@@ -1,4 +1,6 @@
 <%@ page import="entity.Members" %>
+<%@ page import="java.util.List" %>
+<%@ page import="dao.DepartmentDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="zh">
@@ -219,6 +221,11 @@
                                 </a>
                                 <ul class="dropdown-menu dropdownhover-bottom all-open" role="menu">
                                     <%--todo：通过数据库查询有哪些类别显示--%>
+                                    <%
+                                        DepartmentDAO departmentDAO=new DepartmentDAO();
+                                        List departments1= departmentDAO.getOneLevel();
+
+                                    %>
                                     <li class="dropdown">
                                         <a href="index.jsp"><img src="${pageContext.request.contextPath}/assets/images/menu-icon1.png" alt="menu-icon1"/>
                                             电子数码产品<i class="fa fa-angle-right" aria-hidden="true"></i>

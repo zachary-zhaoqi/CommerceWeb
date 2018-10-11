@@ -7,7 +7,6 @@ public class MembersDAO {
     private JdbcOperator jdbcOperator;
 
     public MembersDAO(){
-
         jdbcOperator = new JdbcOperator();
     }
 
