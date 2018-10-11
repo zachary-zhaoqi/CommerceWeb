@@ -1,6 +1,8 @@
 <%@ page import="entity.Members" %>
 <%@ page import="java.util.List" %>
-<%@ page import="dao.DepartmentDAO" %>
+<%@ page import="dao.ClassificationDAO" %>
+<%@ page import="entity.Classification" %>
+<%@ page import="javax.swing.plaf.synth.SynthOptionPaneUI" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="zh">
@@ -220,128 +222,156 @@
                                    aria-expanded="false"><span> 商品分类 </span> <i class="fa fa-bars" aria-hidden="true"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdownhover-bottom all-open" role="menu">
-                                    <%--todo：通过数据库查询有哪些类别显示--%>
+                                    <%--通过数据库查询有哪些类别显示--%>
                                     <%
-                                        DepartmentDAO departmentDAO=new DepartmentDAO();
-                                        List departments1= departmentDAO.getOneLevel();
+                                        ClassificationDAO classificationDAO =new ClassificationDAO();
+                                        List<Classification> primaryclassifications = classificationDAO.getPrimaryClassification();
+                                        List<Classification> secondaryClassifications;
 
+                                        for (int i = 0; i < primaryclassifications.size(); i++) {
+                                            String primaryclassification_grade = primaryclassifications.get(i).getClassificationgrade();
+                                            String primaryclassification_name = primaryclassifications.get(i).getClassificationname();
+                                            String primaryclassification_href;
+                                            out.println("<li class=\"dropdown\">\n" +
+                                                            "<a href=\"index.jsp\"><img src=\""+request.getContextPath()+"/assets/images/menu-icon"+ primaryclassification_grade +".png\" " +
+                                                                "alt=\"menu-icon"+ primaryclassification_grade +"\"/>\n" + primaryclassification_name
+                                            );
+                                            if (primaryclassification_grade.equals("10")){
+                                                System.out.println("aaa");
+                                            }
+                                            secondaryClassifications = classificationDAO.getsecondaryClassification(Classification.getSecondaryClassificationmapping(primaryclassification_grade));
+                                            if (secondaryClassifications.size()>0){
+                                                out.println("<i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i>\n" +
+                                                        "</a>");
+                                                out.println("<ul class=\"dropdown-menu right\">");
+                                                for (int j = 0; j < secondaryClassifications.size(); j++) {
+                                                    String secondaryClassification_href="#";
+                                                    String secondaryClassification_name=secondaryClassifications.get(j).getClassificationname();
+                                                    out.println("<li><a href=\""+secondaryClassification_href+"\">"+secondaryClassification_name+"</a></li>");
+                                                }
+                                                out.println("</ul>");
+                                            }else {
+                                                out.println("</a>");
+                                            }
+                                            out.println("</li>");
+                                        }
                                     %>
-                                    <li class="dropdown">
-                                        <a href="index.jsp"><img src="${pageContext.request.contextPath}/assets/images/menu-icon1.png" alt="menu-icon1"/>
-                                            电子数码产品<i class="fa fa-angle-right" aria-hidden="true"></i>
-                                        </a>
-                                        <ul class="dropdown-menu right">
-                                            <li><a href="grid.jsp">电脑</a></li>
-                                            <li><a href="list.jsp">电视</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon2.png" alt="menu-icon2"/> Phones &
-                                            Accessories <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                        <ul class="dropdown-menu right">
-                                            <li><a href="grid.jsp">Iphone 05</a></li>
-                                            <li><a href="list.jsp">Iphone 06</a></li>
-                                            <li><a href="grid.jsp">Iphone 07</a></li>
-                                            <li><a href="list.jsp">Handfree</a></li>
-                                            <li><a href="grid.jsp">Bettery</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon3.png" alt="menu-icon3"/> PHome &
-                                            Kitchen <sup class="bg-red">hot!</sup></a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon4.png" alt="menu-icon4"/> Fashion &
-                                            Clothing <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                        <div class="dropdown-menu dropdownhover-bottom mega-menu" role="menu">
+                                    <%--<li class="dropdown">--%>
+                                        <%--<a href="index.jsp"><img src="${pageContext.request.contextPath}/assets/images/menu-icon1.png" alt="menu-icon1"/>--%>
+                                            <%--电子数码产品<i class="fa fa-angle-right" aria-hidden="true"></i>--%>
+                                        <%--</a>--%>
+                                        <%--<ul class="dropdown-menu right">--%>
+                                            <%--<li><a href="grid.jsp">电脑</a></li>--%>
+                                            <%--<li><a href="list.jsp">电视</a></li>--%>
+                                        <%--</ul>--%>
+                                    <%--</li>--%>
+                                    <%--<li class="dropdown">--%>
+                                        <%--<a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon2.png" alt="menu-icon2"/> Phones &--%>
+                                            <%--Accessories <i class="fa fa-angle-right" aria-hidden="true"></i></a>--%>
+                                        <%--<ul class="dropdown-menu right">--%>
+                                            <%--<li><a href="grid.jsp">Iphone 05</a></li>--%>
+                                            <%--<li><a href="list.jsp">Iphone 06</a></li>--%>
+                                            <%--<li><a href="grid.jsp">Iphone 07</a></li>--%>
+                                            <%--<li><a href="list.jsp">Handfree</a></li>--%>
+                                            <%--<li><a href="grid.jsp">Bettery</a></li>--%>
+                                        <%--</ul>--%>
+                                    <%--</li>--%>
+                                    <%--<li>--%>
+                                        <%--<a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon3.png" alt="menu-icon3"/> PHome &--%>
+                                            <%--Kitchen <sup class="bg-red">hot!</sup></a>--%>
+                                    <%--</li>--%>
+                                    <%--<li class="dropdown">--%>
+                                        <%--<a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon4.png" alt="menu-icon4"/> Fashion &--%>
+                                            <%--Clothing <i class="fa fa-angle-right" aria-hidden="true"></i></a>--%>
+                                        <%--<div class="dropdown-menu dropdownhover-bottom mega-menu" role="menu">--%>
 
-                                            <div class="col-sm-8 col-md-8">
-                                                <ul>
-                                                    <li><strong>Women’s Fashion</strong></li>
-                                                    <li><a href="#">Flip-Flops</a></li>
-                                                    <li><a href="#">Fashion Scarves</a></li>
-                                                    <li><a href="#">Wallets</a></li>
-                                                    <li><a href="#">Evening Handbags</a></li>
-                                                    <li><a href="#">Wrist Watches</a></li>
-                                                </ul>
-                                                <ul>
-                                                    <li><strong>Women’s Accessories</strong></li>
-                                                    <li><a href="#">Flip-Flops</a></li>
-                                                    <li><a href="#">Fashion Scarves</a></li>
-                                                    <li><a href="#">Wallets</a></li>
-                                                    <li><a href="#">Evening Handbags</a></li>
-                                                    <li><a href="#">Wrist Watches</a></li>
-                                                </ul>
-                                                <ul>
-                                                    <li><strong>Men’s Fashion</strong></li>
-                                                    <li><a href="#">Flip-Flops</a></li>
-                                                    <li><a href="#">Fashion Scarves</a></li>
-                                                    <li><a href="#">Wallets</a></li>
-                                                    <li><a href="#">Evening Handbags</a></li>
-                                                    <li><a href="#">Wrist Watches</a></li>
-                                                </ul>
-                                                <ul>
-                                                    <li><strong>Men’s Accessories</strong></li>
-                                                    <li><a href="#">Flip-Flops</a></li>
-                                                    <li><a href="#">Fashion Scarves</a></li>
-                                                    <li><a href="#">Wallets</a></li>
-                                                    <li><a href="#">Evening Handbags</a></li>
-                                                    <li><a href="#">Wrist Watches</a></li>
-                                                </ul>
-                                            </div>
+                                            <%--<div class="col-sm-8 col-md-8">--%>
+                                                <%--<ul>--%>
+                                                    <%--<li><strong>Women’s Fashion</strong></li>--%>
+                                                    <%--<li><a href="#">Flip-Flops</a></li>--%>
+                                                    <%--<li><a href="#">Fashion Scarves</a></li>--%>
+                                                    <%--<li><a href="#">Wallets</a></li>--%>
+                                                    <%--<li><a href="#">Evening Handbags</a></li>--%>
+                                                    <%--<li><a href="#">Wrist Watches</a></li>--%>
+                                                <%--</ul>--%>
+                                                <%--<ul>--%>
+                                                    <%--<li><strong>Women’s Accessories</strong></li>--%>
+                                                    <%--<li><a href="#">Flip-Flops</a></li>--%>
+                                                    <%--<li><a href="#">Fashion Scarves</a></li>--%>
+                                                    <%--<li><a href="#">Wallets</a></li>--%>
+                                                    <%--<li><a href="#">Evening Handbags</a></li>--%>
+                                                    <%--<li><a href="#">Wrist Watches</a></li>--%>
+                                                <%--</ul>--%>
+                                                <%--<ul>--%>
+                                                    <%--<li><strong>Men’s Fashion</strong></li>--%>
+                                                    <%--<li><a href="#">Flip-Flops</a></li>--%>
+                                                    <%--<li><a href="#">Fashion Scarves</a></li>--%>
+                                                    <%--<li><a href="#">Wallets</a></li>--%>
+                                                    <%--<li><a href="#">Evening Handbags</a></li>--%>
+                                                    <%--<li><a href="#">Wrist Watches</a></li>--%>
+                                                <%--</ul>--%>
+                                                <%--<ul>--%>
+                                                    <%--<li><strong>Men’s Accessories</strong></li>--%>
+                                                    <%--<li><a href="#">Flip-Flops</a></li>--%>
+                                                    <%--<li><a href="#">Fashion Scarves</a></li>--%>
+                                                    <%--<li><a href="#">Wallets</a></li>--%>
+                                                    <%--<li><a href="#">Evening Handbags</a></li>--%>
+                                                    <%--<li><a href="#">Wrist Watches</a></li>--%>
+                                                <%--</ul>--%>
+                                            <%--</div>--%>
 
-                                        </div>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon5.png" alt="menu-icon2"/> Sport &
-                                            Outdoors <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                        <ul class="dropdown-menu right">
-                                            <li><a href="grid.jsp">Sport 05</a></li>
-                                            <li><a href="list.jsp">Sport 06</a></li>
-                                            <li><a href="list.jsp">Outdoors 02</a></li>
-                                            <li><a href="grid.jsp">Outdoors 01</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon6.png" alt="menu-icon2"/> Jewelry &
-                                            Watches <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                        <ul class="dropdown-menu right">
-                                            <li><a href="grid.jsp">Jewelry 05</a></li>
-                                            <li><a href="grid.jsp">Watches 07</a></li>
-                                            <li><a href="list.jsp">Watches 02</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon7.png" alt="menu-icon2"/> Health &
-                                            Beauty <sup class="bg-blue">NEW</sup></a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon8.png" alt="menu-icon2"/> Toys &
-                                            Hobbies <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                        <ul class="dropdown-menu right">
-                                            <li><a href="grid.jsp">Toys 05</a></li>
-                                            <li><a href="list.jsp">Hobbies 02</a></li>
-                                            <li><a href="grid.jsp">Toys 01</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon9.png" alt="menu-icon2"/> Book &
-                                            Office <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                        <ul class="dropdown-menu right">
-                                            <li><a href="grid.jsp">Book 05</a></li>
-                                            <li><a href="list.jsp">Book 06</a></li>
-                                            <li><a href="list.jsp">Office 02</a></li>
-                                            <li><a href="grid.jsp">Office 01</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon10.png" alt="menu-icon2"/> Cameras
-                                            & Camcorders</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon11.png" alt="menu-icon2"/>All
-                                            Categories</a>
-                                    </li>
+                                        <%--</div>--%>
+                                    <%--</li>--%>
+                                    <%--<li class="dropdown">--%>
+                                        <%--<a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon5.png" alt="menu-icon2"/> Sport &--%>
+                                            <%--Outdoors <i class="fa fa-angle-right" aria-hidden="true"></i></a>--%>
+                                        <%--<ul class="dropdown-menu right">--%>
+                                            <%--<li><a href="grid.jsp">Sport 05</a></li>--%>
+                                            <%--<li><a href="list.jsp">Sport 06</a></li>--%>
+                                            <%--<li><a href="list.jsp">Outdoors 02</a></li>--%>
+                                            <%--<li><a href="grid.jsp">Outdoors 01</a></li>--%>
+                                        <%--</ul>--%>
+                                    <%--</li>--%>
+                                    <%--<li class="dropdown">--%>
+                                        <%--<a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon6.png" alt="menu-icon2"/> Jewelry &--%>
+                                            <%--Watches <i class="fa fa-angle-right" aria-hidden="true"></i></a>--%>
+                                        <%--<ul class="dropdown-menu right">--%>
+                                            <%--<li><a href="grid.jsp">Jewelry 05</a></li>--%>
+                                            <%--<li><a href="grid.jsp">Watches 07</a></li>--%>
+                                            <%--<li><a href="list.jsp">Watches 02</a></li>--%>
+                                        <%--</ul>--%>
+                                    <%--</li>--%>
+                                    <%--<li>--%>
+                                        <%--<a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon7.png" alt="menu-icon2"/> Health &--%>
+                                            <%--Beauty <sup class="bg-blue">NEW</sup></a>--%>
+                                    <%--</li>--%>
+                                    <%--<li class="dropdown">--%>
+                                        <%--<a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon8.png" alt="menu-icon2"/> Toys &--%>
+                                            <%--Hobbies <i class="fa fa-angle-right" aria-hidden="true"></i></a>--%>
+                                        <%--<ul class="dropdown-menu right">--%>
+                                            <%--<li><a href="grid.jsp">Toys 05</a></li>--%>
+                                            <%--<li><a href="list.jsp">Hobbies 02</a></li>--%>
+                                            <%--<li><a href="grid.jsp">Toys 01</a></li>--%>
+                                        <%--</ul>--%>
+                                    <%--</li>--%>
+                                    <%--<li class="dropdown">--%>
+                                        <%--<a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon9.png" alt="menu-icon2"/> Book &--%>
+                                            <%--Office <i class="fa fa-angle-right" aria-hidden="true"></i></a>--%>
+                                        <%--<ul class="dropdown-menu right">--%>
+                                            <%--<li><a href="grid.jsp">Book 05</a></li>--%>
+                                            <%--<li><a href="list.jsp">Book 06</a></li>--%>
+                                            <%--<li><a href="list.jsp">Office 02</a></li>--%>
+                                            <%--<li><a href="grid.jsp">Office 01</a></li>--%>
+                                        <%--</ul>--%>
+                                    <%--</li>--%>
+                                    <%--<li>--%>
+                                        <%--<a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon10.png" alt="menu-icon2"/> Cameras--%>
+                                            <%--& Camcorders</a>--%>
+                                    <%--</li>--%>
+                                    <%--<li>--%>
+                                        <%--<a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon11.png" alt="menu-icon2"/>All--%>
+                                            <%--Categories</a>--%>
+                                    <%--</li>--%>
                                 </ul>
                             </li>
                             <li><a href="index.jsp">主页</a></li>
