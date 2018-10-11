@@ -4,6 +4,7 @@ public class Classification {
     private int idclassification;
     private String classificationname;
     private String classificationgrade;
+    private String classificationsrc;
 
 
     public static String getSecondaryClassificationmapping(String classificationgrade) {
@@ -37,5 +38,13 @@ public class Classification {
 
     public void setClassificationgrade(String classificationgrade) {
         this.classificationgrade = classificationgrade;
+    }
+
+    public String getClassificationsrc() {
+        return classificationsrc;
+    }
+
+    public void setClassificationsrc(String classificationsrc) {
+        this.classificationsrc = classificationsrc;
     }
 }

@@ -231,10 +231,10 @@
                                         for (int i = 0; i < primaryclassifications.size(); i++) {
                                             String primaryclassification_grade = primaryclassifications.get(i).getClassificationgrade();
                                             String primaryclassification_name = primaryclassifications.get(i).getClassificationname();
+                                            String primaryclassification_src=primaryclassifications.get(i).getClassificationsrc();
                                             String primaryclassification_href;
                                             out.println("<li class=\"dropdown\">\n" +
-                                                            "<a href=\"index.jsp\"><img src=\""+request.getContextPath()+"/assets/images/menu-icon"+ primaryclassification_grade +".png\" " +
-                                                                "alt=\"menu-icon"+ primaryclassification_grade +"\"/>\n" + primaryclassification_name
+                                                            "<a href=\"index.jsp\"><img src=\""+request.getContextPath()+"/"+ primaryclassification_src +"\"alt=\"menu-icon"+ primaryclassification_grade +"\"/>\n" + primaryclassification_name
                                             );
                                             if (primaryclassification_grade.equals("10")){
                                                 System.out.println("aaa");
