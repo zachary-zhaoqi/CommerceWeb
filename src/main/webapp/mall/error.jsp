@@ -1,4 +1,7 @@
-<%--
+<%@ page import="entity.Members" %>
+<%@ page import="dao.ClassificationDAO" %>
+<%@ page import="entity.Classification" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: starr
   Date: 2018/10/8
@@ -13,26 +16,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <%-- Latest Bootstrap min CSS --%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/css/bootstrap.min.css" type="text/css">
     <%-- Dropdownhover CSS --%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap-dropdownhover.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/css/bootstrap-dropdownhover.min.css" type="text/css">
     <%-- latest fonts awesome --%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/font/css/font-awesome.min.css" type="text/css">
     <%-- simple line fonts awesome --%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/simple-line-icon/css/simple-line-icons.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/simple-line-icon/css/simple-line-icons.css" type="text/css">
     <%-- stroke-gap-icons --%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/stroke-gap-icons/stroke-gap-icons.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/stroke-gap-icons/stroke-gap-icons.css" type="text/css">
     <%-- Animate CSS --%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/css/animate.min.css" type="text/css">
     <%-- Style CSS --%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/css/style.css" type="text/css">
     <%-- Style CSS --%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/slider.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/css/slider.css" type="text/css">
     <%--  baguetteBox --%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/baguetteBox.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/css/baguetteBox.css">
     <%-- Owl Carousel Assets --%>
-    <link href="${pageContext.request.contextPath}/assets/owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/assets/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/mall/assets/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/mall/assets/owl-carousel/owl.theme.css" rel="stylesheet">
     <%-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --%>
     <%-- WARNING: Respond.js doesn't work if you view the page via file:// --%>
     <%--[if lt IE 9]>
@@ -51,11 +54,30 @@
     <%--顶部栏--%>
     <div class="top-header">
         <div class="container">
+
             <div class="col-md-6">
                 <div class="top-header-left">
                     <ul>
                         <li>
-                            <span>你好 请-<a href="login.jsp">登陆</a> or <a href="registe.jsp">注册</a></span>
+                            <span>
+                                <%
+                                    Members members;
+                                    String name;
+                                    String href;
+                                    if (request.getAttribute("Members")!=null){
+                                        members= (Members) request.getAttribute("Members");
+                                        name=members.getEmail();
+                                        href=request.getContextPath()+"/mall/home.jsp";
+                                        out.println("你好!"+
+                                                "<a href=\""+href+"\">"+name+"</a>");
+                                    }else {
+                                        out.println("你好!请-" +
+                                                "<a href=\""+request.getContextPath()+"/mall/login.jsp\">登陆</a>" +
+                                                "or" +
+                                                "<a href=\""+request.getContextPath()+"/mall/registe.jsp\">注册</a>");
+                                    }
+                                %>
+                            </span>
                         </li>
                     </ul>
                 </div>
@@ -67,8 +89,7 @@
                         <li><i class="icon-note icons" aria-hidden="true"></i><a href="#">我的订单</a></li>
                         <li>
                             <div class="dropdown">
-                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                                   data-hover="dropdown">
+                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
                                     <i class="icon-settings icons" aria-hidden="true"></i> 设置
                                 </a>
                                 <ul class="dropdown-menu">
@@ -90,7 +111,7 @@
             <%--商标、搜索栏、购物车--%>
             <div class="col-sm-3">
                 <div class="logo">
-                    <h6><img src="${pageContext.request.contextPath}/assets/images/logo.png" alt="logo"/></h6>
+                    <h6><img src="${pageContext.request.contextPath}/mall/assets/images/logo.png" alt="logo"/></h6>
                 </div>
             </div>
             <div class="col-sm-6">
@@ -101,15 +122,22 @@
                             <a class="btn dropdown-toggle btn-select" data-toggle="dropdown" href="#">所有类别
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">类别 I</a></li>
-                                <li><a href="#">类别 II</a></li>
-                                <li><a href="#">类别 III</a></li>
+                                <%
+                                    ClassificationDAO classificationDAO =new ClassificationDAO();
+                                    List<Classification> primaryclassifications = classificationDAO.getPrimaryClassification();
+                                    List<Classification> secondaryClassifications;
+                                    for (int i = 0; i < primaryclassifications.size(); i++) {
+                                        out.println("<li><a href=\"#\">");
+                                        out.println(primaryclassifications.get(i).getClassificationname());
+                                        out.println("</a></li>");
+                                    }
+                                %>
                                 <li class="divider"></li>
-                                <li><a href="#">其他</a></li>
+                                <li><a href="#">全部</a></li>
                             </ul>
                         </div>
                         <div class="search">
-                            <input type="text" placeholder="Where prodect"/>
+                            <input type="text" placeholder="物品名称"/>
                         </div>
                         <div class="btn-group">
                             <button type="button" id="btnSearch" class="btn btn-primary"><i class="fa fa-search"
@@ -130,13 +158,12 @@
                             <strong>愿望清单</strong>
                         </li>
                         <li class="dropdown">
-                            <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons"
-                                                                                        aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons" aria-hidden="true"></i></a>
                             <span class="subno">2</span><strong>购物车</strong>
                             <div class="dropdown-menu  cart-outer">
                                 <%--todo：jsp自适应显示购物车--%>
                                 <div class="cart-content">
-                                    <div class="col-sm-4 col-md-4"><img src="${pageContext.request.contextPath}/assets/images/elec-img4.jpg" alt="13">
+                                    <div class="col-sm-4 col-md-4"><img src="${pageContext.request.contextPath}/mall/assets/images/elec-img4.jpg" alt="13">
                                     </div>
                                     <div class="col-sm-8 col-md-8">
                                         <div class="pro-text">
@@ -147,7 +174,7 @@
                                     </div>
                                 </div>
                                 <div class="cart-content">
-                                    <div class="col-sm-4 col-md-4"><img src="${pageContext.request.contextPath}/assets/images/elec-img3.jpg" alt="13">
+                                    <div class="col-sm-4 col-md-4"><img src="${pageContext.request.contextPath}/mall/assets/images/elec-img3.jpg" alt="13">
                                     </div>
                                     <div class="col-sm-8 col-md-8">
                                         <div class="pro-text">
@@ -192,132 +219,43 @@
                     </div>
                     <%-- Collect the nav links, forms, and other content for toggling --%>
                     <%--收集导航链接、表单和其他内容--%>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown"
-                         data-animations=" fadeInLeft fadeInUp fadeInRight">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations=" fadeInLeft fadeInUp fadeInRight">
                         <ul class="nav navbar-nav">
                             <li class="all-departments dropdown">
                                 <a href="index.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-expanded="false"><span> 商品分类 </span> <i class="fa fa-bars"
-                                                                                aria-hidden="true"></i>
+                                   aria-expanded="false"><span> 商品分类 </span> <i class="fa fa-bars" aria-hidden="true"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdownhover-bottom" role="menu">
-                                    <%--todo：通过数据库查询有哪些类别显示--%>
-                                    <li class="dropdown">
-                                        <a href="index.jsp"><img src="${pageContext.request.contextPath}/assets/images/menu-icon1.png" alt="menu-icon1"/>
-                                            电子数码产品<i class="fa fa-angle-right" aria-hidden="true"></i>
-                                        </a>
-                                        <ul class="dropdown-menu right">
-                                            <li><a href="grid.jsp">电脑</a></li>
-                                            <li><a href="list.jsp">电视</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon2.png" alt="menu-icon2"/> Phones &
-                                            Accessories <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                        <ul class="dropdown-menu right">
-                                            <li><a href="grid.jsp">Iphone 05</a></li>
-                                            <li><a href="list.jsp">Iphone 06</a></li>
-                                            <li><a href="grid.jsp">Iphone 07</a></li>
-                                            <li><a href="list.jsp">Handfree</a></li>
-                                            <li><a href="grid.jsp">Bettery</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon3.png" alt="menu-icon3"/> PHome &
-                                            Kitchen <sup class="bg-red">hot!</sup></a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon4.png" alt="menu-icon4"/> Fashion &
-                                            Clothing <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                        <div class="dropdown-menu dropdownhover-bottom mega-menu" role="menu">
-
-                                            <div class="col-sm-8 col-md-8">
-                                                <ul>
-                                                    <li><strong>Women’s Fashion</strong></li>
-                                                    <li><a href="#">Flip-Flops</a></li>
-                                                    <li><a href="#">Fashion Scarves</a></li>
-                                                    <li><a href="#">Wallets</a></li>
-                                                    <li><a href="#">Evening Handbags</a></li>
-                                                    <li><a href="#">Wrist Watches</a></li>
-                                                </ul>
-                                                <ul>
-                                                    <li><strong>Women’s Accessories</strong></li>
-                                                    <li><a href="#">Flip-Flops</a></li>
-                                                    <li><a href="#">Fashion Scarves</a></li>
-                                                    <li><a href="#">Wallets</a></li>
-                                                    <li><a href="#">Evening Handbags</a></li>
-                                                    <li><a href="#">Wrist Watches</a></li>
-                                                </ul>
-                                                <ul>
-                                                    <li><strong>Men’s Fashion</strong></li>
-                                                    <li><a href="#">Flip-Flops</a></li>
-                                                    <li><a href="#">Fashion Scarves</a></li>
-                                                    <li><a href="#">Wallets</a></li>
-                                                    <li><a href="#">Evening Handbags</a></li>
-                                                    <li><a href="#">Wrist Watches</a></li>
-                                                </ul>
-                                                <ul>
-                                                    <li><strong>Men’s Accessories</strong></li>
-                                                    <li><a href="#">Flip-Flops</a></li>
-                                                    <li><a href="#">Fashion Scarves</a></li>
-                                                    <li><a href="#">Wallets</a></li>
-                                                    <li><a href="#">Evening Handbags</a></li>
-                                                    <li><a href="#">Wrist Watches</a></li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon5.png" alt="menu-icon2"/> Sport &
-                                            Outdoors <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                        <ul class="dropdown-menu right">
-                                            <li><a href="grid.jsp">Sport 05</a></li>
-                                            <li><a href="list.jsp">Sport 06</a></li>
-                                            <li><a href="list.jsp">Outdoors 02</a></li>
-                                            <li><a href="grid.jsp">Outdoors 01</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon6.png" alt="menu-icon2"/> Jewelry &
-                                            Watches <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                        <ul class="dropdown-menu right">
-                                            <li><a href="grid.jsp">Jewelry 05</a></li>
-                                            <li><a href="grid.jsp">Watches 07</a></li>
-                                            <li><a href="list.jsp">Watches 02</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon7.png" alt="menu-icon2"/> Health &
-                                            Beauty <sup class="bg-blue">NEW</sup></a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon8.png" alt="menu-icon2"/> Toys &
-                                            Hobbies <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                        <ul class="dropdown-menu right">
-                                            <li><a href="grid.jsp">Toys 05</a></li>
-                                            <li><a href="list.jsp">Hobbies 02</a></li>
-                                            <li><a href="grid.jsp">Toys 01</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon9.png" alt="menu-icon2"/> Book &
-                                            Office <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                        <ul class="dropdown-menu right">
-                                            <li><a href="grid.jsp">Book 05</a></li>
-                                            <li><a href="list.jsp">Book 06</a></li>
-                                            <li><a href="list.jsp">Office 02</a></li>
-                                            <li><a href="grid.jsp">Office 01</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon10.png" alt="menu-icon2"/> Cameras
-                                            & Camcorders</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="${pageContext.request.contextPath}/assets/images/menu-icon11.png" alt="menu-icon2"/>All
-                                            Categories</a>
-                                    </li>
+                                    <%--通过数据库查询有哪些类别显示--%>
+                                    <%
+                                        for (int i = 0; i < primaryclassifications.size(); i++) {
+                                            String primaryclassification_grade = primaryclassifications.get(i).getClassificationgrade();
+                                            String primaryclassification_name = primaryclassifications.get(i).getClassificationname();
+                                            String primaryclassification_src=primaryclassifications.get(i).getClassificationsrc();
+                                            String primaryclassification_href;
+                                            out.println("<li class=\"dropdown\">\n" +
+                                                    "<a href=\"index.jsp\"><img src=\""+request.getContextPath()+"/"+ primaryclassification_src +"\"alt=\"menu-icon"+ primaryclassification_grade +"\"/>\n" + primaryclassification_name
+                                            );
+                                            if (primaryclassification_grade.equals("10")){
+                                                System.out.println("aaa");
+                                            }
+                                            secondaryClassifications = classificationDAO.getsecondaryClassification(Classification.getSecondaryClassificationmapping(primaryclassification_grade));
+                                            if (secondaryClassifications.size()>0){
+                                                out.println("<i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i>\n" +
+                                                        "</a>");
+                                                out.println("<ul class=\"dropdown-menu right\">");
+                                                for (int j = 0; j < secondaryClassifications.size(); j++) {
+                                                    String secondaryClassification_href="#";
+                                                    String secondaryClassification_name=secondaryClassifications.get(j).getClassificationname();
+                                                    out.println("<li><a href=\""+secondaryClassification_href+"\">"+secondaryClassification_name+"</a></li>");
+                                                }
+                                                out.println("</ul>");
+                                            }else {
+                                                out.println("</a>");
+                                            }
+                                            out.println("</li>");
+                                        }
+                                    %>
                                 </ul>
                             </li>
                             <li><a href="index.jsp">主页</a></li>
@@ -359,7 +297,7 @@
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <%-- f-weghit --%>
                 <div class="f-weghit">
-                    <img src="${pageContext.request.contextPath}/assets/images/logo.png" alt="logo"/>
+                    <img src="${pageContext.request.contextPath}/mall/assets/images/logo.png" alt="logo"/>
                     <p><strong>赵奇做的网站</strong> 是一个牛逼哄哄的网站。很厉害的网站很厉害的网站很厉害的网站很厉害的网站很厉害的网站很厉害的网站很厉害的网站很厉害的网站很厉害的网站</p>
                     <ul>
                         <li><i class="icon-location-pin icons" aria-hidden="true"></i> <strong>地址：</strong> 我就不告诉你我在哪，万一你来打我咋办。
@@ -404,7 +342,7 @@
                     <%-- e-product --%>
                     <div class="e-product">
                         <div class="pro-img">
-                            <img src="${pageContext.request.contextPath}/assets/images/on-seal-img1.jpg" alt="2">
+                            <img src="${pageContext.request.contextPath}/mall/assets/images/on-seal-img1.jpg" alt="2">
                         </div>
                         <div class="pro-text-outer">
                             <span>Macbook, Laptop</span>
@@ -418,7 +356,7 @@
                     <%-- e-product --%>
                     <div class="e-product">
                         <div class="pro-img">
-                            <img src="${pageContext.request.contextPath}/assets/images/on-seal-img2.jpg" alt="2">
+                            <img src="${pageContext.request.contextPath}/mall/assets/images/on-seal-img2.jpg" alt="2">
                         </div>
                         <div class="pro-text-outer">
                             <span>Macbook, Laptop</span>
@@ -439,7 +377,7 @@
                         Copyright &copy; 2017.Company name All rights reserved.
                     </div>
                     <div class="text-right col-xs-12 col-sm-6 col-md-6">
-                        <img src="${pageContext.request.contextPath}/assets/images/payment-img.jpg" alt="payment-img"/>
+                        <img src="${pageContext.request.contextPath}/mall/assets/images/payment-img.jpg" alt="payment-img"/>
                     </div>
                 </div>
             </div>
@@ -466,16 +404,16 @@
 </aside>
 <%-- /sticky-socia --%>
 <p id="back-top"><a href="#top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a></p>
-<script src="${pageContext.request.contextPath}/assets/js/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/mall/assets/js/jquery.js"></script>
 <%-- Bootstrap Core JavaScript --%>
-<script src="${pageContext.request.contextPath}/assets/js/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/bootstrap-dropdownhover.min.js"></script>
+<script src="${pageContext.request.contextPath}/mall/assets/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/mall/assets/js/bootstrap-dropdownhover.min.js"></script>
 <%-- Plugin JavaScript --%>
-<script src="${pageContext.request.contextPath}/assets/js/jquery.easing.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/wow.min.js"></script>
+<script src="${pageContext.request.contextPath}/mall/assets/js/jquery.easing.min.js"></script>
+<script src="${pageContext.request.contextPath}/mall/assets/js/wow.min.js"></script>
 <%-- owl carousel --%>
-<script src="${pageContext.request.contextPath}/assets/owl-carousel/owl.carousel.js"></script>
+<script src="${pageContext.request.contextPath}/mall/assets/owl-carousel/owl.carousel.js"></script>
 <%--  Custom Theme JavaScript  --%>
-<script src="${pageContext.request.contextPath}/assets/js/filter-price.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/custom.js"></script>
+<script src="${pageContext.request.contextPath}/mall/assets/js/filter-price.js"></script>
+<script src="${pageContext.request.contextPath}/mall/assets/js/custom.js"></script>
 </body>
