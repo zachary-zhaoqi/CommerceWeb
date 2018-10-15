@@ -1,16 +1,17 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
     <title>后台管理系统</title>
 	<meta charset="UTF-8">
-   <link rel="stylesheet" type="text/css" href="../Css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="../Css/bootstrap-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="../Css/style.css" />
-    <script type="text/javascript" src="../Js/jquery.js"></script>
-    <script type="text/javascript" src="../Js/jquery.sorted.js"></script>
-    <script type="text/javascript" src="../Js/bootstrap.js"></script>
-    <script type="text/javascript" src="../Js/ckform.js"></script>
-    <script type="text/javascript" src="../Js/common.js"></script>
+   <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <script type="text/javascript" src="../assets/js/jquery.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.sorted.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/ckform.js"></script>
+    <script type="text/javascript" src="../assets/js/common.js"></script>
     <style type="text/css">
         body {
             padding-top: 40px;
@@ -50,12 +51,11 @@
 <body>
 <div class="container">
 
-    <form class="form-signin" method="post" action="../index.html">
+    <form class="form-signin" method="post" action="<%= request.getContextPath()%>/manage/AdminUser.action">
         <h2 class="form-signin-heading">登录系统</h2>
-        <input type="text" name="username" class="input-block-level" placeholder="账号">
-        <input type="password" name="password" class="input-block-level" placeholder="密码">
-        <input type="text" name="verify" class="input-medium" placeholder="验证码">
-       
+        <input type="text" name="adminusername" class="input-block-level" placeholder="账号">
+        <input type="password" name="adminuserpassword" class="input-block-level" placeholder="密码">
+        <<input type="hidden" name="mark" value="login">
         <p><button class="btn btn-large btn-primary" type="submit">登录</button></p>
     </form>
 

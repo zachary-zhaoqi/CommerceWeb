@@ -1,5 +1,5 @@
 <%@ page import="entity.Members" %>
-<%@ page import="dao.ClassificationDAO" %>
+<%@ page import="dao.mall.ClassificationDAO" %>
 <%@ page import="entity.Classification" %>
 <%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
@@ -293,7 +293,7 @@
         </div>
         <div class="col-sm-10">
             <div class="shipping-outer">
-                <form  action="<%= request.getContextPath()%>/Members.action" onsubmit="return loginValidator()" method="post" >
+                <form  action="<%= request.getContextPath()%>/mall/Members.action" onsubmit="return loginValidator()" method="post" >
                     <h4>登陆你的账户</h4>
                     <div class="row">
                         <div class="col-md-12 counttry">

@@ -32,7 +32,8 @@ public class CentralControl extends HttpServlet {
         if (action==null){
             //不存在业务方法，跳转到错误页面。
             request.setAttribute("errorMessage","无效的请求！");
-            request.getRequestDispatcher("mall/error.jsp").forward(request,response);
+            //todo:这里存在一个问题，不可以加入request.getContextPath()会变成：/CommerceWeb/CommerceWeb//mall/error.jsp
+            request.getRequestDispatcher("/mall/error.jsp").forward(request,response);
 
         }else {
             action.execute(request,response);

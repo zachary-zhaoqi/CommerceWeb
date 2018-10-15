@@ -1,4 +1,4 @@
-package dao;
+package dao.mall;
 
 import entity.Classification;
 import jdbc.JdbcOperator;

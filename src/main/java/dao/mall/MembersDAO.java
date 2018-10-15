@@ -1,5 +1,6 @@
-package dao;
+package dao.mall;
 
+import entity.AdminUser;
 import entity.Members;
 import jdbc.JdbcOperator;
 

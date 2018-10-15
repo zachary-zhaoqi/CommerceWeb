@@ -1,6 +1,7 @@
 package action;
 
 import action.mall.MembersAction;
+import action.manage.AdminUserAction;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,8 +11,8 @@ public class ActionFactory {
 
     /***/
     public static void initUrlMapping(){
-        urlMappings.put("/Members.action",new MembersAction());
-
+        urlMappings.put("/mall/Members.action",new MembersAction());
+        urlMappings.put("/manage/AdminUser.action",new AdminUserAction());
     }
 
     /***/

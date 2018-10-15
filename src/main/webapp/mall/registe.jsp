@@ -1,5 +1,5 @@
 <%@ page import="entity.Members" %>
-<%@ page import="dao.ClassificationDAO" %>
+<%@ page import="dao.mall.ClassificationDAO" %>
 <%@ page import="entity.Classification" %>
 <%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
@@ -292,7 +292,7 @@
         <div class="col-sm-10">
             <div class="shipping-outer">
                 <h3>填写相关信息</h3>
-                <form action="<%= request.getContextPath()%>/Members.action" onsubmit="return registeValidator()" method="post" >
+                <form action="<%= request.getContextPath()%>/mall/Members.action" onsubmit="return registeValidator()" method="post" >
                     <div class="row">
                         <div class="col-md-12 counttry" style="margin-bottom: 5px">
                             <div class="lable" id="emaillable">Email:</div>

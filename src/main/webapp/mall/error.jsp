@@ -1,5 +1,5 @@
 <%@ page import="entity.Members" %>
-<%@ page import="dao.ClassificationDAO" %>
+<%@ page import="dao.mall.ClassificationDAO" %>
 <%@ page import="entity.Classification" %>
 <%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.

@@ -1,6 +1,6 @@
 <%@ page import="entity.Members" %>
 <%@ page import="java.util.List" %>
-<%@ page import="dao.ClassificationDAO" %>
+<%@ page import="dao.mall.ClassificationDAO" %>
 <%@ page import="entity.Classification" %>
 <%@ page import="javax.swing.plaf.synth.SynthOptionPaneUI" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>

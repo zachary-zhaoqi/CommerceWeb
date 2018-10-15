@@ -79,7 +79,7 @@ iframe {
   padding: none;
 }
 .header,.dl-main-nav{
-  background: url('../img/main-nav-bg.png') repeat-x 0 0 #204077;
+  background: url('../Images/main-nav-bg.png') repeat-x 0 0 #204077;
 }
 .header {
   background-color: #1B3160;
@@ -139,7 +139,7 @@ iframe {
 }
 
 .nav-item-inner,.dl4-hide-list  .dl-hover{
-  background:url('../img/icon1.png') no-repeat 0 0  transparent;
+  background:url('../Images/icon1.png') no-repeat 0 0  transparent;
 }
 
 .nav-list .dl-hover{
@@ -434,7 +434,7 @@ iframe {
 }
 
 .dl-selected .dl-hide-current {
-  background-image: url('../img/icon2.png');
+  background-image: url('../Images/icon2.png');
 }
 
 .dl-tab-content {
@@ -506,7 +506,7 @@ iframe {
   top: 25px;
   border-left: 1px solid #C3C3D6;
   border-radius: 2px;
-  background: url('../img/left-slib.gif') no-repeat 0 center transparent;
+  background: url('../Images/left-slib.gif') no-repeat 0 center transparent;
 }
 .dl-collapse .dl-second-slib {
   background-position: -6px center;
