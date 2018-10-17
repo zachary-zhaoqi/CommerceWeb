@@ -67,8 +67,8 @@
                                     Members members;
                                     String name;
                                     String href;
-                                    if (request.getAttribute("Members")!=null){
-                                        members= (Members) request.getAttribute("Members");
+                                    if (request.getSession().getAttribute("Members")!=null){
+                                        members= (Members) request.getSession().getAttribute("Members");
                                         name=members.getEmail();
                                         href=request.getContextPath()+"/mall/home.jsp";
                                         out.println("你好!"+

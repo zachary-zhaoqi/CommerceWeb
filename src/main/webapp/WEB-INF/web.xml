@@ -10,7 +10,7 @@
         <filter-class>filetr.ManageEnter</filter-class>
         <init-param>
             <param-name>excludedPages</param-name>
-            <param-value>/manage/Public/login.jsp</param-value>
+            <param-value>/manage/Public/.*,/manage/assets/.*,/manage/.*\.action</param-value>
         </init-param>
     </filter>
     <filter-mapping>

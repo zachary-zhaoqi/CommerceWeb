@@ -44,7 +44,7 @@ public class MembersAction implements Action {
         MembersDAO membersDAO=new MembersDAO();
         try {
             members=membersDAO.login(members);
-            request.setAttribute("Members",members);
+            request.getSession().setAttribute("Members",members);
             request.getRequestDispatcher("/mall/index.jsp").forward(request,response);
         } catch (Exception e) {
             e.printStackTrace();
@@ -60,8 +60,11 @@ public class MembersAction implements Action {
         MembersDAO membersDAO=new MembersDAO();
         try {
             membersDAO.registe(members);
-            request.setAttribute("Members",members);
-            request.getRequestDispatcher("/mall/index.jsp").forward(request,response);
+            String ss= "<script type='text/javascript'>" +
+                    "alert('registe succeed!please login!');" +
+                    "window.location.href='" +request.getContextPath()+"/mall/login.jsp';" +
+                    "</script>";
+            response.getWriter().print(ss);
         } catch (Exception e) {
             e.printStackTrace();
             request.setAttribute("errorMessage",e.getMessage());

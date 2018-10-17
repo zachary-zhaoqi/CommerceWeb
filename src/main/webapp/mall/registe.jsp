@@ -334,7 +334,7 @@
                         </div>
                     </div>
                     <div class="shopping-cart">
-                        <<input type="hidden" name="mark" value="registe">
+                        <input type="hidden" name="mark" value="registe">
                         <input class="button" type="submit" id="registesubmit" value="注册并登陆"/>
                     </div>
                 </form>

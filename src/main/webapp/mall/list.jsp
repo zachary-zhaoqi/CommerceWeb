@@ -113,7 +113,7 @@
             <%--商标、搜索栏、购物车--%>
             <div class="col-sm-3">
                 <div class="logo">
-                    <h6><img src="${pageContext.request.contextPath}/assets/images/logo.png" alt="logo"/></h6>
+                    <h6><img src="${pageContext.request.contextPath}/mall/assets/images/logo.png" alt="logo"/></h6>
                 </div>
             </div>
             <div class="col-sm-6">
@@ -165,7 +165,7 @@
                             <div class="dropdown-menu  cart-outer">
                                 <%--todo：jsp自适应显示购物车--%>
                                 <div class="cart-content">
-                                    <div class="col-sm-4 col-md-4"><img src="${pageContext.request.contextPath}/assets/images/elec-img4.jpg" alt="13">
+                                    <div class="col-sm-4 col-md-4"><img src="${pageContext.request.contextPath}/mall/assets/images/elec-img4.jpg" alt="13">
                                     </div>
                                     <div class="col-sm-8 col-md-8">
                                         <div class="pro-text">
@@ -176,7 +176,7 @@
                                     </div>
                                 </div>
                                 <div class="cart-content">
-                                    <div class="col-sm-4 col-md-4"><img src="${pageContext.request.contextPath}/assets/images/elec-img3.jpg" alt="13">
+                                    <div class="col-sm-4 col-md-4"><img src="${pageContext.request.contextPath}/mall/assets/images/elec-img3.jpg" alt="13">
                                     </div>
                                     <div class="col-sm-8 col-md-8">
                                         <div class="pro-text">

@@ -4,14 +4,14 @@
 <head>
     <title>后台管理系统</title>
 	<meta charset="UTF-8">
-   <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
-    <script type="text/javascript" src="../assets/js/jquery.js"></script>
-    <script type="text/javascript" src="../assets/js/jquery.sorted.js"></script>
-    <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
-    <script type="text/javascript" src="../assets/js/ckform.js"></script>
-    <script type="text/javascript" src="../assets/js/common.js"></script>
+   <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/manage/assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/manage/assets/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/manage/assets/css/style.css" />
+    <script type="text/javascript" src="${pageContext.request.contextPath}/manage/assets/js/jquery.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/manage/assets/js/jquery.sorted.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/manage/assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/manage/assets/js/ckform.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/manage/assets/js/common.js"></script>
     <style type="text/css">
         body {
             padding-top: 40px;
@@ -46,19 +46,17 @@
             padding: 7px 9px;
         }
 
-    </style>  
+    </style>
 </head>
 <body>
 <div class="container">
-
     <form class="form-signin" method="post" action="<%= request.getContextPath()%>/manage/AdminUser.action">
         <h2 class="form-signin-heading">登录系统</h2>
         <input type="text" name="adminusername" class="input-block-level" placeholder="账号">
         <input type="password" name="adminuserpassword" class="input-block-level" placeholder="密码">
-        <<input type="hidden" name="mark" value="login">
+        <input type="hidden" name="mark" value="login">
         <p><button class="btn btn-large btn-primary" type="submit">登录</button></p>
     </form>
-
 </div>
 </body>
 </html>
