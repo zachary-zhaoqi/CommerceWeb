@@ -235,9 +235,9 @@
                                             String primaryclassification_grade = primaryclassifications.get(i).getClassificationgrade();
                                             String primaryclassification_name = primaryclassifications.get(i).getClassificationname();
                                             String primaryclassification_src=primaryclassifications.get(i).getClassificationsrc();
-                                            String primaryclassification_href;
+                                            String primaryclassification_href=request.getContextPath()+"/mall/CommodityShow.action?primaryclassification="+primaryclassification_name;
                                             out.println("<li class=\"dropdown\">\n" +
-                                                            "<a href=\"index.jsp\"><img src=\""+request.getContextPath()+"/"+ primaryclassification_src +"\"alt=\"menu-icon"+ primaryclassification_grade +"\"/>\n" + primaryclassification_name
+                                                            "<a href=\""+primaryclassification_href+"\"><img src=\""+request.getContextPath()+"/"+ primaryclassification_src +"\"alt=\"menu-icon"+ primaryclassification_grade +"\"/>\n" + primaryclassification_name
                                             );
                                             if (primaryclassification_grade.equals("10")){
                                                 System.out.println("aaa");
@@ -248,8 +248,8 @@
                                                         "</a>");
                                                 out.println("<ul class=\"dropdown-menu right\">");
                                                 for (int j = 0; j < secondaryClassifications.size(); j++) {
-                                                    String secondaryClassification_href="#";
                                                     String secondaryClassification_name=secondaryClassifications.get(j).getClassificationname();
+                                                    String secondaryClassification_href=request.getContextPath()+"/mall/CommodityShow.action?secondaryclassification="+secondaryClassification_name;
                                                     out.println("<li><a href=\""+secondaryClassification_href+"\">"+secondaryClassification_name+"</a></li>");
                                                 }
                                                 out.println("</ul>");
