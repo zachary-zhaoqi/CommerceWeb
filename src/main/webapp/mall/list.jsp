@@ -1,7 +1,9 @@
 <%@ page import="entity.Members" %>
 <%@ page import="dao.mall.ClassificationDAO" %>
 <%@ page import="entity.Classification" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="entity.Commodity" %>
+<%@ page import="entity.PageModel" %><%--
   Created by IntelliJ IDEA.
   User: starr
   Date: 2018/9/25
@@ -20,13 +22,18 @@
     <%-- Latest Bootstrap min CSS --%>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/css/bootstrap.min.css" type="text/css">
     <%-- Dropdownhover CSS --%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/css/bootstrap-dropdownhover.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/css/bootstrap-dropdownhover.min.css"
+          type="text/css">
     <%-- latest fonts awesome --%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/font/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/font/css/font-awesome.min.css"
+          type="text/css">
     <%-- simple line fonts awesome --%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/simple-line-icon/css/simple-line-icons.css" type="text/css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/mall/assets/simple-line-icon/css/simple-line-icons.css"
+          type="text/css">
     <%-- stroke-gap-icons --%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/stroke-gap-icons/stroke-gap-icons.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/stroke-gap-icons/stroke-gap-icons.css"
+          type="text/css">
     <%-- Animate CSS --%>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/css/animate.min.css" type="text/css">
     <%-- Style CSS --%>
@@ -49,7 +56,7 @@
 <body>
 <%--  Preloader  --%>
 <div id="preloader">
-    <div id="loading"> </div>
+    <div id="loading"></div>
 </div>
 <header class="header2">
     <%--  top-header  --%>
@@ -66,17 +73,17 @@
                                     Members members;
                                     String name;
                                     String href;
-                                    if (request.getAttribute("Members")!=null){
-                                        members= (Members) request.getAttribute("Members");
-                                        name=members.getEmail();
-                                        href=request.getContextPath()+"/mall/home.jsp";
-                                        out.println("你好!"+
-                                                "<a href=\""+href+"\">"+name+"</a>");
-                                    }else {
+                                    if (request.getAttribute("Members") != null) {
+                                        members = (Members) request.getAttribute("Members");
+                                        name = members.getEmail();
+                                        href = request.getContextPath() + "/mall/home.jsp";
+                                        out.println("你好!" +
+                                                "<a href=\"" + href + "\">" + name + "</a>");
+                                    } else {
                                         out.println("你好!请-" +
-                                                "<a href=\""+request.getContextPath()+"/mall/login.jsp\">登陆</a>" +
+                                                "<a href=\"" + request.getContextPath() + "/mall/login.jsp\">登陆</a>" +
                                                 "or" +
-                                                "<a href=\""+request.getContextPath()+"/mall/registe.jsp\">注册</a>");
+                                                "<a href=\"" + request.getContextPath() + "/mall/registe.jsp\">注册</a>");
                                     }
                                 %>
                             </span>
@@ -91,7 +98,8 @@
                         <li><i class="icon-note icons" aria-hidden="true"></i><a href="#">我的订单</a></li>
                         <li>
                             <div class="dropdown">
-                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                   data-hover="dropdown">
                                     <i class="icon-settings icons" aria-hidden="true"></i> 设置
                                 </a>
                                 <ul class="dropdown-menu">
@@ -125,7 +133,7 @@
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <%
-                                    ClassificationDAO classificationDAO =new ClassificationDAO();
+                                    ClassificationDAO classificationDAO = new ClassificationDAO();
                                     List<Classification> primaryclassifications = classificationDAO.getPrimaryClassification();
                                     List<Classification> secondaryClassifications;
                                     for (int i = 0; i < primaryclassifications.size(); i++) {
@@ -160,12 +168,15 @@
                             <strong>愿望清单</strong>
                         </li>
                         <li class="dropdown">
-                            <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons"
+                                                                                        aria-hidden="true"></i></a>
                             <span class="subno">2</span><strong>购物车</strong>
                             <div class="dropdown-menu  cart-outer">
                                 <%--todo：jsp自适应显示购物车--%>
                                 <div class="cart-content">
-                                    <div class="col-sm-4 col-md-4"><img src="${pageContext.request.contextPath}/mall/assets/images/elec-img4.jpg" alt="13">
+                                    <div class="col-sm-4 col-md-4"><img
+                                            src="${pageContext.request.contextPath}/mall/assets/images/elec-img4.jpg"
+                                            alt="13">
                                     </div>
                                     <div class="col-sm-8 col-md-8">
                                         <div class="pro-text">
@@ -176,7 +187,9 @@
                                     </div>
                                 </div>
                                 <div class="cart-content">
-                                    <div class="col-sm-4 col-md-4"><img src="${pageContext.request.contextPath}/mall/assets/images/elec-img3.jpg" alt="13">
+                                    <div class="col-sm-4 col-md-4"><img
+                                            src="${pageContext.request.contextPath}/mall/assets/images/elec-img3.jpg"
+                                            alt="13">
                                     </div>
                                     <div class="col-sm-8 col-md-8">
                                         <div class="pro-text">
@@ -221,11 +234,13 @@
                     </div>
                     <%-- Collect the nav links, forms, and other content for toggling --%>
                     <%--收集导航链接、表单和其他内容--%>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations=" fadeInLeft fadeInUp fadeInRight">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown"
+                         data-animations=" fadeInLeft fadeInUp fadeInRight">
                         <ul class="nav navbar-nav">
                             <li class="all-departments dropdown">
                                 <a href="index.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-expanded="false"><span> 商品分类 </span> <i class="fa fa-bars" aria-hidden="true"></i>
+                                   aria-expanded="false"><span> 商品分类 </span> <i class="fa fa-bars"
+                                                                                aria-hidden="true"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdownhover-bottom" role="menu">
                                     <%--通过数据库查询有哪些类别显示--%>
@@ -234,9 +249,9 @@
                                             String primaryclassification_grade = primaryclassifications.get(i).getClassificationgrade();
                                             String primaryclassification_name = primaryclassifications.get(i).getClassificationname();
                                             String primaryclassification_src=primaryclassifications.get(i).getClassificationsrc();
-                                            String primaryclassification_href;
+                                            String primaryclassification_href=request.getContextPath()+"/mall/CommodityShow.action?mark=show&primaryclassification="+primaryclassification_name;
                                             out.println("<li class=\"dropdown\">\n" +
-                                                    "<a href=\"index.jsp\"><img src=\""+request.getContextPath()+"/"+ primaryclassification_src +"\"alt=\"menu-icon"+ primaryclassification_grade +"\"/>\n" + primaryclassification_name
+                                                    "<a href=\""+primaryclassification_href+"\"><img src=\""+request.getContextPath()+"/"+ primaryclassification_src +"\"alt=\"menu-icon"+ primaryclassification_grade +"\"/>\n" + primaryclassification_name
                                             );
                                             if (primaryclassification_grade.equals("10")){
                                                 System.out.println("aaa");
@@ -247,8 +262,8 @@
                                                         "</a>");
                                                 out.println("<ul class=\"dropdown-menu right\">");
                                                 for (int j = 0; j < secondaryClassifications.size(); j++) {
-                                                    String secondaryClassification_href="#";
                                                     String secondaryClassification_name=secondaryClassifications.get(j).getClassificationname();
+                                                    String secondaryClassification_href=request.getContextPath()+"/mall/CommodityShow.action?mark=show&secondaryclassification="+secondaryClassification_name;
                                                     out.println("<li><a href=\""+secondaryClassification_href+"\">"+secondaryClassification_name+"</a></li>");
                                                 }
                                                 out.println("</ul>");
@@ -290,21 +305,6 @@
             <div class="col-sm-3 col-md-3">
                 <div class="weight">
                     <div class="title">
-                        <h2>Categories</h2>
-                    </div>
-                    <div class="product-categories">
-                        <ul>
-                            <li><a href="#">Laptop & Computer  <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></li>
-                            <li><a href="#">Accessories   <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></li>
-                            <li><a href="#">Gaming  <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></li>
-                            <li><a href="#">Mac Computers  <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></li>
-                            <li><a href="#">Ultrabooks <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></li>
-                            <li><a href="#">Printers & Ink  <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="weight">
-                    <div class="title">
                         <h2>filter by price</h2>
                     </div>
                     <div class="filter-outer">
@@ -313,8 +313,10 @@
                         <div class="button-slider">
                             <div class="btn-group">
                                 <div class="btn btn-default">
-                                    <p>Range: <strong>$<span id="sliderValue">100.0</span></strong> - <strong>$<span id="sliderValue2">1.700.00</span></strong> </p>
-                                    <input id="bootstrap-slider" data-slider-min="1" data-slider-max="1700" data-slider-step="1" data-slider-value="100" type="text">
+                                    <p>Range: <strong>$<span id="sliderValue">100.0</span></strong> - <strong>$<span
+                                            id="sliderValue2">1.700.00</span></strong></p>
+                                    <input id="bootstrap-slider" data-slider-min="1" data-slider-max="1700"
+                                           data-slider-step="1" data-slider-value="100" type="text">
                                     <div class="valueLabelblck">Filter</div>
                                 </div>
                             </div>
@@ -323,23 +325,23 @@
                         <div class="brands">
                             <h3>Brands</h3>
                             <ul>
-                                <li><a href="#">Black  <span>(10)</span></a></li>
-                                <li><a href="#">White   <span>(13)</span></a></li>
-                                <li><a href="#">Blue  <span>(05)</span></a></li>
-                                <li><a href="#">Red  <span>(87)</span></a></li>
+                                <li><a href="#">Black <span>(10)</span></a></li>
+                                <li><a href="#">White <span>(13)</span></a></li>
+                                <li><a href="#">Blue <span>(05)</span></a></li>
+                                <li><a href="#">Red <span>(87)</span></a></li>
                                 <li><a href="#">Screen <span>(40)</span></a></li>
                             </ul>
                         </div>
                         <div class="color">
                             <h3>Color</h3>
                             <ul>
-                                <li><a href="#" class="color-1"><span ></span></a></li>
-                                <li><a href="#" class="color-2"><span ></span></a></li>
-                                <li><a href="#" class="color-3"><span ></span></a></li>
-                                <li><a href="#" class="color-4"><span ></span></a></li>
-                                <li><a href="#" class="color-5"><span ></span></a></li>
-                                <li><a href="#" class="color-6"><span ></span></a></li>
-                                <li><a href="#" class="color-7"><span ></span></a></li>
+                                <li><a href="#" class="color-1"><span></span></a></li>
+                                <li><a href="#" class="color-2"><span></span></a></li>
+                                <li><a href="#" class="color-3"><span></span></a></li>
+                                <li><a href="#" class="color-4"><span></span></a></li>
+                                <li><a href="#" class="color-5"><span></span></a></li>
+                                <li><a href="#" class="color-6"><span></span></a></li>
+                                <li><a href="#" class="color-7"><span></span></a></li>
                             </ul>
                         </div>
                         <div class="size">
@@ -359,7 +361,9 @@
                         <h2>Compare products</h2>
                     </div>
                     <div class="ads-lft">
-                        <p>You have no item to compare. </p> <img src="${pageContext.request.contextPath}/mall/assets/images/add-banner2.jpg" alt="add banner"> </div>
+                        <p>You have no item to compare. </p> <img
+                            src="${pageContext.request.contextPath}/mall/assets/images/add-banner2.jpg"
+                            alt="add banner"></div>
                 </div>
                 <div class="weight">
                     <div class="title">
@@ -369,8 +373,10 @@
                         <ul>
                             <li>
                                 <div class="e-product">
-                                    <div class="pro-img"> <img src="${pageContext.request.contextPath}/mall/assets/images/products/digital/5.jpg" alt="2"> </div>
-                                    <div class="pro-text-outer"> <span>Macbook, Laptop</span>
+                                    <div class="pro-img"><img
+                                            src="${pageContext.request.contextPath}/mall/assets/images/products/digital/5.jpg"
+                                            alt="2"></div>
+                                    <div class="pro-text-outer"><span>Macbook, Laptop</span>
                                         <a href="#">
                                             <h4> Apple Macbook Retina 23’ </h4>
                                         </a>
@@ -380,8 +386,10 @@
                             </li>
                             <li>
                                 <div class="e-product">
-                                    <div class="pro-img"> <img src="${pageContext.request.contextPath}/mall/assets/images/products/digital/9.jpg" alt="2"> </div>
-                                    <div class="pro-text-outer"> <span>Macbook, Laptop</span>
+                                    <div class="pro-img"><img
+                                            src="${pageContext.request.contextPath}/mall/assets/images/products/digital/9.jpg"
+                                            alt="2"></div>
+                                    <div class="pro-text-outer"><span>Macbook, Laptop</span>
                                         <a href="#">
                                             <h4> Apple Macbook Retina 23’ </h4>
                                         </a>
@@ -391,8 +399,10 @@
                             </li>
                             <li>
                                 <div class="e-product">
-                                    <div class="pro-img"> <img src="${pageContext.request.contextPath}/mall/assets/images/products/digital/12.jpg" alt="2"> </div>
-                                    <div class="pro-text-outer"> <span>Macbook, Laptop</span>
+                                    <div class="pro-img"><img
+                                            src="${pageContext.request.contextPath}/mall/assets/images/products/digital/12.jpg"
+                                            alt="2"></div>
+                                    <div class="pro-text-outer"><span>Macbook, Laptop</span>
                                         <a href="#">
                                             <h4> Apple Macbook Retina 23’ </h4>
                                         </a>
@@ -405,12 +415,19 @@
                 </div>
             </div>
             <div class="col-sm-9 col-md-9">
-                <div class="col-md-12 grid-banner"> <img src="${pageContext.request.contextPath}/mall/assets/images/Grid-banner.png" alt="Grid-banner" /> </div>
+                <div class="col-md-12 grid-banner"><img
+                        src="${pageContext.request.contextPath}/mall/assets/images/Grid-banner.png" alt="Grid-banner"/>
+                </div>
+                <%
+                    PageModel pageModel = (PageModel) request.getAttribute("pageModel");
+                %>
                 <div class="grid-spr">
-                    <div class="col-sm-6 col-md-6"> <a href="#" class="grid-view-icon"><i class="fa fa-th-large" aria-hidden="true"></i></a> <a href="#" class="list-view-icon"><i class="fa fa-list" aria-hidden="true"></i></a>
+                    <div class="col-sm-6 col-md-6">
+                        <a href="#" class="grid-view-icon"><i class="fa fa-th-large" aria-hidden="true"></i></a>
+                        <a href="#" class="list-view-icon"><i class="fa fa-list" aria-hidden="true"></i></a>
                         <div class="select-option">
                             <a class="btn btn-default btn-select options2">
-                                <input type="hidden" class="btn-select-input" id="1" name="1" value="" />
+                                <input type="hidden" class="btn-select-input" id="1" name="1" value=""/>
                                 <span class="btn-select-value">Select an Item</span>
                                 <span class="btn-select-arrow fa fa-angle-down"></span>
                                 <ul>
@@ -423,337 +440,109 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 text-right"> <strong>Showing 1-12 <span>of 30 relults</span></strong> </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <%-- .pro-text --%>
-                    <div class="pro-text">
-                        <div class="col-xs-12 col-sm-5 col-md-5">
-                            <%-- .pro-img --%>
-                            <div class="pro-img"> <img src="${pageContext.request.contextPath}/mall/assets/images/products/digital/20.jpg" alt="2">
-                                <sup class="sale-tag">sale!</sup>
-                                <%-- .hover-icon --%>
-                                <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
-                                <%-- /.hover-icon --%>
-                            </div>
-                            <%-- /.pro-img --%>
-                        </div>
-                        <div class="col-xs-12 col-sm-7 col-md-7">
-                            <div class="pro-text-outer list-pro-text">
-                                <span>Macbook, Laptop</span>
-                                <a href="#">
-                                    <h4> Apple Macbook Retina 23’ </h4>
-                                </a>
-                                <div class="star2">
-                                    <ul>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><a href="#">10 review(s)</a></li>
-                                        <li><a href="#"> Add your review</a></li>
-                                    </ul>
-                                </div>
-                                <p class="wk-price">$290.00 </p>
-                                <p>Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus.</p>
-                                <a href="#" class="add-btn">Add to cart</a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Heart"></span></a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Restart"></span></a>
-                            </div>
-                        </div>
+                    <div class="col-sm-6 col-md-6 text-right">
+                        <strong>
+                            显示<span><%=pageModel.getResultSize()%>个结果中的</span>
+                            <%=(pageModel.getCurrentPage() - 1) * PageModel.PAGEMODELSIZE + 1%>
+                            -
+                            <%=pageModel.getCurrentPage() * PageModel.PAGEMODELSIZE %>
+                            个
+                        </strong>
                     </div>
-                    <%-- /.pro-text --%>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <%-- .pro-text --%>
-                    <div class="pro-text">
-                        <div class="col-xs-12 col-sm-5 col-md-5">
-                            <%-- .pro-img --%>
-                            <div class="pro-img"> <img src="${pageContext.request.contextPath}/mall/assets/images/products/digital/2.jpg" alt="2">
-                                <sup class="sale-tag">sale!</sup>
-                                <%-- .hover-icon --%>
-                                <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
-                                <%-- /.hover-icon --%>
-                            </div>
-                            <%-- /.pro-img --%>
-                        </div>
-                        <div class="col-xs-12 col-sm-7 col-md-7">
-                            <div class="pro-text-outer list-pro-text">
-                                <span>Macbook, Laptop</span>
-                                <a href="#">
-                                    <h4> Apple Macbook Retina 23’ </h4>
-                                </a>
-                                <div class="star2">
-                                    <ul>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><a href="#">10 review(s)</a></li>
-                                        <li><a href="#"> Add your review</a></li>
-                                    </ul>
-                                </div>
-                                <p class="wk-price">$290.00 </p>
-                                <p>Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus.</p>
-                                <a href="#" class="add-btn">Add to cart</a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Heart"></span></a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Restart"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <%-- /.pro-text --%>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <%-- .pro-text --%>
-                    <div class="pro-text">
-                        <div class="col-xs-12 col-sm-5 col-md-5">
-                            <%-- .pro-img --%>
-                            <div class="pro-img"> <img src="${pageContext.request.contextPath}/mall/assets/images/products/digital/22.jpg" alt="2">
-                                <%-- .hover-icon --%>
-                                <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
-                                <%-- /.hover-icon --%>
-                            </div>
-                            <%-- /.pro-img --%>
-                        </div>
-                        <div class="col-xs-12 col-sm-7 col-md-7">
-                            <div class="pro-text-outer list-pro-text">
-                                <span>Macbook, Laptop</span>
-                                <a href="#">
-                                    <h4> Apple Macbook Retina 23’ </h4>
-                                </a>
-                                <div class="star2">
-                                    <ul>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><a href="#">10 review(s)</a></li>
-                                        <li><a href="#"> Add your review</a></li>
-                                    </ul>
-                                </div>
-                                <p class="wk-price">$290.00 </p>
-                                <p>Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus.</p>
-                                <a href="#" class="add-btn">Add to cart</a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Heart"></span></a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Restart"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <%-- /.pro-text --%>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <%-- .pro-text --%>
-                    <div class="pro-text">
-                        <div class="col-xs-12 col-sm-5 col-md-5">
-                            <%-- .pro-img --%>
-                            <div class="pro-img"> <img src="${pageContext.request.contextPath}/mall/assets/images/products/digital/13.jpg" alt="2">
-                                <%-- .hover-icon --%>
-                                <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
-                                <%-- /.hover-icon --%>
-                            </div>
-                            <%-- /.pro-img --%>
-                        </div>
-                        <div class="col-xs-12 col-sm-7 col-md-7">
-                            <div class="pro-text-outer list-pro-text">
-                                <span>Macbook, Laptop</span>
-                                <a href="#">
-                                    <h4> Apple Macbook Retina 23’ </h4>
-                                </a>
-                                <div class="star2">
-                                    <ul>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><a href="#">10 review(s)</a></li>
-                                        <li><a href="#"> Add your review</a></li>
-                                    </ul>
-                                </div>
-                                <p class="wk-price">$290.00 </p>
-                                <p>Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus.</p>
-                                <a href="#" class="add-btn">Add to cart</a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Heart"></span></a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Restart"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <%-- /.pro-text --%>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <%-- .pro-text --%>
-                    <div class="pro-text">
-                        <div class="col-xs-12 col-sm-5 col-md-5">
-                            <%-- .pro-img --%>
-                            <div class="pro-img"> <img src="${pageContext.request.contextPath}/mall/assets/images/products/digital/17.jpg" alt="2">
-                                <sup class="sale-tag">sale!</sup>
-                                <%-- .hover-icon --%>
-                                <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
-                                <%-- /.hover-icon --%>
-                            </div>
-                            <%-- /.pro-img --%>
-                        </div>
-                        <div class="col-xs-12 col-sm-7 col-md-7">
-                            <div class="pro-text-outer list-pro-text">
-                                <span>Macbook, Laptop</span>
-                                <a href="#">
-                                    <h4> Apple Macbook Retina 23’ </h4>
-                                </a>
-                                <div class="star2">
-                                    <ul>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><a href="#">10 review(s)</a></li>
-                                        <li><a href="#"> Add your review</a></li>
-                                    </ul>
-                                </div>
-                                <p class="wk-price">$290.00 </p>
-                                <p>Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus.</p>
-                                <a href="#" class="add-btn">Add to cart</a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Heart"></span></a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Restart"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <%-- /.pro-text --%>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <%-- .pro-text --%>
-                    <div class="pro-text">
-                        <div class="col-xs-12 col-sm-5 col-md-5">
-                            <%-- .pro-img --%>
-                            <div class="pro-img"> <img src="${pageContext.request.contextPath}/mall/assets/images/products/digital/16.jpg" alt="2">
-                                <%-- .hover-icon --%>
-                                <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
-                                <%-- /.hover-icon --%>
-                            </div>
-                            <%-- /.pro-img --%>
-                        </div>
-                        <div class="col-xs-12 col-sm-7 col-md-7">
-                            <div class="pro-text-outer list-pro-text">
-                                <span>Macbook, Laptop</span>
-                                <a href="#">
-                                    <h4> Apple Macbook Retina 23’ </h4>
-                                </a>
-                                <div class="star2">
-                                    <ul>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><a href="#">10 review(s)</a></li>
-                                        <li><a href="#"> Add your review</a></li>
-                                    </ul>
-                                </div>
-                                <p class="wk-price">$290.00 </p>
-                                <p>Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus.</p>
-                                <a href="#" class="add-btn">Add to cart</a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Heart"></span></a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Restart"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <%-- /.pro-text --%>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <%-- .pro-text --%>
-                    <div class="pro-text">
-                        <div class="col-xs-12 col-sm-5 col-md-5">
-                            <%-- .pro-img --%>
-                            <div class="pro-img"> <img src="${pageContext.request.contextPath}/mall/assets/images/products/digital/14.jpg" alt="2">
-                                <%-- .hover-icon --%>
-                                <div class="hover-icon"> <a href="#"><span class="icon icon-Heart"></span></a> <a href="#"><span class="icon icon-Search"></span></a> <a href="#"><span class="icon icon-Restart"></span></a> </div>
-                                <%-- /.hover-icon --%>
-                            </div>
-                            <%-- /.pro-img --%>
-                        </div>
-                        <div class="col-xs-12 col-sm-7 col-md-7">
-                            <div class="pro-text-outer list-pro-text">
-                                <span>Macbook, Laptop</span>
-                                <a href="#">
-                                    <h4> Apple Macbook Retina 23’ </h4>
-                                </a>
-                                <div class="star2">
-                                    <ul>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li class="yellow-color"><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><a href="#">10 review(s)</a></li>
-                                        <li><a href="#"> Add your review</a></li>
-                                    </ul>
-                                </div>
-                                <p class="wk-price">$290.00 </p>
-                                <p>Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus.</p>
-                                <a href="#" class="add-btn">Add to cart</a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Heart"></span></a>
-                                <a href="#" class="add-btn2"><span class="icon icon-Restart"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <%-- /.pro-text --%>
-                </div>
+                <%
+                    int total;
+                    if (pageModel.getCurrentPage()*PageModel.PAGEMODELSIZE<pageModel.getResultSize()){
+                        total=PageModel.PAGEMODELSIZE;
+                    }else {
+                        total=pageModel.getResultSize()-(pageModel.getCurrentPage()-1)*PageModel.PAGEMODELSIZE;
+                    }
+                    for (int i =1; i < total; i++) {
+                        Commodity commodity= (Commodity) pageModel.getList().get((pageModel.getCurrentPage()-1)*PageModel.PAGEMODELSIZE+i);
+                        out.println(
+                            "<div class=\"col-xs-12 col-sm-12 col-md-12\">\n" +
+                                "<div class=\"pro-text\">\n" +
+                                    "<div class=\"col-xs-12 col-sm-5 col-md-5\">\n" +
+                                        "<div class=\"pro-img\"><img src=\""+request.getContextPath()+commodity.getCommoditynsrc()+"\" alt=\"2\">\n" +
+                                            " <sup class=\"sale-tag\">sale!</sup>\n" +
+                                            "<div class=\"hover-icon\">" +
+                                            "<a href=\"#\"><span class=\"icon icon-Heart\"></span></a>\n" +
+                                            "<a href=\"#\"><span class=\"icon icon-Search\"></span></a>\n" +
+                                            "<a href=\"#\"><span class=\"icon icon-Restart\"></span></a>\n" +
+                                            "</div>\n" +
+                                        "</div>\n" +
+                                    "</div>\n" +
+                                    "<div class=\"col-xs-12 col-sm-7 col-md-7\">\n" +
+                                        "<div class=\"pro-text-outer list-pro-text\">\n" +
+                                            "<span>"+commodity.getPrimaryclassification()+","+commodity.getSecondaryclassification()+"</span>\n" +
+                                            "<a href=\"#\"><h4>"+commodity.getCommodityname()+"</h4></a>\n" +
+                                            "<p class=\"wk-price\">￥"+commodity.getCommodityprice()+" </p>\n" +
+                                            "<p>"+commodity.getCommoditydetail()+"</p>\n " +
+                                            "<a href=\"#\" class=\"add-btn\">添加到购物车</a>\n" +
+                                            "<a href=\"#\" class=\"add-btn2\"><span class=\"icon icon-Heart\"></span></a>\n" +
+                                            "<a href=\"#\" class=\"add-btn2\"><span class=\"icon icon-Restart\"></span></a>\n" +
+                                        "</div >\n " +
+                                    "</div >\n " +
+                                "</div >\n " +
+                            "</div>"
+                        );
+                    }
+                %>
                 <div class="col-xs-12">
                     <div class="grid-spr pag">
                         <%-- .pagetions --%>
                         <div class="col-xs-12 col-sm-6 col-md-6 text-left">
                             <ul class="pagination">
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">&raquo;</a></li>
+                                <%
+                                    for (int i = 1; i <= pageModel.getResultSize()/PageModel.PAGEMODELSIZE+1; i++) {
+                                        if (i==pageModel.getCurrentPage()){
+                                            out.println("<li class=\"active\">");
+                                        }else {
+                                            out.println("<li>");
+                                        }
+                                        session.setAttribute("pageModel",pageModel);
+                                        out.println("<a href=\""+request.getContextPath()+"/mall/CommodityShow.action?mark=change&targetPage="+i+"\">"+i+"</a>");
+
+                                        out.println("</li>");
+                                    }
+                                %>
                             </ul>
+
                         </div>
                         <%-- /.pagetions --%>
                         <%-- .Showing --%>
                         <div class="col-xs-12 col-sm-6 col-md-6 text-right">
-                            <strong>Showing 1-12 <span>of 30 relults</span></strong>
+                            <strong>
+                                显示<span><%=pageModel.getResultSize()%>个结果中的</span>
+                                <%=(pageModel.getCurrentPage() - 1) * PageModel.PAGEMODELSIZE + 1%>
+                                -
+                                <%=pageModel.getCurrentPage() * PageModel.PAGEMODELSIZE %>
+                                个
+                            </strong>
                         </div>
                         <%-- /.Showing --%>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
     <%-- /.grid-shop --%>
 </section>
-<%-- newsletter --%>
-<section class="newsletter">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6">
-                <h6 class="sing-up-text">sign up to
-                    <strong>newsletter</strong> &
-                    <strong>free shipping</strong> for first shopping</h6>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6">
-                <div class="sing-up-input">
-                    <input name="singup" type="text" placeholder="Your email address...">
-                    <input name="submit" type="button" value="Submit" /> </div>
-            </div>
-        </div>
-    </div>
-</section>
-<%-- /newsletter --%>
 <footer>
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <%-- f-weghit --%>
-                <div class="f-weghit"> <img src="${pageContext.request.contextPath}/mall/assets/images/logo.png" alt="logo" />
-                    <p><strong>Complex</strong> is a premium Templates theme with advanced admin module. It’s extremely customizable, easy to use and fully responsive and retina ready.</p>
+                <div class="f-weghit"><img src="${pageContext.request.contextPath}/mall/assets/images/logo.png"
+                                           alt="logo"/>
+                    <p><strong>Complex</strong> is a premium Templates theme with advanced admin module. It’s extremely
+                        customizable, easy to use and fully responsive and retina ready.</p>
                     <ul>
-                        <li><i class="icon-location-pin icons" aria-hidden="true"></i> <strong>Add:</strong> 1234 Heaven Stress, Beverly Hill, Melbourne, USA.</li>
-                        <li><i class="icon-envelope-letter icons"></i> <strong>Email:</strong> Contact@erentheme.com</li>
+                        <li><i class="icon-location-pin icons" aria-hidden="true"></i> <strong>Add:</strong> 1234 Heaven
+                            Stress, Beverly Hill, Melbourne, USA.
+                        </li>
+                        <li><i class="icon-envelope-letter icons"></i> <strong>Email:</strong> Contact@erentheme.com
+                        </li>
                         <li><i class="icon-call-in icons"></i> <strong>Phone Number:</strong> (800) 123 456 789</li>
                     </ul>
                 </div>
@@ -791,8 +580,10 @@
                     <h4>On-Sale Products</h4>
                     <%-- e-product --%>
                     <div class="e-product">
-                        <div class="pro-img"> <img src="${pageContext.request.contextPath}/mall/assets/images/on-seal-img1.jpg" alt="2"> </div>
-                        <div class="pro-text-outer"> <span>Macbook, Laptop</span>
+                        <div class="pro-img"><img
+                                src="${pageContext.request.contextPath}/mall/assets/images/on-seal-img1.jpg" alt="2">
+                        </div>
+                        <div class="pro-text-outer"><span>Macbook, Laptop</span>
                             <a href="#">
                                 <h4> Apple Macbook Retina 23’ </h4>
                             </a>
@@ -802,8 +593,10 @@
                     <%-- e-product --%>
                     <%-- e-product --%>
                     <div class="e-product">
-                        <div class="pro-img"> <img src="${pageContext.request.contextPath}/mall/assets/images/on-seal-img2.jpg" alt="2"> </div>
-                        <div class="pro-text-outer"> <span>Macbook, Laptop</span>
+                        <div class="pro-img"><img
+                                src="${pageContext.request.contextPath}/mall/assets/images/on-seal-img2.jpg" alt="2">
+                        </div>
+                        <div class="pro-text-outer"><span>Macbook, Laptop</span>
                             <a href="#">
                                 <h4> Apple Macbook Retina 23’ </h4>
                             </a>
@@ -817,8 +610,11 @@
             <%-- copayright --%>
             <div class="copayright">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-6">Copyright &copy; 2017.Company name All rights reserved.</div>
-                    <div class="text-right col-xs-12 col-sm-6 col-md-6"> <img src="${pageContext.request.contextPath}/mall/assets/images/payment-img.jpg" alt="payment-img" /> </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">Copyright &copy; 2017.Company name All rights reserved.
+                    </div>
+                    <div class="text-right col-xs-12 col-sm-6 col-md-6"><img
+                            src="${pageContext.request.contextPath}/mall/assets/images/payment-img.jpg"
+                            alt="payment-img"/></div>
                 </div>
             </div>
             <%-- /copayright --%>
@@ -828,15 +624,21 @@
 <%-- sticky-socia --%>
 <aside id="sticky-social">
     <ul>
-        <li><a href="#" class="fa fa-facebook" target="_blank"><span><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</span></a></li>
-        <li><a href="#" class="fa fa-twitter" target="_blank"><span><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</span></a></li>
-        <li><a href="#" class="fa fa-rss" target="_blank"><span><i class="fa fa-rss" aria-hidden="true"></i> RSS</span></a></li>
-        <li><a href="#" class="fa fa-pinterest-p" target="_blank"><span><i class="fa fa-pinterest-p" aria-hidden="true"></i> Pinterest</span></a></li>
-        <li><a href="#" class="fa fa-share-alt" target="_blank"><span><i class="fa fa-share-alt" aria-hidden="true"></i> Flickr</span></a></li>
+        <li><a href="#" class="fa fa-facebook" target="_blank"><span><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</span></a>
+        </li>
+        <li><a href="#" class="fa fa-twitter" target="_blank"><span><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</span></a>
+        </li>
+        <li><a href="#" class="fa fa-rss" target="_blank"><span><i class="fa fa-rss" aria-hidden="true"></i> RSS</span></a>
+        </li>
+        <li><a href="#" class="fa fa-pinterest-p" target="_blank"><span><i class="fa fa-pinterest-p"
+                                                                           aria-hidden="true"></i> Pinterest</span></a>
+        </li>
+        <li><a href="#" class="fa fa-share-alt" target="_blank"><span><i class="fa fa-share-alt" aria-hidden="true"></i> Flickr</span></a>
+        </li>
     </ul>
 </aside>
 <%-- /sticky-socia --%>
-<p id="back-top"> <a href="#top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a> </p>
+<p id="back-top"><a href="#top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a></p>
 <script src="${pageContext.request.contextPath}/mall/assets/js/jquery.js"></script>
 <%-- Bootstrap Core JavaScript --%>
 <script src="${pageContext.request.contextPath}/mall/assets/js/bootstrap.min.js"></script>

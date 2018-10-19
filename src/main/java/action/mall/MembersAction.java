@@ -31,8 +31,8 @@ public class MembersAction implements Action {
             case "remove" :
 
                 break;
-            default : //可选
-                //语句
+            default :
+                //可选语句
         }
 
     }
