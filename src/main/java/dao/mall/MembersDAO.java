@@ -5,7 +5,7 @@ import entity.Members;
 import jdbc.JdbcOperator;
 
 public class MembersDAO {
-    private JdbcOperator jdbcOperator;
+    private final JdbcOperator jdbcOperator;
 
     public MembersDAO(){
         jdbcOperator = new JdbcOperator();

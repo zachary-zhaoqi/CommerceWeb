@@ -1,16 +1,21 @@
 package entity;
 
+import dao.mall.ShoppingCartClauseDAO;
+
+import java.util.List;
+
 public class Members {
-    private int iduser;
+    private int idmembers;
     private String password;
     private String email;
+    private List<ShoppingCartClause> shoppingCart;
 
-    public int getIduser() {
-        return iduser;
+    public int getIdmembers() {
+        return idmembers;
     }
 
-    public void setIduser(int iduser) {
-        this.iduser = iduser;
+    public void setIdmembers(int idmembers) {
+        this.idmembers = idmembers;
     }
 
     public String getPassword() {
@@ -27,5 +32,19 @@ public class Members {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<ShoppingCartClause> getShoppingCart() {
+        return shoppingCart;
+    }
+
+    public void setShoppingCart(List<ShoppingCartClause> shoppingCart) {
+        this.shoppingCart = shoppingCart;
+    }
+
+    public void setShoppingCart() throws Exception {
+        ShoppingCartClauseDAO shoppingCartClauseDAO=new ShoppingCartClauseDAO();
+
+        this.shoppingCart = shoppingCartClauseDAO.getShoppingCart(idmembers);
     }
 }

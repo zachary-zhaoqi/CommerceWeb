@@ -6,7 +6,7 @@ import jdbc.JdbcOperator;
 import java.util.List;
 
 public class CommodityDAO {
-    private JdbcOperator jdbcOperator;
+    private final JdbcOperator jdbcOperator;
     public CommodityDAO() {
         jdbcOperator = new JdbcOperator();
     }

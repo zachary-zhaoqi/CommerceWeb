@@ -8,13 +8,13 @@ import java.util.List;
 
 public class ClassificationDAO {
 
-    private JdbcOperator jdbcOperator;
+    private final JdbcOperator jdbcOperator;
 
     public ClassificationDAO(){
         jdbcOperator = new JdbcOperator();
     }
 
-    public List getPrimaryClassification() {
+    public List getPrimaryClassification() throws Exception {
         List<Classification> primaryclassification=null;
         String sql="select * from commerce.classification where classificationgrade regexp '^[0-9]+$' ;";
 
@@ -24,7 +24,7 @@ public class ClassificationDAO {
     }
 
 
-    public List<Classification> getsecondaryClassification(String secondaryClassificationgrade) {
+    public List<Classification> getsecondaryClassification(String secondaryClassificationgrade) throws Exception {
         List secondaryClassifications=null;
         String sql="SELECT classificationname FROM commerce.classification where classificationgrade=?;";
 

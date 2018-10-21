@@ -23,11 +23,11 @@ DROP TABLE IF EXISTS `members`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `members` (
-  `iduser` int(11) NOT NULL AUTO_INCREMENT,
+  `idmembers` int(11) NOT NULL AUTO_INCREMENT,
   `password` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
-  PRIMARY KEY (`iduser`),
-  UNIQUE KEY `iduser_UNIQUE` (`iduser`),
+  PRIMARY KEY (`idmembers`),
+  UNIQUE KEY `iduser_UNIQUE` (`idmembers`),
   UNIQUE KEY `email_UNIQUE` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
