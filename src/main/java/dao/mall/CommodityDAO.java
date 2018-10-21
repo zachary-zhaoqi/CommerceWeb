@@ -11,7 +11,7 @@ public class CommodityDAO {
         jdbcOperator = new JdbcOperator();
     }
 
-    public List getCommodityListForPrimaryClassification(String primaryclassification) {
+    public List getCommodityListForPrimaryClassification(String primaryclassification) throws Exception {
         String sql="SELECT * FROM commerce.commodity WHERE primaryclassification=?;";
 
         List<Commodity> commodities=jdbcOperator.queryForJavaBeanList(sql,Commodity.class,primaryclassification);
@@ -19,11 +19,18 @@ public class CommodityDAO {
         return commodities;
     }
 
-    public List getCommodityListForSecondaryClassification(String secondaryclassification) {
+    public List getCommodityListForSecondaryClassification(String secondaryclassification) throws Exception {
         String sql="SELECT * FROM commerce.commodity WHERE secondaryclassification=?;";
 
         List<Commodity> commodities=jdbcOperator.queryForJavaBeanList(sql,Commodity.class,secondaryclassification);
 
         return commodities;
+    }
+
+    public Commodity getCommodityForID(int idcommodity) throws Exception {
+        String sql="SELECT * FROM commerce.commodity WHERE idcommodity=?;";
+
+        Commodity commodity = (Commodity) jdbcOperator.queryForJavaBean(sql, Commodity.class, idcommodity);
+        return commodity;
     }
 }

@@ -104,7 +104,7 @@ public class JdbcOperator {
         return object;
     }
 
-    public List queryForJavaBeanList(String sql, Class javaBeanClass, Object... params) {
+    public List queryForJavaBeanList(String sql, Class javaBeanClass, Object... params) throws Exception {
         List<Object>list=new ArrayList<Object>();
         Object object=null;
         Connection conn = null;
@@ -137,7 +137,7 @@ public class JdbcOperator {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            throw new RuntimeException(e.getMessage());
+            throw e;
         } finally{
             if(conn != null){
                 closeConnection(conn);

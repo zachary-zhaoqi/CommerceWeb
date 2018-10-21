@@ -36,11 +36,14 @@ public class CommodityShowAction implements action.Action {
         String secondaryclassification=request.getParameter("secondaryclassification");
         List commodityList=null;
         CommodityDAO commodityDAO=new CommodityDAO();
-
+        try {
         if (primaryclassification!=null){
-            commodityList = commodityDAO.getCommodityListForPrimaryClassification(primaryclassification);
+                commodityList = commodityDAO.getCommodityListForPrimaryClassification(primaryclassification);
         }else if(secondaryclassification!=null){
             commodityList = commodityDAO.getCommodityListForSecondaryClassification(secondaryclassification);
+        }} catch (Exception e) {
+            e.printStackTrace();
+            //todo:跳转到错误页面
         }
 
         PageModel pageModel=new PageModel();
