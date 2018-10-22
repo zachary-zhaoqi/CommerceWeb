@@ -457,7 +457,7 @@
                     }else {
                         total=pageModel.getResultSize()-(pageModel.getCurrentPage()-1)*PageModel.PAGEMODELSIZE;
                     }
-                    for (int i =1; i < total; i++) {
+                    for (int i =0; i < total; i++) {
                         Commodity commodity= (Commodity) pageModel.getList().get((pageModel.getCurrentPage()-1)*PageModel.PAGEMODELSIZE+i);
                         out.println(
                             "<div class=\"col-xs-12 col-sm-12 col-md-12\">\n" +
@@ -478,7 +478,7 @@
                                             "<a href=\"#\"><h4>"+commodity.getCommodityname()+"</h4></a>\n" +
                                             "<p class=\"wk-price\">￥"+commodity.getCommodityprice()+" </p>\n" +
                                             "<p>"+commodity.getCommoditydetail()+"</p>\n " +
-                                            "<a href=\"#\" class=\"add-btn\">添加到购物车</a>\n" +
+                                            "<a href=\""+request.getContextPath()+"/mall/Members.action?mark=addShoppingCart&idcommodity="+commodity.getIdcommodity()+"\" class=\"add-btn\">添加到购物车</a>\n" +
                                             "<a href=\"#\" class=\"add-btn2\"><span class=\"icon icon-Heart\"></span></a>\n" +
                                             "<a href=\"#\" class=\"add-btn2\"><span class=\"icon icon-Restart\"></span></a>\n" +
                                         "</div >\n " +

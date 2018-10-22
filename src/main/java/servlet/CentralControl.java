@@ -26,7 +26,7 @@ public class CentralControl extends HttpServlet {
         if (url.indexOf("?")>=0){
             url=url.substring(0,url.indexOf("?"));
         }
-        System.out.println(url);
+//        System.out.println(url);
 //        工厂方法
         Action action= ActionFactory.getAction(url);
         if (action==null){
