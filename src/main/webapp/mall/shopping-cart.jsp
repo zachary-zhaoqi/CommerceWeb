@@ -1,7 +1,9 @@
 <%@ page import="entity.Members" %>
 <%@ page import="dao.mall.ClassificationDAO" %>
 <%@ page import="entity.Classification" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="entity.ShoppingCartClause" %>
+<%@ page import="entity.Commodity" %><%--
   Created by IntelliJ IDEA.
   User: starr
   Date: 2018/9/25
@@ -20,13 +22,18 @@
     <%-- Latest Bootstrap min CSS --%>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/css/bootstrap.min.css" type="text/css">
     <%-- Dropdownhover CSS --%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/css/bootstrap-dropdownhover.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/css/bootstrap-dropdownhover.min.css"
+          type="text/css">
     <%-- latest fonts awesome --%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/font/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/font/css/font-awesome.min.css"
+          type="text/css">
     <%-- simple line fonts awesome --%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/simple-line-icon/css/simple-line-icons.css" type="text/css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/mall/assets/simple-line-icon/css/simple-line-icons.css"
+          type="text/css">
     <%-- stroke-gap-icons --%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/stroke-gap-icons/stroke-gap-icons.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/stroke-gap-icons/stroke-gap-icons.css"
+          type="text/css">
     <%-- Animate CSS --%>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/mall/assets/css/animate.min.css" type="text/css">
     <%-- Style CSS --%>
@@ -49,7 +56,7 @@
 <body>
 <%--  Preloader  --%>
 <div id="preloader">
-    <div id="loading"> </div>
+    <div id="loading"></div>
 </div>
 <header class="header2">
     <%--顶部栏--%>
@@ -62,20 +69,23 @@
                         <li>
                             <span>
                                 <%
-                                    Members members;
+                                    Members members = null;
+                                    List<ShoppingCartClause> shoppingCart = null;
                                     String name;
                                     String href;
-                                    if (request.getSession().getAttribute("Members")!=null){
-                                        members= (Members) request.getSession().getAttribute("Members");
-                                        name=members.getEmail();
-                                        href=request.getContextPath()+"/mall/home.jsp";
-                                        out.println("你好!"+
-                                                "<a href=\""+href+"\">"+name+"</a>");
-                                    }else {
+                                    if (session.getAttribute("Members") != null) {
+                                        members = (Members) request.getSession().getAttribute("Members");
+                                        members.setShoppingCart();
+                                        shoppingCart = members.getShoppingCart();
+                                        name = members.getEmail();
+                                        href = request.getContextPath() + "/mall/home.jsp";
+                                        out.println("你好!" +
+                                                "<a href=\"" + href + "\">" + name + "</a>");
+                                    } else {
                                         out.println("你好!请-" +
-                                                "<a href=\""+request.getContextPath()+"/mall/login.jsp\">登陆</a>" +
+                                                "<a href=\"" + request.getContextPath() + "/mall/login.jsp\">登陆</a>" +
                                                 "or" +
-                                                "<a href=\""+request.getContextPath()+"/mall/registe.jsp\">注册</a>");
+                                                "<a href=\"" + request.getContextPath() + "/mall/registe.jsp\">注册</a>");
                                     }
                                 %>
                             </span>
@@ -90,7 +100,8 @@
                         <li><i class="icon-note icons" aria-hidden="true"></i><a href="#">我的订单</a></li>
                         <li>
                             <div class="dropdown">
-                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                   data-hover="dropdown">
                                     <i class="icon-settings icons" aria-hidden="true"></i> 设置
                                 </a>
                                 <ul class="dropdown-menu">
@@ -124,7 +135,7 @@
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <%
-                                    ClassificationDAO classificationDAO =new ClassificationDAO();
+                                    ClassificationDAO classificationDAO = new ClassificationDAO();
                                     List<Classification> primaryclassifications = classificationDAO.getPrimaryClassification();
                                     List<Classification> secondaryClassifications;
                                     for (int i = 0; i < primaryclassifications.size(); i++) {
@@ -159,44 +170,60 @@
                             <strong>愿望清单</strong>
                         </li>
                         <li class="dropdown">
-                            <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons" aria-hidden="true"></i></a>
-                            <span class="subno">2</span><strong>购物车</strong>
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons"
+                                                                                        aria-hidden="true"></i></a>
+                            <%
+                                if (members != null) {
+                                    out.println("<span class=\"subno\">"+shoppingCart.size()+"</span>");
+                                }
+                            %>
+                            <strong>购物车</strong>
                             <div class="dropdown-menu  cart-outer">
                                 <%--todo：jsp自适应显示购物车--%>
-                                <div class="cart-content">
-                                    <div class="col-sm-4 col-md-4"><img src="${pageContext.request.contextPath}/mall/assets/images/elec-img4.jpg" alt="13">
-                                    </div>
-                                    <div class="col-sm-8 col-md-8">
-                                        <div class="pro-text">
-                                            <a href="#">Apple Macbook Retina 23’’ </a>
-                                            <div class="close">x</div>
-                                            <strong>1 × $290.00</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cart-content">
-                                    <div class="col-sm-4 col-md-4"><img src="${pageContext.request.contextPath}/mall/assets/images/elec-img3.jpg" alt="13">
-                                    </div>
-                                    <div class="col-sm-8 col-md-8">
-                                        <div class="pro-text">
-                                            <a href="#">Apple Macbook Retina 23’’ </a>
-                                            <div class="close">x</div>
-                                            <strong>1 × $290.00</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="total">
-                                    <div class="col-md-6 text-left">
-                                        <span>运费 :</span>
-                                        <strong>总额 :</strong>
-                                    </div>
-                                    <div class="col-md-6 text-right">
-                                        <strong>$0.00</strong>
-                                        <strong>$160.00</strong>
-                                    </div>
-                                </div>
-                                <a href="shopping-cart.jsp" class="cart-btn">查看购物车详情 </a>
-                                <a href="checkout.jsp" class="cart-btn">购买</a>
+                                <%
+                                    if (members == null) {
+                                        out.println("<div class=\"cart-content\">\n" +
+                                                "                                    <div class=\"col-sm-12 col-md-12\">\n" +
+                                                "                                        <h3  style=\"text-align: center;color:#b11e22\">请先登陆！</h3>\n" +
+                                                "                                    </div>\n" +
+                                                "                                </div>");
+                                    }else {
+                                        double total=0;
+                                        for (int i = 0; i <shoppingCart.size() ; i++) {
+                                            shoppingCart.get(i).setCommodity();
+                                            Commodity commodity = shoppingCart.get(i).getCommodity();
+                                            total=total+shoppingCart.get(i).getQuantity()*commodity.getCommodityprice();
+                                            out.println(
+                                                "<div class=\"cart-content\">\n" +
+                                                    "<div class=\"col-sm-4 col-md-4\">" +
+                                                        "<img src=\""+ request.getContextPath()+commodity.getCommoditynsrc()+"\">\n" +
+                                                    "</div>\n" +
+                                                    "<div class=\"col-sm-8 col-md-8\">\n" +
+                                                        "<div class=\"pro-text\">\n" +
+                                                            "<a href=\"#\">"+commodity.getCommodityname()+"</a>\n" +
+                                                            "<div class=\"close\">x</div>\n" +
+                                                            "<strong>1 "+shoppingCart.get(i).getQuantity()+"× ￥"+commodity.getCommodityprice()+"</strong>\n" +
+                                                        "</div>\n" +
+                                                    "</div>\n" +
+                                                "</div>"
+                                            );
+                                        }
+                                        out.println(
+                                            "<div class=\"total\">\n" +
+                                            "   <div class=\"col-md-6 text-left\">\n" +
+                                            "       <span>运费 :</span>\n" +
+                                            "       <strong>总额 :</strong>\n" +
+                                            "   </div>\n" +
+                                            "   <div class=\"col-md-6 text-right\">\n" +
+                                            "       <strong>￥0.00</strong>\n" +
+                                            "       <strong>￥"+total+"</strong>\n" +
+                                            "   </div>\n" +
+                                            "</div>\n" +
+                                            "<a href=\"shopping-cart.jsp\" class=\"cart-btn\">查看购物车详情 </a>\n" +
+                                            "<a href=\"checkout.jsp\" class=\"cart-btn\">购买</a>"
+                                        );
+                                    }
+                                %>
                             </div>
                         </li>
                     </ul>
@@ -220,11 +247,13 @@
                     </div>
                     <%-- Collect the nav links, forms, and other content for toggling --%>
                     <%--收集导航链接、表单和其他内容--%>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations=" fadeInLeft fadeInUp fadeInRight">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown"
+                         data-animations=" fadeInLeft fadeInUp fadeInRight">
                         <ul class="nav navbar-nav">
                             <li class="all-departments dropdown">
                                 <a href="index.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-expanded="false"><span> 商品分类 </span> <i class="fa fa-bars" aria-hidden="true"></i>
+                                   aria-expanded="false"><span> 商品分类 </span> <i class="fa fa-bars"
+                                                                                aria-hidden="true"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdownhover-bottom" role="menu">
                                     <%--通过数据库查询有哪些类别显示--%>
@@ -232,26 +261,26 @@
                                         for (int i = 0; i < primaryclassifications.size(); i++) {
                                             String primaryclassification_grade = primaryclassifications.get(i).getClassificationgrade();
                                             String primaryclassification_name = primaryclassifications.get(i).getClassificationname();
-                                            String primaryclassification_src=primaryclassifications.get(i).getClassificationsrc();
-                                            String primaryclassification_href=request.getContextPath()+"/mall/CommodityShow.action?mark=show&primaryclassification="+primaryclassification_name;
+                                            String primaryclassification_src = primaryclassifications.get(i).getClassificationsrc();
+                                            String primaryclassification_href = request.getContextPath() + "/mall/CommodityShow.action?mark=show&primaryclassification=" + primaryclassification_name;
                                             out.println("<li class=\"dropdown\">\n" +
-                                                    "<a href=\""+primaryclassification_href+"\"><img src=\""+request.getContextPath()+"/"+ primaryclassification_src +"\"alt=\"menu-icon"+ primaryclassification_grade +"\"/>\n" + primaryclassification_name
+                                                    "<a href=\"" + primaryclassification_href + "\"><img src=\"" + request.getContextPath() + "/" + primaryclassification_src + "\"alt=\"menu-icon" + primaryclassification_grade + "\"/>\n" + primaryclassification_name
                                             );
-                                            if (primaryclassification_grade.equals("10")){
+                                            if (primaryclassification_grade.equals("10")) {
                                                 System.out.println("aaa");
                                             }
                                             secondaryClassifications = classificationDAO.getsecondaryClassification(Classification.getSecondaryClassificationmapping(primaryclassification_grade));
-                                            if (secondaryClassifications.size()>0){
+                                            if (secondaryClassifications.size() > 0) {
                                                 out.println("<i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i>\n" +
                                                         "</a>");
                                                 out.println("<ul class=\"dropdown-menu right\">");
                                                 for (int j = 0; j < secondaryClassifications.size(); j++) {
-                                                    String secondaryClassification_name=secondaryClassifications.get(j).getClassificationname();
-                                                    String secondaryClassification_href=request.getContextPath()+"/mall/CommodityShow.action?mark=show&secondaryclassification="+secondaryClassification_name;
-                                                    out.println("<li><a href=\""+secondaryClassification_href+"\">"+secondaryClassification_name+"</a></li>");
+                                                    String secondaryClassification_name = secondaryClassifications.get(j).getClassificationname();
+                                                    String secondaryClassification_href = request.getContextPath() + "/mall/CommodityShow.action?mark=show&secondaryclassification=" + secondaryClassification_name;
+                                                    out.println("<li><a href=\"" + secondaryClassification_href + "\">" + secondaryClassification_name + "</a></li>");
                                                 }
                                                 out.println("</ul>");
-                                            }else {
+                                            } else {
                                                 out.println("</a>");
                                             }
                                             out.println("</li>");
@@ -281,7 +310,8 @@
         <div class="row">
             <div class="col-md-12">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/mall/assets/index.jsp">主页</a></li>
+                    <li class="breadcrumb-item"><a
+                            href="${pageContext.request.contextPath}/mall/assets/index.jsp">主页</a></li>
                     <li class="breadcrumb-item active">购物车</li>
                 </ol>
             </div>
@@ -290,39 +320,47 @@
                 <table>
                     <tr>
                         <th></th>
-                        <th>Product name</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total Price</th>
+                        <th>商品名</th>
+                        <th>描述</th>
+                        <th>价格</th>
+                        <th>数量</th>
+                        <th>总价格</th>
                         <th></th>
                     </tr>
-                    <tr>
-                        <td><img src="${pageContext.request.contextPath}/mall/assets/images/elec-img4.jpg" alt="13"></td>
-                        <td>Name product #01</td>
-                        <td>Lorem Ipsum is simply dummy text of the printing<br/> and typesetting industry.</td>
-                        <td><strong>$160.00</strong></td>
-                        <td><input type="number" name="quantity" min="1" max="500"></td>
-                        <td><strong>$160.00</strong></td>
-                        <td><span class="red"><i class="fa fa-times" aria-hidden="true"></i></span></td>
-                    </tr>
-                    <tr>
-                        <td><img src="${pageContext.request.contextPath}/mall/assets/images/elec-img3.jpg" alt="13"></td>
-                        <td>Name product #02</td>
-                        <td>Lorem Ipsum is simply dummy text of the printing<br/> and typesetting industry.</td>
-                        <td><strong>$180.00</strong></td>
-                        <td><input type="number" name="quantity" min="1" max="500"></td>
-                        <td><strong>$180.00</strong></td>
-                        <td><span><i class="fa fa-times" aria-hidden="true"></i></span></td>
-                    </tr>
-                </table>
-                <div class="col-sm-6 col-md-6">
-                    <a href="#" class="button red">CONTINUE SHOPPING</a>
-                </div>
-                <div class="col-sm-6 col-md-6 text-right">
-                    <a href="#" class="button">UPDATE SHOPPING CART</a>
-                    <a href="#" class="button">CLEAR SHOPPING CART</a>
-                </div>
+                    <%
+                        if (members == null) {
+                            out.println(" <tr><td colspan=\"7\"><h3>请先登陆</h3></td></tr>");
+                        }else {
+                            double total=0;
+                            for (int i = 0; i <shoppingCart.size() ; i++) {
+                                shoppingCart.get(i).setCommodity();
+                                Commodity commodity = shoppingCart.get(i).getCommodity();
+                                total=shoppingCart.get(i).getQuantity()*commodity.getCommodityprice();
+                                out.println(
+                                    "<tr>\n" +
+                                    "   <td>" +
+                                    "       <img src=\""+ request.getContextPath()+commodity.getCommoditynsrc()+"\">\n" +
+                                    "   </td>\n" +
+                                    "   <td>"+commodity.getCommodityname()+"</td>\n" +
+                                    "   <td  style=\"width: 25%\">"+commodity.getCommoditydetail()+"</td>\n" +
+                                    "   <td><strong>￥"+commodity.getCommodityprice()+"</strong></td>\n" +
+                                    "   <td><input type=\"number\" name=\"quantity\" value=\""+shoppingCart.get(i).getQuantity()+"\" min=\"1\" max=\"500\"></td>\n" +
+                                    "   <td><strong>￥"+shoppingCart.get(i).getQuantity()*commodity.getCommodityprice()+"</strong></td>\n" +
+                                    "   <td><span class=\"red\"><i class=\"fa fa-times\" aria-hidden=\"true\"></i></span></td>\n" +
+                                    "</tr>");
+                            }
+                            out.println(
+                                "</table>\n" +
+                                "<div class=\"col-sm-6 col-md-6\">\n" +
+                                "   <a href=\"#\" class=\"button red\">继续购物</a>\n" +
+                                "</div>\n" +
+                                "<div class=\"col-sm-6 col-md-6 text-right\">\n" +
+                                "   <a href=\"#\" class=\"button\">更新购物车</a>\n" +
+                                "   <a href=\"#\" class=\"button\">清除购物车</a>\n" +
+                                "</div>"
+                            );
+                        }
+                    %>
             </div>
         </div>
 
@@ -357,7 +395,8 @@
                     <img src="${pageContext.request.contextPath}/mall/assets/images/logo.png" alt="logo"/>
                     <p><strong>赵奇做的网站</strong> 是一个牛逼哄哄的网站。很厉害的网站很厉害的网站很厉害的网站很厉害的网站很厉害的网站很厉害的网站很厉害的网站很厉害的网站很厉害的网站</p>
                     <ul>
-                        <li><i class="icon-location-pin icons" aria-hidden="true"></i> <strong>地址：</strong> 我就不告诉你我在哪，万一你来打我咋办。
+                        <li><i class="icon-location-pin icons" aria-hidden="true"></i> <strong>地址：</strong>
+                            我就不告诉你我在哪，万一你来打我咋办。
                         </li>
                         <li><i class="icon-envelope-letter icons"></i> <strong>邮箱：</strong> starryzhaoqi@gmail.com
                         </li>
@@ -434,7 +473,8 @@
                         Copyright &copy; 2017.Company name All rights reserved.
                     </div>
                     <div class="text-right col-xs-12 col-sm-6 col-md-6">
-                        <img src="${pageContext.request.contextPath}/mall/assets/images/payment-img.jpg" alt="payment-img"/>
+                        <img src="${pageContext.request.contextPath}/mall/assets/images/payment-img.jpg"
+                             alt="payment-img"/>
                     </div>
                 </div>
             </div>
@@ -446,15 +486,21 @@
 <%-- sticky-socia --%>
 <aside id="sticky-social">
     <ul>
-        <li><a href="#" class="fa fa-facebook" target="_blank"><span><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</span></a></li>
-        <li><a href="#" class="fa fa-twitter" target="_blank"><span><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</span></a></li>
-        <li><a href="#" class="fa fa-rss" target="_blank"><span><i class="fa fa-rss" aria-hidden="true"></i> RSS</span></a></li>
-        <li><a href="#" class="fa fa-pinterest-p" target="_blank"><span><i class="fa fa-pinterest-p" aria-hidden="true"></i> Pinterest</span></a></li>
-        <li><a href="#" class="fa fa-share-alt" target="_blank"><span><i class="fa fa-share-alt" aria-hidden="true"></i> Flickr</span></a></li>
+        <li><a href="#" class="fa fa-facebook" target="_blank"><span><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</span></a>
+        </li>
+        <li><a href="#" class="fa fa-twitter" target="_blank"><span><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</span></a>
+        </li>
+        <li><a href="#" class="fa fa-rss" target="_blank"><span><i class="fa fa-rss" aria-hidden="true"></i> RSS</span></a>
+        </li>
+        <li><a href="#" class="fa fa-pinterest-p" target="_blank"><span><i class="fa fa-pinterest-p"
+                                                                           aria-hidden="true"></i> Pinterest</span></a>
+        </li>
+        <li><a href="#" class="fa fa-share-alt" target="_blank"><span><i class="fa fa-share-alt" aria-hidden="true"></i> Flickr</span></a>
+        </li>
     </ul>
 </aside>
 <%-- /sticky-socia --%>
-<p id="back-top"> <a href="#top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a> </p>
+<p id="back-top"><a href="#top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a></p>
 <script src="${pageContext.request.contextPath}/mall/assets/js/jquery.js"></script>
 <%-- Bootstrap Core JavaScript --%>
 <script src="${pageContext.request.contextPath}/mall/assets/js/bootstrap.min.js"></script>
