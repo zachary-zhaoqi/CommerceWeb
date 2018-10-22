@@ -1,7 +1,8 @@
 <%@ page import="entity.Members" %>
 <%@ page import="dao.mall.ClassificationDAO" %>
 <%@ page import="entity.Classification" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="entity.ShoppingCartClause" %><%--
   Created by IntelliJ IDEA.
   User: starr
   Date: 2018/9/25
@@ -62,20 +63,23 @@
                         <li>
                             <span>
                                 <%
-                                    Members members;
+                                    Members members = null;
+                                    List<ShoppingCartClause> shoppingCart = null;
                                     String name;
                                     String href;
-                                    if (request.getSession().getAttribute("Members")!=null){
-                                        members= (Members) request.getSession().getAttribute("Members");
-                                        name=members.getEmail();
-                                        href=request.getContextPath()+"/mall/home.jsp";
-                                        out.println("你好!"+
-                                                "<a href=\""+href+"\">"+name+"</a>");
-                                    }else {
+                                    if (session.getAttribute("Members") != null) {
+                                        members = (Members) request.getSession().getAttribute("Members");
+                                        members.setShoppingCart();
+                                        shoppingCart = members.getShoppingCart();
+                                        name = members.getEmail();
+                                        href = request.getContextPath() + "/mall/home.jsp";
+                                        out.println("你好!" +
+                                                "<a href=\"" + href + "\">" + name + "</a>");
+                                    } else {
                                         out.println("你好!请-" +
-                                                "<a href=\""+request.getContextPath()+"/mall/login.jsp\">登陆</a>" +
+                                                "<a href=\"" + request.getContextPath() + "/mall/login.jsp\">登陆</a>" +
                                                 "or" +
-                                                "<a href=\""+request.getContextPath()+"/mall/registe.jsp\">注册</a>");
+                                                "<a href=\"" + request.getContextPath() + "/mall/registe.jsp\">注册</a>");
                                     }
                                 %>
                             </span>
@@ -151,56 +155,72 @@
                 </div>
                 <div class="col-sm-3">
                     <%-- 愿望清单与购物车 --%>
-                    <div class="cart-menu">
-                        <ul>
-                            <li>
-                                <a href="#"><i class="icon-heart icons" aria-hidden="true"></i></a>
-                                <span class="subno">1</span>
-                                <strong>愿望清单</strong>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons" aria-hidden="true"></i></a>
-                                <span class="subno">2</span><strong>购物车</strong>
-                                <div class="dropdown-menu  cart-outer">
-                                    <%--todo：jsp自适应显示购物车--%>
-                                    <div class="cart-content">
-                                        <div class="col-sm-4 col-md-4"><img src="${pageContext.request.contextPath}/mall/assets/images/elec-img4.jpg" alt="13">
-                                        </div>
-                                        <div class="col-sm-8 col-md-8">
-                                            <div class="pro-text">
-                                                <a href="#">Apple Macbook Retina 23’’ </a>
-                                                <div class="close">x</div>
-                                                <strong>1 × $290.00</strong>
-                                            </div>
-                                        </div>
+                        <div class="cart-menu">
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="icon-heart icons" aria-hidden="true"></i></a>
+                                    <span class="subno">1</span>
+                                    <strong>愿望清单</strong>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons"
+                                                                                                aria-hidden="true"></i></a>
+                                    <%
+                                        if (members != null) {
+                                            out.println("<span class=\"subno\">"+shoppingCart.size()+"</span>");
+                                        }
+                                    %>
+                                    <strong>购物车</strong>
+                                    <div class="dropdown-menu  cart-outer">
+                                        <%--todo：jsp自适应显示购物车--%>
+                                        <%
+                                            if (members == null) {
+                                                out.println("<div class=\"cart-content\">\n" +
+                                                        "                                    <div class=\"col-sm-12 col-md-12\">\n" +
+                                                        "                                        <h3  style=\"text-align: center;color:#b11e22\">请先登陆！</h3>\n" +
+                                                        "                                    </div>\n" +
+                                                        "                                </div>");
+                                            }else {
+                                                double total=0;
+                                                for (int i = 0; i <shoppingCart.size() ; i++) {
+                                                    shoppingCart.get(i).setCommodity();
+                                                    Commodity commodity = shoppingCart.get(i).getCommodity();
+                                                    total=total+shoppingCart.get(i).getQuantity()*commodity.getCommodityprice();
+                                                    out.println(
+                                                            "<div class=\"cart-content\">\n" +
+                                                                    "<div class=\"col-sm-4 col-md-4\">" +
+                                                                    "<img src=\""+ request.getContextPath()+commodity.getCommoditynsrc()+"\">\n" +
+                                                                    "</div>\n" +
+                                                                    "<div class=\"col-sm-8 col-md-8\">\n" +
+                                                                    "<div class=\"pro-text\">\n" +
+                                                                    "<a href=\"#\">"+commodity.getCommodityname()+"</a>\n" +
+                                                                    "<div class=\"close\">x</div>\n" +
+                                                                    "<strong>1 "+shoppingCart.get(i).getQuantity()+"× ￥"+commodity.getCommodityprice()+"</strong>\n" +
+                                                                    "</div>\n" +
+                                                                    "</div>\n" +
+                                                                    "</div>"
+                                                    );
+                                                }
+                                                out.println(
+                                                        "<div class=\"total\">\n" +
+                                                                "   <div class=\"col-md-6 text-left\">\n" +
+                                                                "       <span>运费 :</span>\n" +
+                                                                "       <strong>总额 :</strong>\n" +
+                                                                "   </div>\n" +
+                                                                "   <div class=\"col-md-6 text-right\">\n" +
+                                                                "       <strong>￥0.00</strong>\n" +
+                                                                "       <strong>￥"+total+"</strong>\n" +
+                                                                "   </div>\n" +
+                                                                "</div>\n" +
+                                                                "<a href=\"shopping-cart.jsp\" class=\"cart-btn\">查看购物车详情 </a>\n" +
+                                                                "<a href=\"checkout.jsp\" class=\"cart-btn\">购买</a>"
+                                                );
+                                            }
+                                        %>
                                     </div>
-                                    <div class="cart-content">
-                                        <div class="col-sm-4 col-md-4"><img src="${pageContext.request.contextPath}/mall/assets/images/elec-img3.jpg" alt="13">
-                                        </div>
-                                        <div class="col-sm-8 col-md-8">
-                                            <div class="pro-text">
-                                                <a href="#">Apple Macbook Retina 23’’ </a>
-                                                <div class="close">x</div>
-                                                <strong>1 × $290.00</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="total">
-                                        <div class="col-md-6 text-left">
-                                            <span>运费 :</span>
-                                            <strong>总额 :</strong>
-                                        </div>
-                                        <div class="col-md-6 text-right">
-                                            <strong>$0.00</strong>
-                                            <strong>$160.00</strong>
-                                        </div>
-                                    </div>
-                                    <a href="shopping-cart.jsp" class="cart-btn">查看购物车详情 </a>
-                                    <a href="checkout.jsp" class="cart-btn">购买</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     <%-- 愿望清单与购物车 End --%>
                 </div>
                 <%--菜单导航栏--%>

@@ -338,7 +338,7 @@
                                 total=shoppingCart.get(i).getQuantity()*commodity.getCommodityprice();
                                 out.println(
                                     "<tr>\n" +
-                                    "   <td>" +
+                                    "   <td whidt>" +
                                     "       <img src=\""+ request.getContextPath()+commodity.getCommoditynsrc()+"\">\n" +
                                     "   </td>\n" +
                                     "   <td>"+commodity.getCommodityname()+"</td>\n" +
