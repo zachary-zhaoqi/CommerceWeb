@@ -255,6 +255,7 @@
                                 <ul class="dropdown-menu dropdownhover-bottom all-open" role="menu">
                                     <%--通过数据库查询有哪些类别显示--%>
                                     <%
+
                                         for (int i = 0; i < primaryclassifications.size(); i++) {
                                             String primaryclassification_grade = primaryclassifications.get(i).getClassificationgrade();
                                             String primaryclassification_name = primaryclassifications.get(i).getClassificationname();
