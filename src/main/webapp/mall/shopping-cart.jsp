@@ -82,6 +82,7 @@
                                         out.println("你好!" +
                                                 "<a href=\"" + href + "\">" + name + "</a>");
                                     } else {
+                                        shoppingCart= (List<ShoppingCartClause>) session.getAttribute("ShoppingCart");
                                         out.println("你好!请-" +
                                                 "<a href=\"" + request.getContextPath() + "/mall/login.jsp\">登陆</a>" +
                                                 "or" +
@@ -181,10 +182,10 @@
                             <div class="dropdown-menu  cart-outer">
                                 <%--todo：jsp自适应显示购物车--%>
                                 <%
-                                    if (members == null) {
+                                    if (shoppingCart == null|| shoppingCart.size()==0) {
                                         out.println("<div class=\"cart-content\">\n" +
                                                 "                                    <div class=\"col-sm-12 col-md-12\">\n" +
-                                                "                                        <h3  style=\"text-align: center;color:#b11e22\">请先登陆！</h3>\n" +
+                                                "                                        <h3  style=\"text-align: center;color:#b11e22\">购物车空空如也哦~</h3>\n" +
                                                 "                                    </div>\n" +
                                                 "                                </div>");
                                     }else {
@@ -201,7 +202,7 @@
                                                     "<div class=\"col-sm-8 col-md-8\">\n" +
                                                         "<div class=\"pro-text\">\n" +
                                                             "<a href=\"#\">"+commodity.getCommodityname()+"</a>\n" +
-                                                            "<div class=\"close\">x</div>\n" +
+                                                            "<div class=\"close\" onclick=\"clearShoppingCart("+commodity.getIdcommodity()+")\">x</div>\n" +
                                                             "<strong>1 "+shoppingCart.get(i).getQuantity()+"× ￥"+commodity.getCommodityprice()+"</strong>\n" +
                                                         "</div>\n" +
                                                     "</div>\n" +
@@ -328,8 +329,8 @@
                         <th></th>
                     </tr>
                     <%
-                        if (members == null) {
-                            out.println(" <tr><td colspan=\"7\"><h3>请先登陆</h3></td></tr>");
+                        if (shoppingCart == null|| shoppingCart.size()==0) {
+                            out.println(" <tr><td colspan=\"7\"><h3>购物车空空如也哦~</h3></td></tr>\"</table>");
                         }else {
                             double total=0;
                             for (int i = 0; i <shoppingCart.size() ; i++) {
@@ -342,7 +343,7 @@
                                     "       <img src=\""+ request.getContextPath()+commodity.getCommoditynsrc()+"\">\n" +
                                     "   </td>\n" +
                                     "   <td>"+commodity.getCommodityname()+"</td>\n" +
-                                    "   <td  style=\"width: 25%\">"+commodity.getCommoditydetail()+"</td>\n" +
+                                    "   <td>"+commodity.getCommoditydetail()+"</td>\n" +
                                     "   <td><strong>￥"+commodity.getCommodityprice()+"</strong></td>\n" +
                                     "   <td><input type=\"number\" name=\"quantity\" value=\""+shoppingCart.get(i).getQuantity()+"\" min=\"1\" max=\"500\"></td>\n" +
                                     "   <td><strong>￥"+shoppingCart.get(i).getQuantity()*commodity.getCommodityprice()+"</strong></td>\n" +

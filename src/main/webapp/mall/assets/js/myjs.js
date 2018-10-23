@@ -2,6 +2,10 @@ $(document).ready(function(){
 
 });
 
+function clearShoppingCart() {
+
+}
+
 function registeValidator() {
     var flage = true;
     if(!validator.isEmail($("#email").val())){

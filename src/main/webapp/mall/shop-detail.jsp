@@ -76,6 +76,7 @@
                                         out.println("你好!" +
                                                 "<a href=\"" + href + "\">" + name + "</a>");
                                     } else {
+                                        shoppingCart= (List<ShoppingCartClause>) session.getAttribute("ShoppingCart");
                                         out.println("你好!请-" +
                                                 "<a href=\"" + request.getContextPath() + "/mall/login.jsp\">登陆</a>" +
                                                 "or" +
@@ -94,7 +95,8 @@
                         <li><i class="icon-note icons" aria-hidden="true"></i><a href="#">我的订单</a></li>
                         <li>
                             <div class="dropdown">
-                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                   data-hover="dropdown">
                                     <i class="icon-settings icons" aria-hidden="true"></i> 设置
                                 </a>
                                 <ul class="dropdown-menu">
@@ -112,188 +114,190 @@
     </div>
     <%--顶部菜单--%>
     <section class="top-md-menu">
-            <div class="container">
-                <%--商标、搜索栏、购物车--%>
-                <div class="col-sm-3">
-                    <div class="logo">
-                        <h6><img src="${pageContext.request.contextPath}/mall/assets/images/logo.png" alt="logo"/></h6>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <%--查询栏开始--%>
-                    <form>
-                        <div class="well carousel-search hidden-phone">
-                            <div class="btn-group">
-                                <a class="btn dropdown-toggle btn-select" data-toggle="dropdown" href="#">所有类别
-                                    <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <%
-                                        ClassificationDAO classificationDAO =new ClassificationDAO();
-                                        List<Classification> primaryclassifications = classificationDAO.getPrimaryClassification();
-                                        List<Classification> secondaryClassifications;
-                                        for (int i = 0; i < primaryclassifications.size(); i++) {
-                                            out.println("<li><a href=\"#\">");
-                                            out.println(primaryclassifications.get(i).getClassificationname());
-                                            out.println("</a></li>");
-                                        }
-                                    %>
-                                    <li class="divider"></li>
-                                    <li><a href="#" hidden="all">全部</a></li>
-                                </ul>
-                            </div>
-                            <div class="search">
-                                <input type="text" placeholder="物品名称"/>
-                            </div>
-                            <div class="btn-group">
-                                <button type="button" id="btnSearch" class="btn btn-primary"><i class="fa fa-search"
-                                                                                                aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                    <%--查询栏结束--%>
-                </div>
-                <div class="col-sm-3">
-                    <%-- 愿望清单与购物车 --%>
-                        <div class="cart-menu">
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="icon-heart icons" aria-hidden="true"></i></a>
-                                    <span class="subno">1</span>
-                                    <strong>愿望清单</strong>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons"
-                                                                                                aria-hidden="true"></i></a>
-                                    <%
-                                        if (members != null) {
-                                            out.println("<span class=\"subno\">"+shoppingCart.size()+"</span>");
-                                        }
-                                    %>
-                                    <strong>购物车</strong>
-                                    <div class="dropdown-menu  cart-outer">
-                                        <%--todo：jsp自适应显示购物车--%>
-                                        <%
-                                            if (members == null) {
-                                                out.println("<div class=\"cart-content\">\n" +
-                                                        "                                    <div class=\"col-sm-12 col-md-12\">\n" +
-                                                        "                                        <h3  style=\"text-align: center;color:#b11e22\">请先登陆！</h3>\n" +
-                                                        "                                    </div>\n" +
-                                                        "                                </div>");
-                                            }else {
-                                                double total=0;
-                                                for (int i = 0; i <shoppingCart.size() ; i++) {
-                                                    shoppingCart.get(i).setCommodity();
-                                                    Commodity commodity = shoppingCart.get(i).getCommodity();
-                                                    total=total+shoppingCart.get(i).getQuantity()*commodity.getCommodityprice();
-                                                    out.println(
-                                                            "<div class=\"cart-content\">\n" +
-                                                                    "<div class=\"col-sm-4 col-md-4\">" +
-                                                                    "<img src=\""+ request.getContextPath()+commodity.getCommoditynsrc()+"\">\n" +
-                                                                    "</div>\n" +
-                                                                    "<div class=\"col-sm-8 col-md-8\">\n" +
-                                                                    "<div class=\"pro-text\">\n" +
-                                                                    "<a href=\"#\">"+commodity.getCommodityname()+"</a>\n" +
-                                                                    "<div class=\"close\">x</div>\n" +
-                                                                    "<strong>1 "+shoppingCart.get(i).getQuantity()+"× ￥"+commodity.getCommodityprice()+"</strong>\n" +
-                                                                    "</div>\n" +
-                                                                    "</div>\n" +
-                                                                    "</div>"
-                                                    );
-                                                }
-                                                out.println(
-                                                        "<div class=\"total\">\n" +
-                                                                "   <div class=\"col-md-6 text-left\">\n" +
-                                                                "       <span>运费 :</span>\n" +
-                                                                "       <strong>总额 :</strong>\n" +
-                                                                "   </div>\n" +
-                                                                "   <div class=\"col-md-6 text-right\">\n" +
-                                                                "       <strong>￥0.00</strong>\n" +
-                                                                "       <strong>￥"+total+"</strong>\n" +
-                                                                "   </div>\n" +
-                                                                "</div>\n" +
-                                                                "<a href=\"shopping-cart.jsp\" class=\"cart-btn\">查看购物车详情 </a>\n" +
-                                                                "<a href=\"checkout.jsp\" class=\"cart-btn\">购买</a>"
-                                                );
-                                            }
-                                        %>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    <%-- 愿望清单与购物车 End --%>
-                </div>
-                <%--菜单导航栏--%>
-                <div class="main-menu">
-                    <%--  导航  --%>
-                    <nav class="navbar navbar-inverse navbar-default">
-                        <%-- Brand and toggle get grouped for better mobile display --%>
-                        <%--品牌和切换被分组以获得更好的移动显示--%>
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                    data-target="#bs-example-navbar-collapse-1">
-                                <span class="sr-only">切换导航</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <%-- Collect the nav links, forms, and other content for toggling --%>
-                        <%--收集导航链接、表单和其他内容--%>
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations=" fadeInLeft fadeInUp fadeInRight">
-                            <ul class="nav navbar-nav">
-                                <li class="all-departments dropdown">
-                                    <a href="index.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                       aria-expanded="false"><span> 商品分类 </span> <i class="fa fa-bars" aria-hidden="true"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdownhover-bottom" role="menu">
-                                        <%--通过数据库查询有哪些类别显示--%>
-                                        <%
-                                            for (int i = 0; i < primaryclassifications.size(); i++) {
-                                                String primaryclassification_grade = primaryclassifications.get(i).getClassificationgrade();
-                                                String primaryclassification_name = primaryclassifications.get(i).getClassificationname();
-                                                String primaryclassification_src=primaryclassifications.get(i).getClassificationsrc();
-                                                String primaryclassification_href=request.getContextPath()+"/mall/CommodityShow.action?mark=show&primaryclassification="+primaryclassification_name;
-                                                out.println("<li class=\"dropdown\">\n" +
-                                                        "<a href=\""+primaryclassification_href+"\"><img src=\""+request.getContextPath()+"/"+ primaryclassification_src +"\"alt=\"menu-icon"+ primaryclassification_grade +"\"/>\n" + primaryclassification_name
-                                                );
-                                                if (primaryclassification_grade.equals("10")){
-                                                    System.out.println("aaa");
-                                                }
-                                                secondaryClassifications = classificationDAO.getsecondaryClassification(Classification.getSecondaryClassificationmapping(primaryclassification_grade));
-                                                if (secondaryClassifications.size()>0){
-                                                    out.println("<i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i>\n" +
-                                                            "</a>");
-                                                    out.println("<ul class=\"dropdown-menu right\">");
-                                                    for (int j = 0; j < secondaryClassifications.size(); j++) {
-                                                        String secondaryClassification_name=secondaryClassifications.get(j).getClassificationname();
-                                                        String secondaryClassification_href=request.getContextPath()+"/mall/CommodityShow.action?mark=show&secondaryclassification="+secondaryClassification_name;
-                                                        out.println("<li><a href=\""+secondaryClassification_href+"\">"+secondaryClassification_name+"</a></li>");
-                                                    }
-                                                    out.println("</ul>");
-                                                }else {
-                                                    out.println("</a>");
-                                                }
-                                                out.println("</li>");
-                                            }
-                                        %>
-                                    </ul>
-                                </li>
-                                <li><a href="index.jsp">主页</a></li>
-                                <li><a href="list.jsp">列表展示</a></li>
-                                <li><a href="grid.jsp">网格展示</a></li>
-                                <li><a href="shop-detail.jsp">商品详情</a></li>
-                                <li><a href="contact.jsp">联系方式</a></li>
-                                <li><a href="shopping-cart.jsp">购物车</a></li>
-                                <li><a href="checkout.jsp">付款台</a></li>
-                            </ul>
-                            <%-- /.navbar-collapse --%>
-                        </div>
-                    </nav>
-                    <%-- /导航 end --%>
+        <div class="container">
+            <%--商标、搜索栏、购物车--%>
+            <div class="col-sm-3">
+                <div class="logo">
+                    <h6><img src="${pageContext.request.contextPath}/mall/assets/images/logo.png" alt="logo"/></h6>
                 </div>
             </div>
-        </section>
+            <div class="col-sm-6">
+                <%--查询栏开始--%>
+                <form>
+                    <div class="well carousel-search hidden-phone">
+                        <div class="btn-group">
+                            <a class="btn dropdown-toggle btn-select" data-toggle="dropdown" href="#">所有类别
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <%
+                                    ClassificationDAO classificationDAO = new ClassificationDAO();
+                                    List<Classification> primaryclassifications = classificationDAO.getPrimaryClassification();
+                                    List<Classification> secondaryClassifications;
+                                    for (int i = 0; i < primaryclassifications.size(); i++) {
+                                        out.println("<li><a href=\"#\">");
+                                        out.println(primaryclassifications.get(i).getClassificationname());
+                                        out.println("</a></li>");
+                                    }
+                                %>
+                                <li class="divider"></li>
+                                <li><a href="#" hidden="all">全部</a></li>
+                            </ul>
+                        </div>
+                        <div class="search">
+                            <input type="text" placeholder="物品名称"/>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" id="btnSearch" class="btn btn-primary"><i class="fa fa-search"
+                                                                                            aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <%--查询栏结束--%>
+            </div>
+            <div class="col-sm-3">
+                <%-- 愿望清单与购物车 --%>
+                <div class="cart-menu">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="icon-heart icons" aria-hidden="true"></i></a>
+                            <span class="subno">1</span>
+                            <strong>愿望清单</strong>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown"><i class="icon-basket-loaded icons"
+                                                                                        aria-hidden="true"></i></a>
+                            <%
+                                if (members != null) {
+                                    out.println("<span class=\"subno\">"+shoppingCart.size()+"</span>");
+                                }
+                            %>
+                            <strong>购物车</strong>
+                            <div class="dropdown-menu  cart-outer">
+                                <%--todo：jsp自适应显示购物车--%>
+                                <%
+                                    if (shoppingCart == null|| shoppingCart.size()==0) {
+                                        out.println("<div class=\"cart-content\">\n" +
+                                                "                                    <div class=\"col-sm-12 col-md-12\">\n" +
+                                                "                                        <h3  style=\"text-align: center;color:#b11e22\">购物车空空如也哦~</h3>\n" +
+                                                "                                    </div>\n" +
+                                                "                                </div>");
+                                    }else {
+                                        double total=0;
+                                        for (int i = 0; i <shoppingCart.size() ; i++) {
+                                            shoppingCart.get(i).setCommodity();
+                                            Commodity commodity = shoppingCart.get(i).getCommodity();
+                                            total=total+shoppingCart.get(i).getQuantity()*commodity.getCommodityprice();
+                                            out.println(
+                                                    "<div class=\"cart-content\">\n" +
+                                                            "<div class=\"col-sm-4 col-md-4\">" +
+                                                            "<img src=\""+ request.getContextPath()+commodity.getCommoditynsrc()+"\">\n" +
+                                                            "</div>\n" +
+                                                            "<div class=\"col-sm-8 col-md-8\">\n" +
+                                                            "<div class=\"pro-text\">\n" +
+                                                            "<a href=\"#\">"+commodity.getCommodityname()+"</a>\n" +
+                                                            "<div class=\"close\">x</div>\n" +
+                                                            "<strong>1 "+shoppingCart.get(i).getQuantity()+"× ￥"+commodity.getCommodityprice()+"</strong>\n" +
+                                                            "</div>\n" +
+                                                            "</div>\n" +
+                                                            "</div>"
+                                            );
+                                        }
+                                        out.println(
+                                                "<div class=\"total\">\n" +
+                                                        "   <div class=\"col-md-6 text-left\">\n" +
+                                                        "       <span>运费 :</span>\n" +
+                                                        "       <strong>总额 :</strong>\n" +
+                                                        "   </div>\n" +
+                                                        "   <div class=\"col-md-6 text-right\">\n" +
+                                                        "       <strong>￥0.00</strong>\n" +
+                                                        "       <strong>￥"+total+"</strong>\n" +
+                                                        "   </div>\n" +
+                                                        "</div>\n" +
+                                                        "<a href=\"shopping-cart.jsp\" class=\"cart-btn\">查看购物车详情 </a>\n" +
+                                                        "<a href=\"checkout.jsp\" class=\"cart-btn\">购买</a>"
+                                        );
+                                    }
+                                %>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <%-- 愿望清单与购物车 End --%>
+            </div>
+            <%--菜单导航栏--%>
+            <div class="main-menu">
+                <%--  导航  --%>
+                <nav class="navbar navbar-inverse navbar-default">
+                    <%-- Brand and toggle get grouped for better mobile display --%>
+                    <%--品牌和切换被分组以获得更好的移动显示--%>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">切换导航</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <%-- Collect the nav links, forms, and other content for toggling --%>
+                    <%--收集导航链接、表单和其他内容--%>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown"
+                         data-animations=" fadeInLeft fadeInUp fadeInRight">
+                        <ul class="nav navbar-nav">
+                            <li class="all-departments dropdown">
+                                <a href="index.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-expanded="false"><span> 商品分类 </span> <i class="fa fa-bars"
+                                                                                aria-hidden="true"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdownhover-bottom" role="menu">
+                                    <%--通过数据库查询有哪些类别显示--%>
+                                    <%
+                                        for (int i = 0; i < primaryclassifications.size(); i++) {
+                                            String primaryclassification_grade = primaryclassifications.get(i).getClassificationgrade();
+                                            String primaryclassification_name = primaryclassifications.get(i).getClassificationname();
+                                            String primaryclassification_src = primaryclassifications.get(i).getClassificationsrc();
+                                            String primaryclassification_href = request.getContextPath() + "/mall/CommodityShow.action?mark=show&primaryclassification=" + primaryclassification_name;
+                                            out.println("<li class=\"dropdown\">\n" +
+                                                    "<a href=\"" + primaryclassification_href + "\"><img src=\"" + request.getContextPath() + "/" + primaryclassification_src + "\"alt=\"menu-icon" + primaryclassification_grade + "\"/>\n" + primaryclassification_name
+                                            );
+                                            if (primaryclassification_grade.equals("10")) {
+                                                System.out.println("aaa");
+                                            }
+                                            secondaryClassifications = classificationDAO.getsecondaryClassification(Classification.getSecondaryClassificationmapping(primaryclassification_grade));
+                                            if (secondaryClassifications.size() > 0) {
+                                                out.println("<i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i>\n" +
+                                                        "</a>");
+                                                out.println("<ul class=\"dropdown-menu right\">");
+                                                for (int j = 0; j < secondaryClassifications.size(); j++) {
+                                                    String secondaryClassification_name = secondaryClassifications.get(j).getClassificationname();
+                                                    String secondaryClassification_href = request.getContextPath() + "/mall/CommodityShow.action?mark=show&secondaryclassification=" + secondaryClassification_name;
+                                                    out.println("<li><a href=\"" + secondaryClassification_href + "\">" + secondaryClassification_name + "</a></li>");
+                                                }
+                                                out.println("</ul>");
+                                            } else {
+                                                out.println("</a>");
+                                            }
+                                            out.println("</li>");
+                                        }
+                                    %>
+                                </ul>
+                            </li>
+                            <li><a href="index.jsp">主页</a></li>
+                            <li><a href="list.jsp">列表展示</a></li>
+                            <li><a href="grid.jsp">网格展示</a></li>
+                            <li><a href="shop-detail.jsp">商品详情</a></li>
+                            <li><a href="contact.jsp">联系方式</a></li>
+                            <li><a href="shopping-cart.jsp">购物车</a></li>
+                            <li><a href="checkout.jsp">付款台</a></li>
+                        </ul>
+                        <%-- /.navbar-collapse --%>
+                    </div>
+                </nav>
+                <%-- /导航 end --%>
+            </div>
+        </div>
+    </section>
 </header>
 <%-- newsletter --%>
 <section class="grid-shop">

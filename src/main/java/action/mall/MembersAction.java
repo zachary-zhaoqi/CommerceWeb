@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MembersAction implements Action {
 
@@ -45,8 +47,19 @@ public class MembersAction implements Action {
         int idcommodity=Integer.parseInt(request.getParameter("idcommodity"));
         Members members= (Members) request.getSession().getAttribute("Members");
         if (members == null) {
-            request.setAttribute("errorMessage","请先登陆，谢谢！");
-            request.getRequestDispatcher("/mall/login.jsp").forward(request,response);
+            List<ShoppingCartClause> shoppingCart;
+            if (request.getSession().getAttribute("ShoppingCart") == null) {
+                shoppingCart = new ArrayList<>();
+            }else {
+                shoppingCart= (List<ShoppingCartClause>) request.getSession().getAttribute("ShoppingCart");
+            }
+            ShoppingCartClause shoppingCartClause=new ShoppingCartClause();
+            shoppingCartClause.setIdcommodity(idcommodity);
+            shoppingCartClause.setQuantity(1);
+            shoppingCart.add(shoppingCartClause);
+            request.getSession().setAttribute("ShoppingCart",shoppingCart);
+            request.getRequestDispatcher("/mall/shopping-cart.jsp").forward(request,response);
+            return;
         }
         ShoppingCartClauseDAO shoppingCartClauseDAO=new ShoppingCartClauseDAO();
         try {
