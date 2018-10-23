@@ -24,12 +24,12 @@ DROP TABLE IF EXISTS `members`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `members` (
   `idmembers` int(11) NOT NULL AUTO_INCREMENT,
-  `password` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
   PRIMARY KEY (`idmembers`),
-  UNIQUE KEY `iduser_UNIQUE` (`idmembers`),
+  UNIQUE KEY `idmembers_UNIQUE` (`idmembers`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `members` (
 
 LOCK TABLES `members` WRITE;
 /*!40000 ALTER TABLE `members` DISABLE KEYS */;
-INSERT INTO `members` VALUES (1,'123456','123@qq.com'),(2,'123456','666@qq.com'),(3,'123456','456@qq.com'),(4,'654321','777@qq.com'),(5,'654321','888@qq.com'),(8,'654321','999@qq.com'),(17,'dsa','starry-zhao@outlook.com'),(18,'a','a'),(19,'','');
+INSERT INTO `members` VALUES (1,'123@qq.com','123456'),(2,'666@qq.com','123456'),(3,'456@qq.com','123456'),(4,'777@qq.com','654321'),(23,'starry-zhao@outlook.com','123');
 /*!40000 ALTER TABLE `members` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-11 22:52:09
+-- Dump completed on 2018-10-23 13:56:28

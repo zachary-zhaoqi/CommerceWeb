@@ -2,7 +2,8 @@
 <%@ page import="dao.mall.ClassificationDAO" %>
 <%@ page import="entity.Classification" %>
 <%@ page import="java.util.List" %>
-<%@ page import="entity.ShoppingCartClause" %><%--
+<%@ page import="entity.ShoppingCartClause" %>
+<%@ page import="entity.Commodity" %><%--
   Created by IntelliJ IDEA.
   User: starr
   Date: 2018/9/26
